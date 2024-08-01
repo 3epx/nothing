@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main() {
+ 
+ int o_p = 8; 
+ int n_p = 12;
+ int a = 0;
+ 
+ cout << "enter the amount of cola bottles : ";
+ cin >> a;
+ 
+ if (a %2 == 0){
+     a = a/2;
+     cout << a * n_p;
+ }
+ else if (a %2 != 0) {
+     a = a - 1;
+     a = a / 2;
+     a = a * n_p;
+     cout << a + o_p;
+ }
+ 
+ 
+    return 0;
+}
