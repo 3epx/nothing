@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main() {
+ 
+int x = 0;
+int y = 0;
+
+cout << "enter the first number and second : ";
+cin >> x >> y;
+
+cout << x * y << endl;
+cout << x + y << endl;
+cout << x - y << endl;
+
+
+
+    return 0;
+}
