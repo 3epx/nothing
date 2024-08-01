@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int cc(int num){
+    int count = 0;
+    // التحقق من أن الرقم ليس صفرًا
+    if (num == 0) {
+        count = 1;
+    } else {
+        while (num != 0) {
+            num /= 10; // قسمة الرقم على 10
+            count++; // زيادة العداد
+        }
+    }
+    if (count == 2)
+    count = 10;
+    else if (count == 3)
+    count = 100;
+    else if (count == 4)
+    count = 1000;
+    else if (count = 5)
+    count = 10000;      
+    return count;
+}
+int main() {
+   int number = 72323;
+   int n_n1 = number %10; 
+   int n_n2 = (number / 100) * 100;
+   int z = cc(n_n2);
+   n_n2 = n_n2 / z;
+   int n_n3 = (number / 1000) * 1000;
+   z = cc(n_n3);
+   n_n3 = n_n3 / z;
+   int n_n4 = (number / 10000) * 10000;
+   z = cc(n_n4);
+   n_n4 = n_n4 / z;
+   cout << n_n1 + n_n2 + n_n3 + n_n4;
+   
+    return 0;
+}
