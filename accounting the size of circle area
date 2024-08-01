@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main() {
+int r =0;
+cout << "enter the number please : ";
+cin >> r;
+cout << "the size of area is : " << 3.14159265359 * r * r; 
+    return 0;
+}
