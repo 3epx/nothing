@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main() {
+
+int n1 = 0 , n2 = 0; 
+cout << "enter the values of the numbers : ";
+cin >> n1 >> n2; cout << endl;
+n1 = n1 %10; n2 = n2 %10;
+cout << "the result is : " << n1 + n2;
+
+
+return 0; 
+
+}
