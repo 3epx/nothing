@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main() {
+ 
+int a=0,b=0,c=0,d=0;
+cout << "enter the values : ";
+cin >> a >> b >> c >> d;
+cout << "the defrince is : " << a*b - c*d; 
+
+
+
+    return 0;
+}
