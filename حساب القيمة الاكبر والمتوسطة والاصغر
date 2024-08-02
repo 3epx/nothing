@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+
+int a=0,b=0,c=0;
+
+cout << "enter the values : ";
+cin >> a >> b >> c;
+
+if (a > b and a > c){cout << "the bigger number is : " << a << endl;}
+if (b > a and b > c){cout << "the bigger number is : " << b << endl;}
+if (c > a and c > b) {cout << "the bigger number is : " << c << endl;}
+if (a > b and a < c){cout << "the middel number is : " << a << endl;}
+if (a < b and a > c){cout << "the middel number is : " << a << endl;}
+if (b > a and b < c){cout << "the middel number is : " <<b << endl;}
+if (b < a and b > c){cout << "the middel number is : " << b << endl;}
+if (c > a and c < b){cout << "the middel number is : " <<c << endl;}
+if (c < a and c > b){cout << "the middel number is : " << c << endl;}
+if (c < a and c > b){cout << "the middel number is : " << c << endl;}
+if (a < c and a < b){cout << "the smaller number is : " <<a << endl;}
+if (b < a and b < c){cout << "the smaller number is : " << b<< endl;}
+if (c < a and c < b){cout << "the smaller number is : " << c << endl;}
+
+    return 0;
+}
