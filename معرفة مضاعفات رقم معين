@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a=0,b=0;
+
+cout << "enter the values : ";
+cin >> a >> b;
+
+if (a %b == 0){
+    cout << "multiplaes";
+}
+else {cout << "thousnd cock in your mother pussy";}
+
+
+    return 0;
+}
