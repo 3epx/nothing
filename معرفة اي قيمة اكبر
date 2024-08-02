@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int n = 0, d = 0;
+
+cout << "enter the values : ";
+cin >> n >> d;cout << endl;
+if (n >= d){
+    cout << "yes";
+}else if (n < d){
+    cout << "no";
+}
+
+
+    return 0;
+}
