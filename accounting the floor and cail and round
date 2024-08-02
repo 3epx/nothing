@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int n = 0, d = 0, floorv=0, cailv=0, roundv=0 , dd =0, da =0, db =0;
+
+cout << "enter the values  : "; 
+cin >> n >> d;
+double sum = n / d;
+
+floorv = (int)sum;
+dd = sum - floorv;
+if (dd <= 0.4){
+    cout << " the floor is " << floorv << endl;
+}
+cailv = (int)sum;
+da = sum - cailv;
+if (da >= 0.5){
+    cout <<  " the cail is " << cailv + 1  << endl;
+}
+roundv = (int)sum;
+db = sum - roundv;
+if (db >= 0.5){
+    cout <<" the round is " << roundv + 1  << endl;
+}else {cout <<   " the round is " << roundv  << endl;}
+
+
+
+    return 0;
+}
