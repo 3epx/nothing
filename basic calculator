@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int n1 = 0;
+    char op;
+    int n2 = 0;
+    
+    cout << "enter the expration :";
+    cin >> n1 >> op >> n2; 
+    
+    if (op == '+'){cout << n1 + n2;}
+    else if (op == '-'){cout << n1 - n2;}
+    else if (op == '*'){cout << n1 * n2;}
+    else if (op == '/'){cout << n1 / n2;}
+    else {cout << "خالتك الشكرة";}
+
+
+
+    return 0;
+}
