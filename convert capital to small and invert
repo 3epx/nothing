@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char input;
+
+    cout << "Enter a character: ";
+    cin >> input;
+
+    if (input >= 'A' && input <= 'Z') {
+        char lowercase = input + 32;
+        cout << "The lowercase of " << input << " is " << lowercase << endl;
+    }
+    else if (input >= 'a' && input <= 'z') {
+        char uppercase = input - 32;
+        cout << "The uppercase of " << input << " is " << uppercase << endl;
+    }
+    else {
+        cout << input << " is neither an uppercase nor a lowercase letter." << endl;
+    }
+
+    return 0;
+}
