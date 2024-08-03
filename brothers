@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+
+string f_name;
+string s_name; 
+string f_name2;
+string s_name2; 
+
+cout << "enter the name for the first person : ";
+cin >> f_name >> s_name; cout << endl;
+cout << "enter the name for the second person : ";
+cin >> f_name2 >> s_name2; cout << endl;
+
+if (s_name2 == s_name){
+    cout << "ARE brothers";
+}else {
+    cout << "they not brothers";
+}
+
+return 0;
+}
