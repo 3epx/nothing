@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int nofn(int number){
+    int numbers;
+    int z = 0;
+    while (number == 0){
+        number / 10;
+        numbers + 1;
+    }
+    if (numbers == 0){z = 0;}
+    else if (numbers == 1){z = 10;}
+    else if (numbers == 2){z = 100;}
+    else if (numbers == 3){z = 1000;}
+    else if (numbers == 4){z = 10000;}
+    else if (numbers == 5){z = 100000;}
+    else if (numbers == 6){z = 1000000;}
+    else if (numbers == 7){z = 10000000;}
+    else if (numbers == 8){z = 100000000;}
+    return z;
+}
+int main() {
+    int evod = 0;
+    
+cout << "enter the number pls : ";
+cin >> evod; 
+
+ int n_v = nofn(evod);
+ int nn = (evod / n_v) * n_v;
+ 
+ if(nn %2 == 0){
+     cout << "the number is even";
+ }
+ else {cout << "the number is odd";}
+
+    return 0;
+}
