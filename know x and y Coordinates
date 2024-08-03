@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int x = 0;
+    int y = 0;
+    
+    cout << "enter the values please : ";
+    cin >> x >> y;
+    if (x == 0 and y == 0){cout << "نقطة الاصل";}
+    else if (x > 0 and y == 0){cout << "محور اكس الموجب";}
+    else if (x < 0 and y == 0){cout << "محور اكس السالب";}
+    else if (x == 0 and y > 0){cout << "محور واي الموجب";}
+    else if (x == 0 and y < 0){cout << "محور واي السالب";}
+    else if (x > 0 and y > 0){cout << "الربع الاول";}
+    else if (x > 0 and y > 0){cout << "الربع الاول";}
+    else if (x < 0 and y > 0){cout << "الربع الاول";}
+    else if (x < 0 and y < 0){cout << "الربع الثالث";}
+    else if (x > 0 and y < 0){cout << "الربع الرابع";}
+    
+    return 0;
+}
