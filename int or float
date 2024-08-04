@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+float number = 0; 
+
+cout << "enter the number please : ";
+cin >> number; 
+int con = int(number);
+
+if (number - con > 0){
+    cout << "the number is float : "<< con << "\t" << number - con;
+}
+else if (number - con == 0){
+    cout << "the number is integr : " << con;
+}
+}
