@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+int dayss = 0;
+
+cout << "enter the number of days : ";
+cin >> dayss;
+
+int years = dayss / 365;
+int months = dayss - years * 365;
+months = months / 30;
+int days = dayss - years * 365 - months * 30;
+
+cout << "the age is : "<< years << endl;
+cout << "and : "<< months << "months"<< endl;
+cout << "and : "<< days << "days" << endl;
+cout << "the age in hours is : " << dayss * 24<< endl;
+cout << "the age in munites is : " << dayss * 1436<< endl;
+cout << "the age in secound is : " << dayss * 86400<< endl;
+
+    return 0;
+}
