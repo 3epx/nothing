@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b =0; char op; 
+
+cout << "enter the numbers and the symbol please : ";
+cin >> a >> op >> b; 
+
+if (op == '>' and a > b){
+    cout << "right";
+}
+else if (op == '>' and a < b){
+    cout << "worng";
+}
+else if (op == '<' and a < b){
+    cout << "right";
+}
+else if (op == '<' and a > b){
+    cout << "worng";
+}
+
+}
