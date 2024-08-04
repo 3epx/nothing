@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int a =0, b=0, c=0;
+cout << "please enter the values here : ";
+cin >> a >> b >>c;
+if (a < b and a < c){cout << "the smaller number is : " << a << endl;}
+else if (b < a and b < c){cout << "the smaller number is : " << b << endl;}
+else if (c < b and c < a){cout << "the smaller number is : " << c << endl;}
+if (a > b and a < c or a < b and a > c){cout << "the medume number is : " << a << endl;}
+else if (b > a and b < c or b < a and b > c){cout << "the medume number is : " << b << endl;}
+else if (c > a and c < b or c < a and c > b){cout << "the medume number is : " << c << endl;}
+if (a > b and a > c){cout << "the bigest number is : " << a << endl;}
+else if (b > a and b > c){cout << "the bigest number is : " << b << endl;}
+else if (c > b and c > a){cout << "the bigest number is : " << c << endl;}
+cout << endl;
+if (a > b and a > c){cout << "the bigest number is : " << a << endl;}
+else if (b > a and b > c){cout << "the bigest number is : " << b << endl;}
+else if (c > b and c > a){cout << "the bigest number is : " << c << endl;}
+if (a > b and a < c or a < b and a > c){cout << "the medume number is : " << a << endl;}
+else if (b > a and b < c or b < a and b > c){cout << "the medume number is : " << b << endl;}
+else if (c > a and c < b or c < a and c > b){cout << "the medume number is : " << c << endl;}
+if (a < b and a < c){cout << "the smaller number is : " << a << endl;}
+else if (b < a and b < c){cout << "the smaller number is : " << b << endl;}
+else if (c < b and c < a){cout << "the smaller number is : " << c << endl;}
+}
