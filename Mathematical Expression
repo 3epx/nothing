@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int a = 0, b =0 , c = 0 , d = 0; char  s , q;
+    
+    cout << "enter the equision : ";
+    cin >> a >> s >> b >> q >> c;
+    
+    if(s == '+'){d = a + b;}
+    else if(s == '-'){d = a - b;}
+    else if(s == '*'){d = a * b;}
+    else if(s == '/'){d = a / b;}
+    
+    
+    if (s == '+' and d == c){cout << "Yes";}
+    else if (s == '+' and d != c){cout << a + b;}
+    else if (s == '-' and d == c){cout << "Yes";}
+    else if (s == '-' and d != c){cout << a - b;}
+    else if (s == '*' and d == c){cout << "Yes";}
+    else if (s == '*' and d != c){cout << a * b;}
+    else if (s == '/' and d == c){cout << "Yes";}
+    else if (s == '/' and d != c){cout << a / b;}
+    
+    return 0;
+}
