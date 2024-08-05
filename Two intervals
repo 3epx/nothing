@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+
+int f1 = 0 , f2 = 0 , s1 = 0 , s2 =0;
+
+cout << "enter the intervals pls : "; 
+cin >> f1 >> f2 >> s1 >> s2;
+
+
+if (f1 <= s1 and f2 >= s1){cout << s1 << "\t" << f2;}
+else if (f1 >= s1 and f2 >= s1){cout << f1 << "\t" << s2;}
+else if (f1 <= s1 and f2 >= s1){cout << f1 << "\t" << f2;}
+else if (f1 <= s1 and f2 <= s1){cout << s1 - f2;}
+else if (f1 >= s2 and f2 >= s2){cout << f1 - s2;}
+else if (f1 < s1 and f2 == s1){cout << 0;}
+
+
+
+    return 0;
+}
