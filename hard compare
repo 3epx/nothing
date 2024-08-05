@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , c = 0 , d = 0;
+
+cout << "enter the values :";
+cin >> a >> b >> c >> d;
+
+int comp1 = pow(a,b);
+int comp2 = pow(c,d);
+
+if (comp1 > comp2){cout << "A upper from B";}
+else if (comp1 == comp2){cout << "A equl B";}
+else if (comp1 < comp2){cout << "A lower from B";}
+
+
+
+
+
+    return 0;
+}
