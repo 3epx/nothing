@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , c = 0 , d =0;
+
+cout << "enter the values here : ";
+cin >> a >> b >> c >> d;
+
+int result = a * b * c * d; 
+int bb = result %100;
+cout << bb;
+
+
+
+
+    return 0;
+}
