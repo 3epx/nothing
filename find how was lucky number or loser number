@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0, f_n = 0 , s_n = 0;
+cout << "enter the number please "; 
+cin >> a;
+f_n = a%10;
+s_n = a/10;
+
+if(s_n %f_n ==0){cout << "the number is lucky";}
+else {cout << "the number is lose";}
+
+
+
+
+    return 0;
+}
