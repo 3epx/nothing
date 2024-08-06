@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+   
+   char digt; 
+   cout << "enter the digt pls : ";
+   cin >> digt;
+   int asciicon = digt + 1;
+   char charcon= asciicon;
+   cout << charcon;
+  
+    return 0;
+}
