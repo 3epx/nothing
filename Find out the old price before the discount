@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+   
+   
+   float a = 0 , b = 0; float sum = 0;
+   
+   cout << "enter the persent of the discount then enter the new price : ";
+   cin >> a >> b; 
+   a = a / 100;
+   sum = 1 - a;
+   cout <<  "old price is : " << b / sum;
+   
+    return 0;
+}
