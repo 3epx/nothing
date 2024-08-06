@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+   
+   
+   int meme = 0 , momo = 0 , k = 0;
+   
+   cout << "enter the values of memo and momo and then enter the k : ";
+   cin >> meme >> momo >> k;
+   if (meme %k == 0 and momo %k != 0){cout << "meme is win";}
+   else if (meme %k != 0 and momo %k == 0){cout << "momo is win";}
+   else if (meme %k == 0 and momo %k == 0){cout << "both are win";}
+   else if (meme %k != 0 and momo %k != 0){cout << "both is lose";}
+   
+   
+   
+   
+   
+   
+    return 0;
+}
