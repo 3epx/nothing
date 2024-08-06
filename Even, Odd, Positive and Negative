@@ -17,7 +17,6 @@ int limit = 0;
      if (mahmood %2 != 0){odd++;}
      if (mahmood < 0){negtive--;}
      if (mahmood > 0){postive++;}
-     if (mahmood == 07711674617){break;}
      i++;
  }
  cout << "the numbers in postive side is : " << postive <<endl;
