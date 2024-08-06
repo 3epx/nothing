@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int even = 0, odd = 0, postive = 0 , negtive = 0 , i =0;
+
+int limit = 0;
+    cout << "enter the numbers please : ";
+    cin >> limit; 
+ 
+ while (limit >= i){
+     int mahmood = 0; 
+     cout << "enter the number : ";
+     cin >> mahmood;
+     
+     if (mahmood %2 == 0){even++;}
+     if (mahmood %2 != 0){odd++;}
+     if (mahmood < 0){negtive--;}
+     if (mahmood > 0){postive++;}
+     if (mahmood == 07711674617){break;}
+     i++;
+ }
+ cout << "the numbers in postive side is : " << postive <<endl;
+ cout << "the numbers in negtive side is : " << negtive <<endl;
+ cout << "the numbers in even side is : " << even <<endl;
+ cout << "the numbers in odd side is : " << odd <<endl;
+
+    return 0;
+}
