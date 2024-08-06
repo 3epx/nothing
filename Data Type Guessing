@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+int ahmed = 0 , majed = 0 , ali = 0 , sumcon = 0; double sum = 0 , sumsub = 0;
+cout << "enter the numbers pls :"; 
+cin >> ahmed >> majed >> ali;]
+sum = ahmed * majed; 
+sum = sum / ali;
+sumcon = sum; 
+sumsub = sum - sumcon; 
+if (sumsub > 0){cout << "the number is double" << sum << endl;}
+else if (sumsub == 0){cout << "the number is intger : " << sum << endl;}
+if (sum > 1000) {cout << "the number is long";}
+
+
+
+
+    return 0;
+}
