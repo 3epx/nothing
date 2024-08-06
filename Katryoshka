@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+  //هنا المتغيرات اللي المستخدم يحط بيها العدد مال عيون والخشم والجسم
+int eye = 0 , month = 0 , body = 0; 
+
+  //هنا نكول للمستخدم يحط العيون وبعدها الخشم وبعدها الجسم
+
+cout << "enter the number of the eyes : ";
+cin >> eye;cout << endl;
+cout << "enter the number of the months : ";
+cin >> month;cout << endl;
+cout << "enter the number of the bodys : ";
+cin >> body;cout << endl;
+eye = eye / 2; 
+
+  //هنا نحط شروط على الاقل يعني اذا جانت العيون اقل شي فعدد الاجسام يصير حسب العيون او اذا الاجسام قليلة وباقي الاشياء كثيرة فعدد الاجسام هو اللي راح يصير او اذا الخشوم قليلة وباقي الاشياء كثرة فراح ناخذ الاقل اللي هو عدد الخشوم,, المهم ناخذ اقل شي
+
+if (body <= eye and body <= month){cout << "the largest of full body you can make is : " << body;}
+else if (eye <= body and eye <= month){cout << "the largest of full body you can make is : " << eye;}
+else if (month <= body and month <= eye){cout << "the largest of full body you can make is : " << month;}
+
+
+    return 0;
+}
