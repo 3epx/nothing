@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+   
+   
+   int a =0 , b =0 , c = 0 , d =0;
+   cout << "enter the 3 valuse and then result : ";
+   cin >> a >> b >> c >> d;
+   
+   if (a-b+c == d){cout << "Yes";}
+   else if (a-b*c == d){cout << "Yes";}
+   else if (a*b-c == d){cout << "Yes";}
+   else if (a*b+c == d){cout << "Yes";}
+   else if (a+b*c == d){cout << "Yes";}
+   else if (a+b-c == d){cout << "Yes";}
+   else {cout << "No";}
+
+
+    return 0;
+}
