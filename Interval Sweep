@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main() {
+   
+   
+   int a =0 , b =0 , odd = 0 , even = 0;
+   cout << "enter the intervals here : ";
+   cin >> a >> b;cout << endl;
+   
+   if (a <= b)
+   while (a <= b){
+       if (a %2 != 0){odd++;}
+       else if (a %2 == 0){even++;}
+       a++;
+   }
+else if (a >= b){
+    while (b <= a){
+       if (b %2 != 0){odd++;}
+       else if (b %2 == 0){even++;}
+       b++;
+   }
+}
+   
+   int u_odd = 0, u_even = 0;
+   
+   cout << "enter the odd intervals : ";
+   cin >> u_odd; cout << endl;
+   cout << "enter the even intervals : ";
+   cin >> u_even; cout << endl;
+   
+   if (u_odd == odd and u_even == even){cout << "Yes , the intervals is correct";}
+   else {
+       cout << "No , the intervals not compare";
+       cout << "the correct intervals of odd is " << odd << " and even is " << even;}
+   
+    return 0;
+}
