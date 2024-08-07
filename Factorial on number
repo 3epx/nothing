@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int number = 0 , sum = 1;
+cout << "enter the number : ";
+cin >> number;
+for(int i = 1; i <=number ; i++){
+    sum = sum * i;
+}
+cout << "the factorial of ( " << number << " ) is : ( " << sum << " )";
+
+}
