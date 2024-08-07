@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int bigc1 = 0, bigc2 = 0, gcd = 0;
+    
+    int number1 = 0 , number2 = 0;
+    cout << "enter the small number then the big number pls :";
+    cin >> number1 >> number2;
+    
+   for (int u = 1; u <= number1; u++){
+        if (number1 %u == 0){bigc1 = u;}
+        else {continue;}
+        if (number1 %bigc1 == 0 and number2 %bigc1 == 0){gcd = bigc1;}
+    }
+    for (int i = 1; i <= number2; i++){
+        if (number2 %i == 0){bigc2 = i;}
+        else {continue;}
+        if (number1 %bigc2 == 0 and number2 %bigc2 == 0){gcd = bigc2;}
+    }
+
+        if (number1 %bigc1 == 0 and number2 %bigc1 == 0){gcd = bigc1;}
+
+    cout << "the gcd is : " << gcd;
+    return 0;
+}
