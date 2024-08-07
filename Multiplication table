@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int nomt = 0 , nom = 0;
+cout << "enter the number of the  Multiplication table : ";
+cin >> nomt;
+cout << "enter the limit for the table : ";
+cin >> nom;
+
+for(int i = 0; i <= nom ; i++){
+    cout << i << " x " << nomt << " = " << i * nomt;cout << endl;
+}
+
+
+}
