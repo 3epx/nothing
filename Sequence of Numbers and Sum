@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n1 = 0 , n2 = 0 , sum = 0 , numbers = 0; 
+
+cout << "enter the number of number pls : "; 
+cin >> numbers; 
+
+for (int i = 1; i <= numbers; i++){
+cout << "enter the number pls : ";
+cin >> n1 >> n2; 
+if (n1 > n2){
+    while (n1 >= n2){
+        sum = sum + n2; 
+        cout << n2 << " ";
+        n2++;
+    }cout << " = " << sum; 
+}else if (n1 < n2){ 
+    while (n1 <= n2){
+        sum = sum + n1; 
+        cout << n1 << " ";
+        n1++;
+    }cout << " = " << sum; 
+}
+cout << endl;
+}
+    return 0;
+}
