@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int number = 0;
+char symobl;
+int nono = 0;
+cout << "enter the symbol :";
+cin >> symobl;
+cout << "enter the number of numbers :";
+cin >> number;
+
+for (int i = 1; i <= number; i++){
+    cin >> nono;
+    for (int u = 1; u <= nono; u++){
+        cout << symobl;
+    }
+    cout << endl;
+}
+
+    return 0;
+}
