@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int number = 0;
+cout << "enter the number pls : ";
+cin >> number;
+for(int i = 0; i<= number; ){
+    for ( int u = 1; number >=u ; u++){
+        cout << "*";
+    }cout << endl;
+    number--;
+}
+
+
+    return 0;
+}
