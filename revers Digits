@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int hmn(int a){
+     int i = 0;
+    while (a != 0){
+        a = a / 10;
+        i++;
+    }
+    return i;
+}
+int main() {
+
+int number = 0, numbers = 0, mly = 10 , check = 0, devid = 1, z = 0;
+cout << "enter the number ";
+cin >> numbers;
+
+    for (int i = 1; i <= numbers ; i++){
+    cout << "enter the number pls : ";
+    cin >> number;
+    int hmnn = hmn(number);
+    for(int i = 0; i < hmnn; i++){
+        check = number %mly;
+        check = check / devid;
+        z  = check;
+        cout << z << " ";
+        devid = devid * 10;
+        mly = mly * 10;
+        
+    } cout << endl;
+        devid = 1;
+        mly = 10;
+    }
+
+}
