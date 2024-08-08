@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int hmn(int a){
+     int i = 0;
+    while (a != 0){
+        a = a / 10;
+        i++;
+    }
+    return i;
+}
+int main() {
+
+int number = 0, mly = 10 ,check = 0, devid = 1, z = 0;
+cout << "enter the number pls : ";
+cin >> number;
+int hmnn = hmn(number);
+
+if (hmnn >= 1){
+    for(int i = 0; i < hmnn; i++){
+        check = number %mly;
+        check = check / devid;
+        z  = check;
+        devid = devid * 10;
+        mly = mly * 10;
+        if (z == 1 or z ==2 or z ==3 or z ==5 or z ==6 or z ==8 or z ==9 or z ==0){cout << "the number is lose ";break;}
+    }
+}
+if (z == 7 or z == 4){cout << "the number is lucky ";}
+    return 0;
+}
