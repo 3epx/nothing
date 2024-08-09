@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0, b = 0;
+    cout << "enter the numbers  : ";
+    cin >> a >> b;
+    cout << "the average is : " << (a + b)/2 << endl;
+    
+    return 0;
+}
