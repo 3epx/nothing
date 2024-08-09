@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+int n1 = 0 , n2 = 1, sum= 1  , number = 0;
+    cout << "enter the number pls :";
+    cin >> number;
+    
+    for (int i = 1; i<= number; i++){
+        cout << sum << " ";
+        sum = n1 + n2; 
+        n1 = n2; 
+        n2 = sum;   
+    
+    
+    return 0;
+}
