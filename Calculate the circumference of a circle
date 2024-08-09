@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0;
+    cout << "enter the number : ";
+    cin >> a;
+    cout << "the tall of circumference is : " << 3.14 * a;
+    return 0;
+}
