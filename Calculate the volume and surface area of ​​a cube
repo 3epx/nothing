@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0;
+    cout << "enter the number : ";
+    cin >> a;
+    cout << "the Cube volume is : " << a * a * a << endl;
+    cout << "the Cubic surface area is : " << 6 * (a * a);
+    return 0;
+}
