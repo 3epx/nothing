@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0;
+    cout << "enter the number  : ";
+    cin >> a;
+    cout << "the length of circumference is : " << 2 * 3.14 * a << endl;
+    cout << "the surface area of a circle is  : " << 3.14 * a * a;
+    return 0;
+}
