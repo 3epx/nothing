@@ -1,0 +1,46 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int hmn(int number){
+    int h = 1;
+    for (int i = 1; i<= number ; i++){
+        number = number / 10;
+        h++;
+    }
+    return h;
+}
+int main() {
+
+int number = 0, sum = 0 , summmm = 0 , tsn = 0 , a = 0 , b = 0 , dev = 1 , devt = 10;
+
+cout << "enter the number pls : ";
+cin >> number; 
+cout << "enter the small interval then big pls : ";
+cin >> a >> b;
+
+for (int i = 1; i <= number; i++){
+    int z = hmn(number);
+    if (i < 10 and i >= a and i <= b){
+        sum = sum + i;
+    }
+
+    if (i >= 10){
+        for (int u = 1; u < z ; ++u){
+            tsn = i; 
+            tsn = tsn %devt;
+            tsn = tsn /dev;
+            summmm = summmm + tsn;
+            dev = dev * 10;
+            devt = devt * 10;
+        }
+        if (summmm >= a and summmm <= b){sum = sum + i;}
+        dev = 1;
+        devt = 10;
+        summmm = 0;
+    }
+}
+cout << "the number is : "<< sum;
+
+
+    return 0;
+}
