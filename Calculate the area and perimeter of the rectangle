@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0 , b =0 ;
+    cout << "enter the tall of two sides : ";
+    cin >> a >> b;
+    cout << "the Area of the rectangle is : " << a * b << endl;
+    cout << "the perimeter of the rectangle is : " << 2 * (a + b) << endl;
+    return 0;
+}
