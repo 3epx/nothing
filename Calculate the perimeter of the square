@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0;
+cout << "enter the tall of side : ";
+cin >> a; 
+cout << a * 4;
+
+    
+    return 0;
+}
