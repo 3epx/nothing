@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int a = 0, b = 0;
+    cout << "enter the numbers  : ";
+    cin >> a >> b;
+    cout << "The sum of the squares of two numbers is : " << (a * a) + (b * b);
+    cout << endl;
+    cout << "The difference of the squares of two numbers is " << (a * a) - (b * b);
+    cout << endl;
+    cout << "The product of the square of the two numbers" << (a * a) * (b * b);
+    cout << endl;
+    cout << "The ratio of the squares of two numbers" << (a * a) / (b * b);
+    
+    return 0;
+}
