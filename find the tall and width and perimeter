@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+    int tall = 0, width = 0, perimeter = 0;
+    cout << "enter x1 then y1 : " << endl;
+    cin >> x1 >> y1;
+    cout << "enter x2 then y2 : " << endl;
+    cin >> x2 >> y2;
+    width = x1 - x2;
+    if (width < 0) { cout << width * -1; }
+    cout << "the width is : " << width << endl;
+    tall = y1 - y2;
+    if (tall < 0) { cout << tall * -1; }
+    cout << "the width is : " << tall << endl;
+    perimeter = 2 * (width + tall);
+    cout << "the perimeter is " << perimeter << endl;
+
+
+    return 0;
+}
