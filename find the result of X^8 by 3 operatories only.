@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+  
+    int x = 0;
+    cout << "enter the value of x : ";
+    cin >> x; cout << endl;
+
+    x = x * x;
+    cout << "the reult of X^2 is : " << x << endl;
+    x = x * x; 
+    cout << "the reult of X^4 is : " << x << endl;
+    x = x * x;
+    cout << "the reult of X^8 is : " << x << endl;
+
+
+
+    return 0;
+
+}
