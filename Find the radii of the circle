@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+	int r1 = 0, r2 = 0;
+	cout << "enter the numbers : ";
+	cin >> r1 >> r2;
+
+	int s1 = 3.14 * (r1 * r1);
+	cout << "the area of s1 is : " << s1 << endl;
+	int s2 = 3.14 * (r2 * r2);
+	cout << "the area of s2 is : " << s2 << endl;
+	int s3 = s1 - s2;
+	cout << "the area of s3 is : " << s3 << endl;
+
+	
+
+}
