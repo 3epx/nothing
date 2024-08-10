@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+    // you can calculate the equsion (y = 4 * (x-3)^6 - 7*(x-3)^2 -2) by this code;
+
+    int x = 0 , y = 0;
+    cout << "enter the value of x : ";
+    cin >> x;
+
+    y = 4 * pow((x - 3), 6) - 7 * pow((x-3), 2) + 2;
+
+    cout << "the result of the equation is y = " << y;
+
+
+    return 0;
+
+}
