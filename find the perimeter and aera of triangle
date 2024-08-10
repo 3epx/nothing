@@ -1,0 +1,47 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+    int x1 = 0, x2 = 0, x3 = 0, y1 = 0, y2 = 0, y3 = 0, d1 = 0, d2 = 0, d3 = 0, d4 = 0, d5 = 0, d6 = 0;
+    cout << "enter the x1 and y1 points : ";
+    cin >> x1 >> y1;
+    cout << endl;
+    cout << "enter the x2 and y2 points : ";
+    cin >> x2 >> y2;
+    cout << endl;
+    cout << "enter the x3 and y3 points : ";
+    cin >> x3 >> y3;
+    cout << endl;
+    // هنا المسافة بين النقطين  (x2 , x1) و (y2 - y1)
+    d1 = x2 - x1;
+    if (d1 < 0) { d1 = d1 * -1; }
+    d1 = pow(d1 , 2);
+    d2 = y2 - y1;
+    if (d2 < 0) { d2 = d2 * -1; }
+    d2 = pow(d2 , 2);
+    // هنا المسافة بين النقطين  (x3 , x2) و (y3 - y2)
+    d3 = y3 - y2;
+    if (d3 < 0) { d3 = d3 * -1; }
+    d3 = pow(d3 , 2);
+    d4 = x3 - x2;
+    if (d4 < 0) { d4 = d4 * -1; }
+    d4 = pow(d4 , 2);
+    // هنا المسافة بين النقطين  (x3 , x1) و (y3 - y1)
+    d5 = y3 - y1;
+    if (d5 < 0) { d5 = d5 * -1; }
+    d5 = pow(d3 , 2);
+    d6 = x3 - x1;
+    if (d6 < 0) { d6 = d6 * -1; }
+    d6 = pow(d6 , 2);
+    int p1 = sqt(d1 + d2);
+    int p2 = sqrt(d3 + d4);
+    int p3 = sqrt(d5 + d6);
+    int p = p1 + p2 + p3;
+    cout << "the valume of the perimeter is : " << p << endl;
+    cout << "the size of area is : " << (p1 + p2 + p3) / 2 << endl;
+
+    return 0;
+
+}
