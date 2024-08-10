@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+
+	int s = 0;
+	cout << "enter the area of the circle : ";
+	cin >> s;
+	int r = s / 3.14; 
+	r = sqrt(r);
+	int l = 2 * 3.14 * r;
+	int d = l / 3.14;
+	cout << "the diameter is : " << d << endl;
+	int ss = 3.14 * d * d / 4;
+	cout << "the lenth of circumferenace is : " << ss << endl;
+
+
+
+}
+
+
