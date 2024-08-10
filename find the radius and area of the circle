@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+	int l = 0;
+	cout << "enter the number : ";
+	cin >> l;
+	int r = l / 6.28;
+	cout << "the value of the redus is : " << r;
+	cout << "the area of the circle is :" << 3.14 * r *r;
+}
