@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0, b = 0;
+cout << "enter the numbers pls : ";
+cin >> a >> b;
+
+int sum = b - a;
+if (sum < 0){sum = sum * -1;}
+cout << "the dstance between the points is : " << sum;
+
+    return 0;
+}
