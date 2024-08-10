@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+  
+    int x = 0;
+    cout << "enter the temperature in Fahrenheit : ";
+    cin >> x; cout << endl;
+    
+    cout << "the temperature in centigrade is : " << (x * 5 / 9) + 32;
+
+    return 0;
+
+}
+
+
+
