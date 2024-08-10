@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+  
+    int x = 0, a = 0, y = 0;
+    cout << "enter the amount of a in kg: ";
+    cin >> x; cout << endl;
+    cout << "enter the price of this amount : ";
+    cin >> a; cout << endl;
+    cout << "enter the amount of sweet to calc it's price : ";
+    cin >> y;
+    a = a / x;
+    cout << "the price of the sweet have " << y << "kg is " << a * y;
+
+    return 0;
+
+}
+
+
+
