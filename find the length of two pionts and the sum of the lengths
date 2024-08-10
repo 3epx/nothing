@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0, b = 0, c = 0;
+cout << "enter the numbers pls : ";
+cin >> a >> b >> c;
+int l1 = a * c , l2 = b * c;
+
+cout << "the length of AC is : "<< l1 << endl;
+cout << "the length of BC is : "<< l2 << endl;
+int sum = l1 + l2;
+cout << "the sum of lengths points is : " << sum << endl;
+
+    return 0;
+}
