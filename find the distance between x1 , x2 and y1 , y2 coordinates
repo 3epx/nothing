@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+    int x1 = 0, y1 = 0, x2 = 0, y2 = 0, dx = 0, dy = 0;
+    cout << "enter the x1 and x2 points : ";
+    cin >> x1 >> x2;
+    cout << endl;
+    cout << "enter the y1 and y2 points : ";
+    cin >> y1 >> y2;
+    cout << endl;
+
+    dx = x2 - x1;
+    if (dx < 0) { dx = dx * -1; }
+    dx = sqrt(dx);
+    dy = y2 - y1;
+    if (dy < 0) { dy = dy * -1; }
+    dy = sqrt(dy);
+    cout << "the distance between the points is : " << sqrt(dx + dy);
+
+    return 0;
+
+}
