@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+
+	int a = 0, b = 0;
+	cout << "enter the numbers : ";
+	cin >> a >> b;
+
+	int c = (a * a + b * b);
+	c = sqrt(c);
+	cout << "the hypotenuse is : "<<  c << endl;
+	int p = a + b + c;
+	cout << "the perimeter is : " << p;
+
+}
