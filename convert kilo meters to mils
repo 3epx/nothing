@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    float a = 0; 
+
+
+    cout << "enter the number in kilo meter : ";
+    cin >> a;
+    float b = a * 0.621371192;
+    cout << " the number of the mails is : " << b;
+
+
+    return 0;
+
+}
