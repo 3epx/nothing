@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+  
+    int x = 0;
+    cout << "enter the value of x : ";
+    cin >> x; cout << endl;
+    int x2 = x;
+    x = x * x;
+    cout << "the reult of X^2 is : " << x << endl;
+    x2 = x * x * x2; 
+    cout << "the reult of X^5 is : " << x2 << endl;
+    x = x2 * x2;
+    cout << "the reult of X^10 is : " << x << endl;
+    x2 = x * x2;
+    cout << "the reult of X^15 is : " << x2 << endl;
+
+    cout << endl;
+
+
+    return 0;
+
+}
