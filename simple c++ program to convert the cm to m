@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+  
+    float a = 0; 
+
+
+    cout << "enter the number in centemeter : ";
+    cin >> a;
+    float b = a / 100;
+    cout << " the number of the meters is : " << b;
+
+
+    return 0;
+
+}
