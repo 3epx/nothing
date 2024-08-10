@@ -1,0 +1,16 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+
+  
+    int x = 0;
+    cout << "enter the value of x : ";
+    cin >> x; cout << endl;
+    
+    cout << "dgrees to redius : " << x * 180 / 3.14;
+
+
+    return 0;
+
+}
