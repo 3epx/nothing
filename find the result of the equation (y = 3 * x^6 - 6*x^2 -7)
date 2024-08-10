@@ -1,0 +1,21 @@
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+    // you can calculate the equsion (y = 3 * x^6 - 6*x^2 -7) by this code;
+
+    int x = 0 , y = 0;
+    cout << "enter the value of x : ";
+    cin >> x;
+
+    y = 3 * pow(x, 6) - 6 * pow(x, 2) - 7;
+
+    cout << "the result of the equation is y = " << y;
+
+
+    return 0;
+
+}
