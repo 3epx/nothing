@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    int a = 0, b = 0, c = 0 , pr = 0;
+    cout << "enter the values of a then b then c : ";
+    cin >> a >> b >> c;
+    pr = b;
+    c = a;
+    b = c;
+    a = pr;
+
+    cout << "the value of a is : " << a << endl;
+    cout << "the value of b is : " << b << endl;
+    cout << "the value of c is : " << c << endl;
+
+    return 0;
+
+}
