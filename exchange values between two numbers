@@ -1,0 +1,18 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int a = 0, b = 0;
+
+    cout << "entet the values of the a and b : ";
+    cin >> a >> b;
+    // a = 5 , b = 3;
+    a = a + b;
+    b = a - b;
+    a = a - b; 
+    cout << "the new values of a is " << a << " and b is " << b;
+
+    return 0;
+
+}
