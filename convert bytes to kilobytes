@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    float a = 0; 
+
+
+    cout << "enter the number in bytes : ";
+    cin >> a;
+    float b = a / 1024;
+    cout << " the number of the kilo bytes is : " << b;
+
+
+    return 0;
+
+}
