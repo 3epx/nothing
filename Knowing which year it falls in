@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int year = 0;
+cout << "enter the year pls : ";
+cin >> year;
+year = year / 100; 
+year = year + 1; 
+cout << "the year falls in the : " << year << " Century";
+
+    return 0;
+}
