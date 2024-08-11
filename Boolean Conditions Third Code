@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+int a = 0, b = 0 , c = 0;
+
+cout << "enter the numbers in paralell a then b then c: ";
+cin >> a >> b >> c;
+
+bool result = (a < b) and (b < c);
+cout << "the result is : " << result;
+
+    return 0;
+}
