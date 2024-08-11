@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+     int a = 0 , b = 0; 
+
+    cout << "enter the number A then B : ";
+    cin >> a >> b;
+    float u = a %b;
+    cout << "The remaining number of area A is : " << u;
+
+
+    return 0;
+
+}
