@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+ 
+ int n1 = 0, n2 = 0; 
+ cout << "enter first number : ";
+ cin >> n1; 
+ cout << "enter second number : ";
+ cin >> n2;
+ 
+ cout << "the sum of this numbers is : " << n1 + n2 << endl;
+ cout << "the product of this number is : " << n1 * n2 << endl;
+ 
+ 
+    return 0;
+}
