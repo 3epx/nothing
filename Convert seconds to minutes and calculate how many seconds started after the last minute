@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int s = 0;int min = 0;
+cout << "enter the number of seconds : ";
+cin >> s;
+min = s / 60;
+s = s %min;
+
+cout << "The number of seconds starting from the last minute is : " << s << endl;
+
+
+    return 0;
+}
