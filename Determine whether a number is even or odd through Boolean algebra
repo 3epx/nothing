@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+// ااذا كان الرقم فردي سوف تكون النتيجة 1 واذا كان زوجي فان النتيجة 0
+
+    int number = 0;
+    cout << "enter the number pls : ";
+    cin >> number;
+    bool u = number%2 == 1;
+    cout << "Is the number :  " << u << std::endl;
+
+    return 0;
+}
