@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n = 0;
+cout << "enter the number : ";
+cin >> n;
+n = n %1000;
+n = n / 100;
+cout << "the number is  : " << n << endl;
+
+
+    return 0;
+}
