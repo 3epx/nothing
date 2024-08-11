@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n = 0 , nn = 0 , hn = 0; // 123 --> 213
+cout << "enter the numbers in parallel : ";
+cin >> n;
+hn = n; 
+nn = n %10;
+n = n %100;
+n = n /10;
+n = n * 100;
+hn = hn /100 * 10; 
+nn = nn + hn + n;
+
+cout << "the revers number is  : " << nn << endl;
+
+
+    return 0;
+}
