@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+// rectangle algorithm
+int l1 = 0, l2 = 0;
+// square algorithm
+int a = 0;
+int b = 0;
+cout << "Enter the measurements of the sides of the rectangle, one and then the second : ";
+cin >> l1 >> l2;
+cout << "enter the side of the squre : "; 
+cin >> a;
+l1 = l1 * l2;
+a = a * a;
+b = l1 / a;
+b = b * 16;
+l1 = l1 - b;
+cout << "the number of squer is : " << b << endl;
+cout << "The remainder of the number is : " << l1 << endl;
+
+    return 0;
+}
