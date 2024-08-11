@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int a = 0; 
+    cout << "enter the numbers pls : ";
+    cin >> a;
+    float b = a/10;
+    bool result = (b >= 1) && (a %2 == 0); 
+    cout << result; 
+    
+    
+    return 0;
+}
