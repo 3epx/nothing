@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+ 
+ int n = 0; 
+ cout << "enter the number : "; // 56 
+ cin >> n; 
+ 
+n = n / 100; 
+ 
+ cout << "the revers number is : " << n;
+
+ 
+    return 0;
+}
