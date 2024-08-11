@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+float s = 0;float m = 0;
+cout << "enter the number of seconds : ";
+cin >> s;
+m = s / 60;
+cout << "the number of minutes is  : " << m << endl;
+
+
+    return 0;
+}
