@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int sunday = 1 , Monday = 2, Tuesday = 3 , Wednesday = 4 , Thursday = 5 , Friday  = 6 , Saturday =7;
+int day = 0;
+cout << "enter the day between 1 and 365 : ";
+cin >> day;
+
+for (int i = 1; i <= day; i++){
+    
+    if (day == sunday){cout << "This day falls on Sunday";break;}
+    else if (day == Monday){cout << "This day falls on Monday";break;}
+    else if (day == Tuesday){cout << "This day falls on Tuesday";break;}
+    else if (day == Wednesday){cout << "This day falls on Wednesday";break;}
+    else if (day == Thursday){cout << "This day falls on Thursday";break;}
+    else if (day == Friday){cout << "This day falls on Friday";break;}
+    else if (day == Saturday){cout << "This day falls on Saturday";break;}
+    for (int a = 0; a < sunday ; ){
+        sunday +=7;
+        break;
+    }
+    for (int b = 0; b < Monday ; ){
+        Monday +=7;
+        break;
+    }
+    for (int c = 0; c < Tuesday ; ){
+        Tuesday +=7;
+        break;
+    }
+    for (int d = 0; d < Wednesday ; ){
+        Wednesday +=7;
+        break;
+    }
+    for (int e = 0; e < Thursday ; ){
+        Thursday +=7;
+        break;
+    }
+    for (int f = 0; f < Friday ; ){
+        Friday +=7;
+        break;
+    }
+    for (int g = 0; g < Saturday ; ){
+        Saturday +=7;
+        break;
+    }
+    
+}
+    return 0;
+}
