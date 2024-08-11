@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int sunday = 0 , Monday = 0, Tuesday = 0 , Wednesday = 0 , Thursday = 0 , Friday  = 0 , Saturday = 0;
+int day = 0;
+int dayy = 0;
+cout << "enter the day between 1 and 365 : ";
+cin >> day;
+cout << "in 1 day of year what the day of weak in this day : " <<endl;
+cout << "1. sunday\n2. Monday\n3. Tuesday\n4. Wednesday\n5. Thursday\n6. Friday\n7. Saturday "<< endl;
+cout << "chose any day from this days above, only write number of day : ";
+cin >> dayy;
+
+if (dayy == 1){sunday = 1 , Monday = 2, Tuesday = 3 , Wednesday = 4 , Thursday = 5 , Friday  = 6 , Saturday = 7;}
+else if (dayy == 2){sunday = 7 , Monday = 1, Tuesday = 2 , Wednesday = 3 , Thursday = 4 , Friday  = 5 , Saturday = 6;}
+else if (dayy == 3){sunday = 6 , Monday = 7, Tuesday = 1 , Wednesday = 2 , Thursday = 3 , Friday  = 4 , Saturday = 5;}
+else if (dayy == 4){sunday = 5 , Monday = 6, Tuesday = 7 , Wednesday = 1 , Thursday = 2 , Friday  = 3 , Saturday = 4;}
+else if (dayy == 5){sunday = 4 , Monday = 5, Tuesday = 6 , Wednesday = 7 , Thursday = 1 , Friday  = 2 , Saturday = 3;}
+else if (dayy == 6){sunday = 3 , Monday = 4, Tuesday = 5 , Wednesday = 6 , Thursday = 7 , Friday  = 1 , Saturday = 2;}
+else if (dayy == 7){sunday = 2 , Monday = 3, Tuesday = 4 , Wednesday = 5 , Thursday = 6 , Friday  = 7 , Saturday = 1;}
+else {cout << "worng";}
+
+for (int i = 1; i <= day; i++){
+    
+    if (day == sunday){cout << "This day falls on Sunday";break;}
+    else if (day == Monday){cout << "This day falls on Monday";break;}
+    else if (day == Tuesday){cout << "This day falls on Tuesday";break;}
+    else if (day == Wednesday){cout << "This day falls on Wednesday";break;}
+    else if (day == Thursday){cout << "This day falls on Thursday";break;}
+    else if (day == Friday){cout << "This day falls on Friday";break;}
+    else if (day == Saturday){cout << "This day falls on Saturday";break;}
+    for (int a = 0; a < sunday ; ){
+        sunday +=7;
+        break;
+    }
+    for (int b = 0; b < Monday ; ){
+        Monday +=7;
+        break;
+    }
+    for (int c = 0; c < Tuesday ; ){
+        Tuesday +=7;
+        break;
+    }
+    for (int d = 0; d < Wednesday ; ){
+        Wednesday +=7;
+        break;
+    }
+    for (int e = 0; e < Thursday ; ){
+        Thursday +=7;
+        break;
+    }
+    for (int f = 0; f < Friday ; ){
+        Friday +=7;
+        break;
+    }
+    for (int g = 0; g < Saturday ; ){
+        Saturday +=7;
+        break;
+    }
+    
+}
+    return 0;
+}
