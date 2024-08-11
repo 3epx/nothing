@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+ 
+ int n = 0 , u = 0; 
+ cout << "enter The number : "; // 56 
+ cin >> n; 
+ 
+ u = n %10;
+ u = u * 10;
+ n = n /10;
+ u = u + n;
+ 
+
+ cout << "the revers number is : " << u;
+
+ 
+    return 0;
+}
