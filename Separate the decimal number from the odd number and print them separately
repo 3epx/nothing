@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+ 
+ int number = 0; 
+ cout << "enter a numbrt has a two digts : ";
+ cin >> number; 
+ cout << endl;
+ cout << "the ten number is : " << number/10 << endl; 
+ cout << "the one number is : " << number%10 << endl;
+ 
+    return 0;
+}
