@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n1 = 0 , n2 = 0 , n3 = 0;
+cout << "enter the numbers in parallel : ";
+cin >> n1 >> n2 >> n3;
+
+cout << "the sum of this numbers is : " << n1 + n2 + n3 << endl;
+cout << "the produact os this number is : " << n1 * n2 * n3 << endl;
+
+
+    return 0;
+}
