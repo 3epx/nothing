@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    // 1 = 2 black or 2 white , 0 = one black and one white
+    
+    
+    int  x = 0 , y = 0 , x1 = 0 , y1 = 0;
+    cout << "enter the coordinates of first squre : "; 
+    cin >> x >> y;
+    x = x+y;
+    cout << "enter the coordinates of second squre : "; 
+    cin >> x1 >> y1;
+    x1 = x1+y1;
+    bool result = (x %2 == 0) and (x1 %2 == 0) or (x %2 == 1) and (x1 %2 == 1); 
+    cout << result;
+    return 0;
+}
