@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+int number = 0, p = 0 , pp = 0;
+cout << "enter the number pls : ";
+cin >> number; 
+
+p = number % 10;
+p = p * 10;
+pp = number %100;
+pp = pp / 10;
+pp = p + pp;
+int u = number / 100;
+
+bool result = (u >= pp);
+cout << result;
+
+    return 0;
+}
