@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+int number = 0, a = 0 , b = 0 , c = 0;
+cout << "enter the number pls : ";
+cin >> number;
+a = number / 100;
+b = number %100;
+b = b /10;
+c = number %10;
+
+bool result = a < b and b < c or a > b and b > c;
+cout << result;
+
+    return 0;
+}
