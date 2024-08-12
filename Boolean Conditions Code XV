@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int a = 0 , b = 0 , c = 0; 
+    cout << "enter the numbers pls : ";
+    cin >> a >> b >> c;
+    int u1 = a - a * 2; // c . b
+    int u2 = b - b * 2; // a . c
+    int u3 = c - c * 2; // a . b
+    
+    bool result =  (b == u1) or (c == u1) or (a == u2) or (c == u2) or (a == u3) or (b == u3);
+  
+  cout << result;
+    return 0;
+}
+
+
+
