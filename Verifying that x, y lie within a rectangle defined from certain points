@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    int x = 0 , y = 0 , x1 = 0 , y1 = 0 , x2 = 0 , y2 =0;
+    cout << "enter the values of x and y : ";
+    cin >> x >> y;
+    cout << "enter the values of x1 and y1 : ";
+    cin >> x1 >> y1;
+    cout << "enter the values of x2 and y2 : ";
+    cin >> x2 >> y2;
+    bool result = (x2 >= y) and (y >= y2) and (y1 >= y) and (y >= y2);
+    cout << result;
+
+    return 0;
+}
