@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int a = 0 , b = 0 , c = 0;
+    cout << "enter the numbers a then b then c : ";
+    cin >> a >> b >> c;
+    a = a*a;
+    b = b*b;
+    c = c*c;
+    
+    bool result = (a == b + c) or (b = a + c) or (c = a + b);
+    cout << result;
+    return 0;
+}
