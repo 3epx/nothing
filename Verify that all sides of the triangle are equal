@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+int a = 0 , b = 0 , c =0; 
+
+cout << "enter the sides of the tringle : ";
+cin >> a >> b >> c;
+bool result = a == b and a == c;
+cout << result;
+
+    return 0;
+}
