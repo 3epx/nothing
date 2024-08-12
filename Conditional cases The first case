@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+   int number = 0;
+   cout << "enter the number pls : ";
+   cin >> number; 
+   
+   if (number >= 1){cout << number + 1 << endl;cout << "orignal number is " << number;}
+   else if (number < 0){cout << number - 2 << endl;cout << "orignal number is " << number;}
+   else if (number == 0) {cout << 10 << endl;cout << "orignal number is " << number;}
+   
+   
+    return 0;
+}
