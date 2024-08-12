@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int  x = 0 , y = 0 , x1 = 0 , y1 = 0;
+    cout << "enter the coordinates of first squre : "; 
+    cin >> x >> y;
+    cout << "enter the coordinates of second squre : "; 
+    cin >> x1 >> y1;
+    int dx = x1 - x;
+    int dy = y1 - y;
+    bool result = (1 >= dx) && (dx >= 0)or (1 >= dy) && (dy >=0); 
+    cout << result;
+    return 0;
+}
