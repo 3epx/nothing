@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0; float f = 0; 
+cout << "enter the value of x : ";
+cin >> x;
+
+if (x <=0){f = -x;}
+else if (x < 2 and x > 0){f = x*x;}
+else if (x >=2){f = 4;}
+
+cout << "resut is : " << f;
+
+
+    return 0;
+}
