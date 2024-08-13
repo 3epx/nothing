@@ -1,0 +1,25 @@
+برنامج ياخذ رقمين ويرجع يرتبها من الاصغر الى الاكبر حسب الترتيب الابجدي
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , n_a = 0 , n_b = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b;
+
+if (a > b){
+    n_a = b;
+    n_b = a;
+}else if (a < b){
+    n_a = a;
+    n_b = b;
+}
+
+if (n_b == b or n_a == a ){
+    cout << "the values of a is : " << n_a << " and b is : " << n_b;
+}else if (n_b != b or n_a != a){
+    cout << "the new values of a is : " << n_a << " and b is : " << n_b;
+
+}
+    return 0;
+}
