@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+int main() {
+ float x = 0 , y = 0 , number = 0;
+cout << "chose any unit you want to convert : " << endl
+<< "1.Gram " << endl
+<< "2.Ounce "<< endl
+<< "3.Pound "<< endl
+<< "4.Kilogram "<< endl
+<< "5.Ton "<< endl
+<< endl;
+cout << "chose any unit : "; cin >> x;cout << endl;
+cout << "enter the number of unit : ";
+cin >> number; cout << endl;
+cout << "chose any unit you want convert to : " << endl
+<< "1.Gram " << endl
+<< "2.Ounce "<< endl
+<< "3.Pound "<< endl
+<< "4.Kilogram "<< endl
+<< "5.Ton "<< endl
+<< endl;
+cout << "chose any unit : "; cin >> y;cout << endl;
+
+if (x == 1 and y == 1){cout << "worng!!!!";}
+else if (x == 1 and y == 2){cout << number * 0.035274;}
+else if (x == 1 and y == 3){cout << number * 0.00220462;}
+else if (x == 1 and y == 4){cout << number * 0.001;}
+else if (x == 1 and y == 5){cout << number * 0.00000110231;}
+// unit two
+else if (x == 2 and y == 2){cout << "worng!!!!";}
+else if (x == 2 and y == 1){cout << number * 28.3495;}
+else if (x == 2 and y == 3){cout << number * 0.0625;}
+else if (x == 2 and y == 4){cout << number * 0.0283495;}
+else if (x == 2 and y == 5){cout << number * 0.00003125;}
+// unit three
+else if (x == 3 and y == 3){cout << "worng!!!!";}
+else if (x == 3 and y == 1){cout << number * 453.592;}
+else if (x == 3 and y == 2){cout << number * 16;}
+else if (x == 3 and y == 4){cout << number * 0.453592;}
+else if (x == 3 and y == 5){cout << number * 0.0005;}
+// unit four
+else if (x == 4 and y == 4){cout << "worng!!!!";}
+else if (x == 4 and y == 1){cout << number * 1000;}
+else if (x == 4 and y == 2){cout << number * 35.274;}
+else if (x == 4 and y == 3){cout << number * 2.20462;}
+else if (x == 4 and y == 5){cout << number * 0.00110231;}
+// unit four
+else if (x == 5 and y == 5){cout << "worng!!!!";}
+else if (x == 5 and y == 1){cout << number * 1000000;}
+else if (x == 5 and y == 2){cout << number * 35274;}
+else if (x == 5 and y == 3){cout << number * 2204.62;}
+else if (x == 5 and y == 4){cout << number * 1000;}
+
+    return 0;
+}
