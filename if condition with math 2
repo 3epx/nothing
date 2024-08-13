@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0; float f = 0; 
+cout << "enter the value of x : ";
+cin >> x;
+
+if ( x > 2 or x < -2){
+    f = 2 * x;
+}else {f = -3 * x;}
+
+cout << "resut is : " << f;
+
+
+    return 0;
+}
