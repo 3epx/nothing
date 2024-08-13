@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0;
+cout << "enter the number from 1 to 12 : ";
+cin >> x;
+
+if (x == 12 or x == 1 or x == 2){cout << "Winter ";}
+else if (x == 3 or x == 4 or x == 5){cout << "Spring ";}
+else if (x == 6 or x == 7 or x == 8){cout << "Summer ";}
+else if (x == 9 or x == 10 or x == 1){cout << "Autumn ";}
+else {cout << "worng !!!!";}
+
+
+    return 0;
+}
