@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0 , b =0 , c = 0;
+    cout << "enter the values in paralell : ";
+    cin >> a >> b >> c;
+    
+    if (a > b,c and b > c){
+        cout << "The point closest to a is is " << b;
+        cout << endl;
+        cout << "The point farthest from a is " << c;
+    }else if (a > b,c and c > b){
+        cout << "The point closest to a is is " << c;
+        cout << endl;
+        cout << "The point farthest from a is " << b;    
+        
+    }
+    return 0;
+}
