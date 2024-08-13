@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 0 , b =0 , c = 0 , d = 0;
+    cout << "enter the values in paralell : ";
+    cin >> a >> b >> c >> d;
+    
+    if(a == b == c and d != a,b,c){cout << "The different number is : " << d;}
+    else if (a == b == d and c != a,b,d){cout << "The different number is : " << c;}
+    else if (a == c == d and b != a,c,d){cout << "The different number is : " << b;}
+    else if (b == c == d and a != b,c,d){cout << "The different number is : " << a;}
+    
+    
+    
+    return 0;
+}
