@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b >> c;
+
+if(a == b and c != a and c != b){
+    cout << "the gay number is c : " << c;
+}else if (a == c and b != a and b != c){
+    cout << "the gay number is b : " << b;
+}else if (b == c and a != b and a != c){
+    cout << "the gay number is a : " << a;
+}else {cout << "try again ";}
+
+    return 0;
+}
