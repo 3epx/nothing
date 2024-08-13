@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0;
+cout << "enter the value of x : ";
+cin >> x;
+
+if (x %4 == 0 and x %400 == 0){cout << "This year is a leap year";}
+else {cout << "This year is not a leap year";}
+
+    return 0;
+}
