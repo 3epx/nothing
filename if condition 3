@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b >> c;
+
+if (a < b and a > c or a > b and a < c){cout << "the medium value is " << a;}
+else if (b < a and b > c or b > a and b < c){cout << "the medium value is " << b;}
+else if (c < a and c > b or c > a and c < b){cout << "the medium value is " << c;}
+
+    return 0;
+}
