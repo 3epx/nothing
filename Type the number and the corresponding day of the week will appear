@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0;
+cout << "enter the number of day from 1 to 7 : ";
+cin >> x;
+
+if (x == 1){cout << "the day is sunday";}
+else if (x == 2){cout << "the day is monday";}
+else if (x == 3){cout << "the day is Tuesday";}
+else if (x == 4){cout << "the day is wednisday";}
+else if (x == 5){cout << "the day is thursday";}
+else if (x == 6){cout << "the day is friday";}
+else if (x == 7){cout << "the day is satrday";}
+else {cout << "worng !!!!";}
+
+
+    return 0;
+}
