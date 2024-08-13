@@ -1,0 +1,21 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b >> c;
+
+if (a < b and a < c){cout << "the smaller value is " << a;}
+else if (b < a and b < c){cout << "the smaller value is " << b;}
+else if (c < a and c < b){cout << "the smaller value is " << c;}
+cout << endl;
+if (a > b and a > c){cout << "the largest value is " << a;}
+else if (b > a and b > c){cout << "the largest value is " << b;}
+else if (c > a and c > b){cout << "the largest value is " << c;}
+
+
+
+    return 0;
+}
