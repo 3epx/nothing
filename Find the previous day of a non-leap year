@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int d = 0, m = 0; 
+cout << "enter the day : ";
+cin >> d;
+cout << "enter the month : ";
+cin >> m;
+
+// الخالات التي ترحعنة شهر
+if (d > 1){cout << "month : " << m << " day : " << d -1;}
+else if (d == 1  and m == 1){cout << "month : " << 12 << " day : " << 31;}
+else if (d == 1  and m == 2){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 3){cout << "month : " << m - 1 << " day : " << 28;}
+else if (d == 1  and m == 4){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 5){cout << "month : " << m - 1 << " day : " << 30;}
+else if (d == 1  and m == 6){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 7){cout << "month : " << m - 1 << " day : " << 30;}
+else if (d == 1  and m == 8){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 9){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 10){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 11){cout << "month : " << m - 1 << " day : " << 31;}
+else if (d == 1  and m == 12){cout << "month : " << m - 1 << " day : " << 30;}
+
+    return 0;
+}
