@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0;
+cout << "enter the value of x : ";
+cin >> x;
+
+if (x %2 == 0 and x < 0){cout << "the number is even and its negitive";}
+else if (x %2 == 0 and x >=1){cout << "the number is even and its positive";}
+else if (x %2 == 0 and x < 0){cout << "the number is even and its negitive";}
+else if (x %2 == 0 and x >= 1){cout << "the number is even and its positive";}
+else if (x %2 == 1 and x >=1){cout << "the number is odd and its positive";}
+else if (x %2 == -1 and x < 0){cout << "the number is odd and its negitive";}
+
+
+    return 0;
+}
