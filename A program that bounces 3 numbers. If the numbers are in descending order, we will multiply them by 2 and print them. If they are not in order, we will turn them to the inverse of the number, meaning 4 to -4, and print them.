@@ -1,0 +1,15 @@
+برنامج تنطيه 3 ارقام اذا جانت الارقام مرتبة تنازليا راح نضربها في 2 ونطبعها واذا جانت ما مرتبة راح نقلبها الى معكوس الرقم يعني 4 الى -4 ونطبعها 
+
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b >> c;
+
+if (a > b and b > c){a = a*2; b= b*2; c= c*2; cout << "new numbers is :" << a << " " << b << " " << c;}
+else {a = a - a*2; b = b - b*2; c = c - c*2; cout << "new numbers is : " << a << " " << b << " " << c;}
+
+    return 0;
+}
