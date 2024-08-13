@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x = 0;
+cout << "enter the value of x from 1 to 999 : ";
+cin >> x;
+
+if (x >= 1 and x <= 9 and x %2 == 0){
+    cout << "the number have 0ne digit" << endl;
+    cout << "the number is even";
+}
+else if (x >= 1 and x <= 9 and x %2 == 1){
+    cout << "the number have 0ne digit" << endl;
+    cout << "the number is odd";
+}
+else if (x >= 10 and x <= 99 and x %2 == 0){
+    cout << "the number have two digit" << endl;
+    cout << "the number is even";
+}
+else if (x >= 10 and x <= 99 and x %2 == 1){
+    cout << "the number have two digit" << endl;
+    cout << "the number is odd";
+}
+else if (x >= 100 and x <= 999 and x %2 == 0){
+    cout << "the number have three digit" << endl;
+    cout << "the number is even";
+}
+else if (x >= 100 and x <= 999 and x %2 == 1){
+    cout << "the number have three digit" << endl;
+    cout << "the number is odd";
+}
+else {cout << "worng !!";}
+
+    return 0;
+}
