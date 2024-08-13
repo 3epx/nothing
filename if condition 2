@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b;
+
+if (a == b){a = 0;b=0; cout << "the new values of a and b is : " << a;}
+else if (a > b){a = a+b;b=a; cout << "the new values of a and b is : "<< a;}
+else if (b > a){a = a+b;b=a;cout << "the new values of a and b is : " << a;}
+
+
+
+    return 0;
+}
