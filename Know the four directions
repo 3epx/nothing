@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int  n1 = 0 ,n2 = 0; 
+cout << "enter the direction." << endl;
+cout 
+<< "1.north" << endl 
+<< "2.south" << endl 
+<< "3.east" << endl 
+<< "4.west" << endl;
+cout << "chose any one form the list : ";
+cin >> n1;
+cout << endl;
+cout << "enter the opeation." << endl;
+cout 
+<< "1.Rotate right" << endl 
+<< "2.Rotate left" << endl 
+<< "3.revers" << endl;
+cout << "chose any one form the list : ";
+cin >> n2;
+cout << endl;
+
+if(n1 == 1 and n2 == 1){cout << "east";}
+else if (n1 == 1 and n2 == 2){cout << "west";}
+else if (n1 == 1 and n2 == 3){cout << "south";}
+else if (n1 == 2 and n2 == 1){cout << "west";}
+else if (n1 == 2 and n2 == 2){cout << "east";}
+else if (n1 == 2 and n2 == 3){cout << "north";}
+else if (n1 == 3 and n2 == 1){cout << "south";}
+else if (n1 == 3 and n2 == 2){cout << "north";}
+else if (n1 == 3 and n2 == 3){cout << "west";}
+else if (n1 == 4 and n2 == 1){cout << "north";}
+else if (n1 == 4 and n2 == 2){cout << "south";}
+else if (n1 == 4 and n2 == 3){cout << "east";}
+else {cout << "worng!!!!";}
+
+
+    return 0;
+}
