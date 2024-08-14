@@ -1,0 +1,74 @@
+#include <iostream>
+
+int main() {
+    int orderNumber;
+    std::cin >> orderNumber;
+
+    if (orderNumber == 10) {
+        std::cout << "the tenth task" << std::endl;
+    } else if (orderNumber == 11) {
+        std::cout << "the eleventh task" << std::endl;
+    } else if (orderNumber == 12) {
+        std::cout << "the twelfth task" << std::endl;
+    } else if (orderNumber == 13) {
+        std::cout << "the thirteenth task" << std::endl;
+    } else if (orderNumber == 14) {
+        std::cout << "the fourteenth task" << std::endl;
+    } else if (orderNumber == 15) {
+        std::cout << "the fifteenth task" << std::endl;
+    } else if (orderNumber == 16) {
+        std::cout << "the sixteenth task" << std::endl;
+    } else if (orderNumber == 17) {
+        std::cout << "the seventeenth task" << std::endl;
+    } else if (orderNumber == 18) {
+        std::cout << "the eighteenth task" << std::endl;
+    } else if (orderNumber == 19) {
+        std::cout << "the nineteenth task" << std::endl;
+    } else if (orderNumber == 20) {
+        std::cout << "the twentieth task" << std::endl;
+    } else if (orderNumber == 21) {
+        std::cout << "the twenty-first task" << std::endl;
+    } else if (orderNumber == 22) {
+        std::cout << "the twenty-second task" << std::endl;
+    } else if (orderNumber == 23) {
+        std::cout << "the twenty-third task" << std::endl;
+    } else if (orderNumber == 24) {
+        std::cout << "the twenty-fourth task" << std::endl;
+    } else if (orderNumber == 25) {
+        std::cout << "the twenty-fifth task" << std::endl;
+    } else if (orderNumber == 26) {
+        std::cout << "the twenty-sixth task" << std::endl;
+    } else if (orderNumber == 27) {
+        std::cout << "the twenty-seventh task" << std::endl;
+    } else if (orderNumber == 28) {
+        std::cout << "the twenty-eighth task" << std::endl;
+    } else if (orderNumber == 29) {
+        std::cout << "the twenty-ninth task" << std::endl;
+    } else if (orderNumber == 30) {
+        std::cout << "the thirtieth task" << std::endl;
+    } else if (orderNumber == 31) {
+        std::cout << "the thirty-first task" << std::endl;
+    } else if (orderNumber == 32) {
+        std::cout << "the thirty-second task" << std::endl;
+    } else if (orderNumber == 33) {
+        std::cout << "the thirty-third task" << std::endl;
+    } else if (orderNumber == 34) {
+        std::cout << "the thirty-fourth task" << std::endl;
+    } else if (orderNumber == 35) {
+        std::cout << "the thirty-fifth task" << std::endl;
+    } else if (orderNumber == 36) {
+        std::cout << "the thirty-sixth task" << std::endl;
+    } else if (orderNumber == 37) {
+        std::cout << "the thirty-seventh task" << std::endl;
+    } else if (orderNumber == 38) {
+        std::cout << "the thirty-eighth task" << std::endl;
+    } else if (orderNumber == 39) {
+        std::cout << "the thirty-ninth task" << std::endl;
+    } else if (orderNumber == 40) {
+        std::cout << "the fortieth task" << std::endl;
+    } else {
+        std::cout << "Invalid order number" << std::endl;
+    }
+
+    return 0;
+}
