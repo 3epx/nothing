@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+int c = 0 , h = 0 , s = 0 , va = 0 , ch = 0;
+
+cout << "chose any one from this." << endl;
+cout 
+<< "1. The string" << endl  // c
+<< "2. Height on the string" << endl // h
+<< "3. The Area" << endl;  // s
+cout << "chose any one from the list : ";
+cin >> ch;
+cout << "enter the value : ";
+cin >> va; 
+
+if (ch == 1){
+    c = va;
+    h = c /2;
+    s = c * h / 2;
+    cout << "Height on the string is : " << h << endl;
+    cout << "The Area is : " << s << endl;
+}
+else if (ch == 2){
+    h = va; 
+    c = h * sqrt(2);
+    s = c * h / 2;
+    cout << "The string is : " << c << endl;
+    cout << "The Area is : " << s << endl;
+}
+else if (ch == 3){
+    s = va;
+    c = s*4; c = sqrt(c);
+    h = c / 2;
+    cout << "The string is : " << c << endl;
+    cout << "Height on the string is : " << h << endl;
+}
+
+
+
+    return 0;
+}
