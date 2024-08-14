@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+float S = 0, L = 0, R  = 0 , r = 0 , va = 0;
+int ch = 0;
+cout << "chose any one from this choesies"<< endl;
+cout 
+<< "1.radius" << endl
+<< "2.diameter" << endl
+<< "3.circumference" << endl
+<< "4. Area of the circle" << endl;
+cout << "chosw any one : ";
+cin >> ch;
+cout << "enter the value of this : ";
+cin >> va;
+
+if(ch == 1){
+    R = va / 2;
+    L =  2 * 3.14 * R;
+    S = 2 * R * R;
+    cout << "the diameter is : " << R <<endl;
+    cout << "the circumference is : " << L <<endl;
+    cout << "the Area of the circle is : " << S <<endl;
+}
+else if (ch == 2){
+    r = va * 2;
+    R = va;
+    L =  2 * 3.14 * R;
+    S = 2 * R * R;
+    cout << "the radius is : " << r <<endl;
+    cout << "the circumference is : " << L <<endl;
+    cout << "the Area of the circle is : " << S <<endl;
+}
+else if (ch == 3){
+    R = va / 2 * 3.14;
+    r = R * 2;
+    S = 2 * R * R;
+    cout << "the radius is : " << r <<endl;
+    cout << "the diameter is : " << R <<endl;
+    cout << "the Area of the circle is : " << S <<endl;
+}
+else if (ch == 4){
+    R = va / 2; R = sqrt(R);
+    r = R * 2;
+    L =  2 * 3.14 * R;
+    cout << "the radius is : " << r <<endl;
+    cout << "the diameter is : " << R <<endl;
+    cout << "the circumference is : " << L <<endl;
+}
+
+    return 0;
+}
