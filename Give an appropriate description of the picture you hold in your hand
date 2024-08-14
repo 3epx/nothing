@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n = 0 , m = 0; 
+cout << "enter the number of page : ";
+cin >> n;
+cout << "enter the number of the Adjective : ";
+cin >> m;
+
+if (m == 1 and n >=4 and n <=10) {cout << n << " of spades";}
+else if (m == 2 and n >=4 and n <=10){cout << n << " of CLubs";}
+else if (m == 3 and n >=4 and n <=10){cout << n << " of diamonds";}
+else if (m == 4 and n >=4 and n <=10){cout << n << " of hearts";}
+if (n == 11 and m == 1){cout << "jack" << " of spades";}
+else if (n == 11 and m == 2){cout << "jack" << " of clubs";}
+else if (n == 11 and m == 3){cout << "jack" << " of diamonds";}
+else if (n == 11 and m == 4){cout << "jack" << " of hearts";}
+else if (n == 12 and m == 1){cout << "Queen" << " of spades";}
+else if (n == 12 and m == 2){cout << "Queen" << " of clubs";}
+else if (n == 12 and m == 3){cout << "Queen" << " of diamonds";}
+else if (n == 12 and m == 4){cout << "Queen" << " of hearts";}
+else if (n == 13 and m == 1){cout << "King" << " of spades";}
+else if (n == 13 and m == 2){cout << "King" << " of clubs";}
+else if (n == 13 and m == 3){cout << "King" << " of diamonds";}
+else if (n == 13 and m == 4){cout << "King" << " of hearts";}
+else if (n == 14 and m == 1){cout << "Ace" << " of spades";}
+else if (n == 14 and m == 2){cout << "Ace" << " of clubs";}
+else if (n == 14 and m == 3){cout << "Ace" << " of diamonds";}
+else if (n == 14 and m == 4){cout << "Ace" << " of hearts";}
+
+    return 0;
+}
