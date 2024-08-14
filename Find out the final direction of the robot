@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int d = 0 , c = 0;
+cout << "Choose the direction : " << endl;
+cout << "1. North"<< endl;
+cout << "2. South"<< endl;
+cout << "3. East"<< endl;
+cout << "4. West"<< endl;
+cout << "chose any one ";
+cin >> d; 
+cout << endl;
+cout << "Do you want to tilt the direction at an angle of 90?" << endl;
+cout << "0. It keeps moving"<< endl;
+cout << "1. Tilt clockwise"<< endl;
+cout << "2. Tilt counterclockwise"<< endl;
+cout << "chose any one ";
+cin >> c;
+cout << endl;
+
+if (d == 1 and c == 0){cout << "The final direction is north";}
+else if (d == 2 and c == 0){cout << "The final direction is South";}
+else if (d == 3 and c == 0){cout << "The final direction is East";}
+else if (d == 4 and c == 0){cout << "The final direction is West";}
+else if (d == 1 and c == 1){cout << "The final direction is East";}
+else if (d == 1 and c == 2){cout << "The final direction is West";}
+else if (d == 2 and c == 1){cout << "The final direction is West";}
+else if (d == 2 and c == 1){cout << "The final direction is East";}
+else if (d == 3 and c == 1){cout << "The final direction is South";}
+else if (d == 3 and c == 2){cout << "The final direction is north";}
+else if (d == 4 and c == 1){cout << "The final direction is north";}
+else if (d == 4 and c == 2){cout << "The final direction is South";}
+else {cout << "worng!!!!!";}
+
+
+
+    return 0;
+}
