@@ -1,0 +1,112 @@
+#include <iostream>
+
+int main() {
+    int age;
+    std::cin >> age;
+
+    if (age == 20) {
+        std::cout << "twenty years" << std::endl;
+    } else if (age == 21) {
+        std::cout << "twenty-one years" << std::endl;
+    } else if (age == 22) {
+        std::cout << "twenty-two years" << std::endl;
+    } else if (age == 23) {
+        std::cout << "twenty-three years" << std::endl;
+    } else if (age == 24) {
+        std::cout << "twenty-four years" << std::endl;
+    } else if (age == 25) {
+        std::cout << "twenty-five years" << std::endl;
+    } else if (age == 26) {
+        std::cout << "twenty-six years" << std::endl;
+    } else if (age == 27) {
+        std::cout << "twenty-seven years" << std::endl;
+    } else if (age == 28) {
+        std::cout << "twenty-eight years" << std::endl;
+    } else if (age == 29) {
+        std::cout << "twenty-nine years" << std::endl;
+    } else if (age == 30) {
+        std::cout << "thirty years" << std::endl;
+    } else if (age == 31) {
+        std::cout << "thirty-one years" << std::endl;
+    } else if (age == 32) {
+        std::cout << "thirty-two years" << std::endl;
+    } else if (age == 33) {
+        std::cout << "thirty-three years" << std::endl;
+    } else if (age == 34) {
+        std::cout << "thirty-four years" << std::endl;
+    } else if (age == 35) {
+        std::cout << "thirty-five years" << std::endl;
+    } else if (age == 36) {
+        std::cout << "thirty-six years" << std::endl;
+    } else if (age == 37) {
+        std::cout << "thirty-seven years" << std::endl;
+    } else if (age == 38) {
+        std::cout << "thirty-eight years" << std::endl;
+    } else if (age == 39) {
+        std::cout << "thirty-nine years" << std::endl;
+    } else if (age == 40) {
+        std::cout << "forty years" << std::endl;
+    } else if (age == 41) {
+        std::cout << "forty-one years" << std::endl;
+    } else if (age == 42) {
+        std::cout << "forty-two years" << std::endl;
+    } else if (age == 43) {
+        std::cout << "forty-three years" << std::endl;
+    } else if (age == 44) {
+        std::cout << "forty-four years" << std::endl;
+    } else if (age == 45) {
+        std::cout << "forty-five years" << std::endl;
+    } else if (age == 46) {
+        std::cout << "forty-six years" << std::endl;
+    } else if (age == 47) {
+        std::cout << "forty-seven years" << std::endl;
+    } else if (age == 48) {
+        std::cout << "forty-eight years" << std::endl;
+    } else if (age == 49) {
+        std::cout << "forty-nine years" << std::endl;
+    } else if (age == 50) {
+        std::cout << "fifty years" << std::endl;
+    } else if (age == 51) {
+        std::cout << "fifty-one years" << std::endl;
+    } else if (age == 52) {
+        std::cout << "fifty-two years" << std::endl;
+    } else if (age == 53) {
+        std::cout << "fifty-three years" << std::endl;
+    } else if (age == 54) {
+        std::cout << "fifty-four years" << std::endl;
+    } else if (age == 55) {
+        std::cout << "fifty-five years" << std::endl;
+    } else if (age == 56) {
+        std::cout << "fifty-six years" << std::endl;
+    } else if (age == 57) {
+        std::cout << "fifty-seven years" << std::endl;
+    } else if (age == 58) {
+        std::cout << "fifty-eight years" << std::endl;
+    } else if (age == 59) {
+        std::cout << "fifty-nine years" << std::endl;
+    } else if (age == 60) {
+        std::cout << "sixty years" << std::endl;
+    } else if (age == 61) {
+        std::cout << "sixty-one years" << std::endl;
+    } else if (age == 62) {
+        std::cout << "sixty-two years" << std::endl;
+    } else if (age == 63) {
+        std::cout << "sixty-three years" << std::endl;
+    } else if (age == 64) {
+        std::cout << "sixty-four years" << std::endl;
+    } else if (age == 65) {
+        std::cout << "sixty-five years" << std::endl;
+    } else if (age == 66) {
+        std::cout << "sixty-six years" << std::endl;
+    } else if (age == 67) {
+        std::cout << "sixty-seven years" << std::endl;
+    } else if (age == 68) {
+        std::cout << "sixty-eight years" << std::endl;
+    } else if (age == 69) {
+        std::cout << "sixty-nine years" << std::endl;
+    } else {
+        std::cout << "Invalid age" << std::endl;
+    }
+
+    return 0;
+}
