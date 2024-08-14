@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int year =0;
+cout << "enter the year pls : ";
+cin >> year;
+int d_year = year - 1984;
+int color = (d_year %10) / 2;
+int animal = (d_year %12);
+string yecolo , yeanim;
+if (color == 1){ yecolo = "الاخضر";}
+else if (color == 2){ yecolo = "البني";}
+else if (color == 3){ yecolo = "الاحمر";}
+else if (color == 4){ yecolo = "الازرق";}
+else if (color == 5){ yecolo = "الاسود";}
+
+if (animal == 1){ yeanim = "الاسد";}
+else if (animal == 2){ yeanim = "الهايشة";}
+else if (animal == 3){ yeanim = "البزون";}
+else if (animal == 4){ yeanim = "العتوي";}
+else if (animal == 5){ yeanim = "الفار";}
+else if (animal == 6){ yeanim = "البومة";}
+else if (animal == 7){ yeanim = "الجدي";}
+else if (animal == 8){ yeanim = "المطي";}
+else if (animal == 9){ yeanim = "الثور";}
+else if (animal == 10){ yeanim = "الحمار";}
+else if (animal == 11){ yeanim = "الجحش";}
+else if (animal == 12){ yeanim = "الزمال";}
+
+cout << "the year name is " << yeanim << " " << yecolo ;
+
+
+    return 0;
+}
