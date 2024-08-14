@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cmath>
+using namespace std; 
+int main() {
+
+int a = 0 , r1 = 0 , r2 = 0 , s = 0 , ch = 0 , va = 0;
+cout << "chose any one from this." << endl;
+cout 
+<< "1. The radius of the inner circle" << endl  // 
+<< "2. The radius of the surrounding circle" << endl // h
+<< "3. The Area" << endl;  // s
+cout << "chose any one from the list : ";
+cin >> ch;
+cout << "enter the value : ";
+cin >> va; 
+cout << endl;
+if(ch == 1){
+    r1 = va; 
+    a = r1 * 6 / sqrt(3);
+    r2 = 2 * r1;
+    s = a*a * sqrt(3) / 4;
+    cout << "The radius of the surrounding circle is : " << r2 << endl;
+    cout << "The Area is : " << s << endl;
+}
+else if (ch == 2)
+{
+    r2 = va; 
+    a = r2 * 3 / 2 * sqrt(3);
+    r1 = a * sqrt(3) / 6;
+    s = a*a * sqrt(3) / 4;
+    cout << "The radius of the inner circle is : " << r1 << endl;
+    cout << "The Area is : " << s << endl;
+}
+else if (ch == 3)
+{
+    s = va;
+    a = s * 4 / sqrt(3);
+    a = sqrt(a);
+    r1 = a * sqrt(3) / 6;
+    r2 = 2 * r1;
+    cout << "The radius of the inner circle is : " << r1 << endl;
+    cout << "The radius of the surrounding circle is : " << r2 << endl;
+}
+
+
+
+
+
+    return 0;
+}
