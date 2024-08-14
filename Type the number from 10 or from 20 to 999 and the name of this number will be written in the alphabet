@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main() {
+int number = 0;
+cout << "enter the number pls : ";
+cin >> number; 
+string name;
+int u1 = 0;
+int u2 = 0;
+int r = number%100;
+if (number >= 100 and number <= 999){
+    number = number / 100;
+    if (number == 0){}
+    else if (number == 1){name = name + "one hundred and ";}
+    else if (number == 2){name = name + "Two hundred and ";}
+    else if (number == 3){name = name + "Three hundred and ";}
+    else if (number == 4){name = name + "Four hundred and ";}
+    else if (number == 5){name = name + "Five hundred and ";}
+    else if (number == 6){name = name + "Six hundred and ";}
+    else if (number == 7){name = name + "Seven hundred and ";}
+    else if (number == 8){name = name + "Eight hundred and ";}
+    else if (number == 9){name = name + "Nine hundred and ";}
+}
+if (r >= 10 and r <= 99){
+    u1 = r %10;
+    u2 = r / 10;
+    if (u2 == 0){}
+    else if (u2 == 1){name = name + "ten ";}
+    else if (u2 == 2){name = name + "twenty ";}
+    else if (u2 == 3){name = name + "thirty ";}
+    else if (u2 == 4){name = name + "forty ";}
+    else if (u2 == 5){name = name + "fifty ";}
+    else if (u2 == 6){name = name + "sixty ";}
+    else if (u2 == 7){name = name + "seventy ";}
+    else if (u2 == 8){name = name + "eighty ";}
+    else if (u2 == 9){name = name + "ninety ";}
+    if (u1 == 0){}
+    else if (u1 == 1){name = name + "one ";}
+    else if (u1 == 2){name = name + "two ";}
+    else if (u1 == 3){name = name + "three ";}
+    else if (u1 == 4){name = name + "four ";}
+    else if (u1 == 5){name = name + "five ";}
+    else if (u1 == 6){name = name + "six ";}
+    else if (u1 == 7){name = name + "seven ";}
+    else if (u1 == 8){name = name + "eight ";}
+    else if (u1 == 9){name = name + "nine ";}
+    cout << name;
+};
+    return 0;
+}
