@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0 , b =0;
+cout << "enter the a number pls : ";
+cin >> a; 
+cout << "enter the b number pls : ";
+cin >> b; 
+cout << endl;
+int sum = 0; 
+for (; a <= b; a++){
+    int u = a*a;
+    sum = sum + u;
+}
+cout << "the total is : " << sum; 
+    return 0;
+}
