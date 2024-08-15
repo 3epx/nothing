@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+float number = 0; float sum = 1;
+cout << "enter the number pls : ";
+cin >> number;
+for (float i = 1; i <= number; i += 0.1 ){
+    int t = i;
+    float k = i - t;
+    k = k * 10;
+    int j = k;
+    if (j %2 == 0){sum  = sum - i;}
+    else if (j %2 == 1){sum = sum + i;}
+}
+cout << "final result is : " << sum; 
+    return 0;
+}
