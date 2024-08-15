@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 2;
+int p = 1500;
+for (float i = 1; i <= a; i += 0.2){
+    cout << i * p << endl;
+}
+
+    return 0;
+}
