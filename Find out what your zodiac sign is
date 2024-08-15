@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int d = 0 , m = 0;
+    cout << "enter the day : ";
+    cin >> d;
+    cout << "enter the month : ";
+    cin >> m;
+    
+    if(d >= 22 and d <=31 and m == 12 or d >= 1 and d <=19 and m == 1){cout << "Capricorn";}
+    else if (d >= 20 and d <=31 and m == 1 or d >= 1 and d <=18 and m == 2){cout << "Aquarius";}
+    else if (d >= 19 and d <=28 and m == 2 or d >= 1 and d <=20 and m == 3){cout << "Pisces";}
+    else if (d >= 21 and d <=31 and m == 3 or d >= 1 and d <=19 and m == 4){cout << "Aries";}
+    else if (d >= 20 and d <=30 and m == 4 or d >= 1 and d <=20 and m == 5){cout << "Taurus";}
+    else if (d >= 21 and d <=31 and m == 5 or d >= 1 and d <=21 and m == 6){cout << "Gemini";}
+    else if (d >= 22 and d <=30 and m == 6 or d >= 1 and d <=22 and m == 7){cout << "Cancer";}
+    else if (d >= 23 and d <=31 and m == 7 or d >= 1 and d <=22 and m == 8){cout << "Leo";}
+    else if (d >= 23 and d <=31 and m == 8 or d >= 1 and d <=22 and m == 9){cout << "Virgo";}
+    else if (d >= 23 and d <=30 and m == 9 or d >= 1 and d <=22 and m == 10){cout << "Libra";}
+    else if (d >= 23 and d <=31 and m == 10 or d >= 1 and d <=22 and m == 11){cout << "Scorpio";}
+    else if (d >= 23 and d <=30 and m == 11 or d >= 1 and d <=21 and m == 12){cout << "Sagittarius";}
+    else {cout << "worng!!!!!!!";}
+    
+    return 0;
+}
