@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 0, b = 0;
+cout << "enter the value of a : ";
+cin >> a;
+cout << "enter the value of b : ";
+cin >> b;
+int i = 0;
+for (; a <= b; i++){
+    cout << a << endl;
+    a++;
+}
+cout << "and finally the numbers of integrs is : "  << i;
+
+    return 0;
+}
