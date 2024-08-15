@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std; 
+int main() {
+
+int n = 0  , p = 0 , sum = 0;
+cout << "enter the number : ";
+cin >> n;
+cout << "enter the value of power : ";
+cin >> p;
+int n_s = n;
+for (int i = 1 ; i <= p; i++){
+    if (i %2 == 0){sum = sum + n_s;}
+    else if (i %2 == 1){sum = sum - n_s;}
+    n_s = n_s * n; 
+}
+cout << "result is : " << 1 - n +  sum;
+
+    return 0;
+}
