@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n = 0; float sum = 1;
+cout << "enter the number pls : ";
+cin >> n;
+for (float i  = 2; i<= n; i++){
+    sum = sum + 1/i;
+}
+cout << "the total is : " << sum;
+
+
+    return 0;
+}
