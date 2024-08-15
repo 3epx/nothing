@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+float n = 0 , k = 2 , u = 1 , sum = 1;
+
+cout << "enter the number pls : ";
+cin >> n; 
+
+for ( float i = 1; i <= n; i++){
+    u = u + k;
+    k++;
+    sum = sum + 1/u;
+}
+cout << "final result is : " << sum;
+
+
+    return 0;
+}
