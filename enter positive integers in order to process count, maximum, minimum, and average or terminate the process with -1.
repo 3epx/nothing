@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n = 0, min = 21922 , max = 0 , hh = 0 , avd = 0 ,  sum = 0;
+
+do{
+    cout << "enter the number : ";
+    cin >> n;
+    if (n == -1){break;}
+    sum = sum + n;
+    avd++;
+    if (n > max){max = n;}
+    if (n < min){min = n;}
+}while(n != -1);
+sum = sum / avd;
+cout << "avrege of sum equl = " << sum << endl;
+cout << max<< endl;
+cout << min<< endl;
+
+    return 0;
+}
