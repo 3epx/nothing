@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n = 0 ,  sum = 0; string com;
+do{
+    cout << "enter the number : ";
+    cin >> n;
+    cout << "you want to complate ? (y/n) : ";
+    cin >> com;
+    sum = sum + n;
+}while(com != "n");
+cout << "final result is : " << sum;
+
+    return 0;
+}
