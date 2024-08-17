@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n = 0; 
+cout << "enter the number pls : ";
+cin >> n;
+for (int i = 1; i<= n ; i++){
+   int sum = i * i * i;
+   cout << sum << endl;
+    }
+    return 0;
+}
