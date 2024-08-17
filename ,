@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+int n = 0 , terms = 0; float sumn = 0; float j = 1; float sum = 1;
+
+cout << "enter the number pls : ";
+cin >> n;
+cout << "enter the number of trems : ";
+cin >> terms;
+for (int i = 1; i <= terms; i++){
+    int k = 2;
+    for ( float u = 1; u <= k; u++ ){
+        j = j * u;
+    }
+    sumn = sumn + pow(n,k)/j;
+    k++;
+    j = 1;
+}
+sum = n +  sumn;
+cout << "final result is : " << sum;
+
+    return 0;
+} 
