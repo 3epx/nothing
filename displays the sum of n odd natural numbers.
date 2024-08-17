@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n = 0; int sum = 0; int x = 1; 
+cout << "enter the number pls : ";
+cin >> n;
+
+for (int i = 1; i <= n ; i++){
+    cout << x << endl;
+     sum = sum + x; 
+     x += 2;
+}
+cout << "the result of odd numbers is : " << sum; 
+
+
+    return 0;
+} 
