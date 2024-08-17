@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n = 0; int many = 0; int sum = 0; int u = 1;
+cout << "enter the number pls : ";
+cin >> n;
+cout << "enter the many of terms : ";
+cin >> many;
+u = n;
+for (float i = 1; i <= many ; i++){
+u = u * 10 + n;
+cout << u << endl;
+sum = sum + u;
+}
+cout << "the final result is : " << sum; 
+    return 0;
+} 
