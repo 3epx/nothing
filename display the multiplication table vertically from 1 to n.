@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n = 0; 
+cout << "enter the number pls : ";
+cin >> n;
+
+for (int i = 1; i <= 10 ; i++){
+    
+    for (int u = 1; u <= n ; u++){
+        
+        cout << i << " x " << u << " = " << i*u << " \t ";
+        cout << endl;
+    }
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
+}
+
+
