@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int n = 0 , check = 0; 
+cout << "enter the number pls : ";
+cin >> n;
+for (int i = 1 ; i <= n; i++){
+    for (int u = 1; u <=i ; u++){
+        if (i %u == 0){check = check + 1;}
+    }
+    if (check > 2){cout << i << endl;}
+    check = 0;
+
+}
+    return 0;
+}
