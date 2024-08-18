@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int s_s = 0 , e_s = 0 , d = 0 , sum = 0; 
+    cout << "enter the number of start series : ";
+    cin >> s_s;
+    cout << "enter the number of numbers in series : ";
+    cin >> e_s;
+    cout << "enter the number of difrence btween numbers : ";
+    cin >> d;   
+    for (int i = 1; i<= e_s ; i++){
+        sum = sum + s_s;
+        cout << s_s << " + ";
+        s_s = s_s + d;
+    }
+ cout << "= " << sum;
+}
