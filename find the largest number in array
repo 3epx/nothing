@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int u[9] = { 5699975,8383,92, 43378979874 , 83283, 3742, 21,41,2398};
+    int bign = 0;
+    int bignn = 0;
+    for (int i = 0; i <= 8; i++) {
+        bign = u[i];
+        if (bignn < bign) { bignn = bign; }
+    }
+    cout << bignn;
+    return 0;
+}
