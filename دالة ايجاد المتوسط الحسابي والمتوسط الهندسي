@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void mean(int x , int y , int &gmean , int &amean){
+
+    amean = x + y;
+    amean = amean / 2;
+    gmean = x*y;
+    gmean = sqrt(gmean);
+}
+int main() {
+
+int a = 0, b = 0 , c = 0, d = 0 , gmean = 0 , amean = 0;
+cout << "enter the numbers in paralell pls : ";
+cin >> a >> b >> c >> d;
+
+mean(a,b,gmean,amean);
+cout << "(A,B) = " << gmean << " and " << amean;
+cout << endl;
+mean(a,c,gmean,amean);
+cout << "(A,C) = " << gmean << " and " << amean;
+cout << endl;
+mean(a,d,gmean,amean);
+cout << "(A,D) = " << gmean << " and " << amean;
+
+    return 0;
+}
