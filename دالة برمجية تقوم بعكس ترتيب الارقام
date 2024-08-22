@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void rev(int a , int &r){
+    for(; a > 0;){
+        int k = a %10;
+        r = r *10 + k;
+        a = a / 10;
+    }
+}
+int main() {
+int a = 0 , r = 0;
+cout << "enter the number pls : ";
+cin >> a; 
+rev(a , r);
+cout << r;
+    return 0;
+}
