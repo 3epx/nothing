@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void tranpls(int x1 , int x2 , int y1 , int y2 , int &l , int &w , int &p , int &s){
+    l = x1 - x2;
+    if (l < 0){l = l*-1;}
+    w = y1 - y2;
+    if (w < 0){w = w* -1;}
+    p = 2 * l * w;
+    s = w * l;
+}
+
+int main() {
+
+int x1 = 0 , y1 = 0 , x2 = 0 , y2 = 0 , l = 0 , w = 0 , p = 0 , s = 0;
+
+cout << "enter x1 then x2 pls : ";
+cin >> x1 >> x2;
+cout << "enter y1 then y2 pls : ";
+cin >> y1 >> y2;
+
+
+tranpls(x1 , x2 , y1 , y2 , l , w , p , s);
+
+cout << "the length of the traingle is : " << l << endl;
+cout << "the width of the traingle is : " << w << endl;
+cout << "the Perimeter of the traingle is : " << p << endl;
+cout << "the area of the traingle is : " << s << endl;
+
+
+    return 0;
+}
