@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+void ii(int a , int &b , int &c){
+    int u = a;
+    for (; u > 0 ; b++){
+        u = u/10;
+    }
+    int  dev = 1 , devd = 10 ;
+    for (int i = 1; i <= b; i++){
+        int k = a;
+        k = a %devd;
+        k = k / dev;
+        c = c + k;
+        devd = devd * 10;
+        dev = dev * 10;
+    }
+    
+}
+
+int main() {
+int a = 0 , b = 0 , c = 0;
+cout << "enter the number pls : ";
+cin >> a;
+ii(a, b , c);
+cout << "the number of digets is : " << b << endl;
+cout << "the sum of digets is : " << c << endl;
+
+    return 0;
+}
