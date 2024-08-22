@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int pow3(int a , int &b){
+    b = a*a*a;
+    return b;
+}
+int main() {
+
+int a = 0;
+int b = 0;
+cout << "enter the number pls : ";
+cin >> a;
+int z = pow3(a,b);
+cout << "final result is : " << b;
+
+    return 0;
+}
