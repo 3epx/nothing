@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void nump(int &a , int  b, int c){
+    a = a * 10; 
+    a = a + b; 
+    a = a * 10; 
+    a = a + c; 
+}
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the numbers pls : ";
+cin >> a >> b >> c;
+nump(a , b , c);
+cout << a;
+    return 0;
+}
