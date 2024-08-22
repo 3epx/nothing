@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void chng(int &a , int &b){
+    if(a >= b){
+    a = a +b;
+    b = a - b;
+    a = a - b;}
+}
+int main() {
+
+int a = 0 , b = 0;
+
+for (;a != -77 or b != -77;){
+    cout << "enter the values : ";
+    cin >> a >> b;
+    chng(a , b);
+    cout << "new value of a = " << a << " and b = " << b << endl;
+}
+    return 0;
+}
