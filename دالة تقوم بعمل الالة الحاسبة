@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+void calc(int a , int b , int op){
+    if(op == 1){cout << a - b;}
+    else if (op == 2){cout << a / b;}
+    else if (op == 3){cout << a * b;}
+    else {cout << a + b;}
+}
+int main() {
+int a = 0 ,  b = 0 ,  op = 0;
+cout << "enter the first number pls : ";
+cin >> a;
+cout << "enter the second number pls : ";
+cin >> b;
+cout << "enter the operator pls : ";
+cin >> op;
+
+calc(a,b,op);
+
+    return 0;
+}
