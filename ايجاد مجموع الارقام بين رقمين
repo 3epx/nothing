@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std; 
+void ran(int a , int b , int c){
+    int bab , bbc;
+    for (; a <= b; a++){
+        bab = bab + a;
+    }
+    cout << "the sum of numbers between a and b is : "<< bab << endl;
+    for (; b <= c; b++){
+        bbc = bbc + b;
+    }
+    cout << "the sum of numbers between a and b is : "<< bbc << endl;
+    
+}
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the values a then b then c : ";
+cin >> a >> b >> c;
+
+if (a < b and b < c){ ran(a ,b,c);}
+else {cout << "worng!!!!";}
+
+    return 0;
+}
