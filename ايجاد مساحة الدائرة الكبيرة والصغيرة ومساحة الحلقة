@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void rings(int r1, int r2, int &s, int &s1 , int &s2){
+    s1 = 3.14 * r1*r1;
+    s2 = 3.14 * r2*r2;
+    s = s1 - s2;
+    if (s < 0){s = s*-1;}
+    cout << "Area of a large circle is : " << s1 << endl;
+    cout << "Area of a small circle is : " << s2 << endl;
+    cout << "Ring area is : " << s << endl;
+}
+int main() {
+int r1 = 0 , r2 = 0, s = 0 , s1 = 0 , s2 = 0;
+cout << "enter the value of R1 pls : ";
+cin >> r1; 
+cout << "enter the value of R2 pls : ";
+cin >> r2; 
+if (r1 > r2){
+    rings(r1 , r2 , s , s1 , s2);
+}else {cout << "worng!!!";}
+    return 0;
+}
