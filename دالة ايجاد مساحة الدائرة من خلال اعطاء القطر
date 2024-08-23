@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+void acir(int n , int &a){
+    a = 3.14 * n*n;
+}
+int main() {
+int n = 0 , a = 0;
+cout << "enter the number of R : "; 
+cin >> n;
+acir(n,a);
+cout << "the area of the circle is : " << a;
+    return 0;
+}
