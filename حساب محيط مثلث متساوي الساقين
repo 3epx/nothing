@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void trip(int a , int h ){
+    
+    int r = h*h + a*a / 4;
+    r = sqrt(r);
+    cout << "final result is : " << r;
+    
+}
+
+int main() {
+
+int h =0 , a = 0;
+cout << "enter the values of a then h : ";
+cin >> a >> h;
+
+trip(a,h);
+
+
+    return 0;
+}
