@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void shift(int &a , int &b , int &c){
+    int d = a; 
+    a = b;
+    b = c;
+    c = d;
+    cout << "new val of a is : " << a << " : and b is : "<< b << " : and c is : "<< c << endl;
+}
+int main() {
+int a = 0 , b = 0 , c = 0; 
+for (int i = 1; i <=2 ;i++){
+    
+    cout << "enter the numbers pls : ";
+    cin >> a >> b >> c;
+    shift(a,b,c);
+}
+
+    return 0;
+}
