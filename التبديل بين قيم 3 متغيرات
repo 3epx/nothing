@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+void shift(int &a , int &b, int &c){
+    int d = c; b = b + a; c = b - a; b = a; a = d; 
+}
+int main() {
+
+int a = 0 , b = 0 , c = 0;
+cout << "enter the numbers pls : ";
+cin >> a >> b >> c;
+shift(a,b,c);
+
+cout << "new value of a is : " << a << 
+" : and b is : "<< b << 
+" : and c is : " << c;
+    return 0;
+}
