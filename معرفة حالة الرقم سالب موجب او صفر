@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void status(int a){
+if (a < 0){cout << "the number is nigitve";}
+else if (a > 0 ){cout << "the number is poitive";}
+else if (a == 0 ){cout << "the number is zero";}
+cout << endl;}
+int main() {
+int a = 0; 
+for (; a != 8129;){
+    cout << "enter the number pls : ";
+    cin >> a;
+    status(a);
+}
+    return 0;
+}
