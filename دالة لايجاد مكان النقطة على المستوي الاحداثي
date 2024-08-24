@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void graph(int x , int y){
+    if (x > 0 and y > 0){cout << "the point in first squere";}
+    else if (x < 0 and y > 0){cout << "the point in second squere";}
+    else if (x < 0 and y < 0){cout << "the point in third squere";}
+    else if (x > 0 and y < 0){cout << "the point in fourd squere";}
+    else if (x == 0 and y == 0){cout << "the point in center";}
+    else if (x > 0 and y == 0){cout << "the point in positive x cordinate";}
+    else if (x < 0 and y == 0){cout << "the point in nigitve x cordinate";}
+    else if (x == 0 and y > 0){cout << "the point in positive y cordinate";}
+    else if (x == 0 and y < 0){cout << "the point in nigitve y cordinate";}
+}
+int main() {
+int x = 0 , y = 0;
+cout << "enter values of x then y : ";
+cin >> x >> y;
+graph(x,y);
+    return 0;
+}
