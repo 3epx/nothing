@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+void rud(float n){
+    float u = n * 180 / 3.14;
+    cout << "the number in dgrees is : " << u;
+}
+
+int main() {
+
+float n = 0;
+cout << "enter the number pls : ";
+cin >> n;
+rud(n);
+
+    return 0;
+}
