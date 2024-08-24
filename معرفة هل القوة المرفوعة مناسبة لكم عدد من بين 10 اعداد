@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std; 
+int ispwo(int n , int p){
+    if (n %p == 0){return true;}
+    else {return false;}
+    return true;
+}
+int main() { 
+int p = 0;
+cout << "enter the power pls : ";
+cin >> p;
+int nums[10];
+int sum = 0;
+for (int i = 1; i <= 10; i++){
+    cout <<"enter the number : ";
+    cin >> nums[i];
+}
+
+
+for (int i = 1; i <= 10; i++){
+int z = ispwo(nums[i],p);
+sum = sum + z; 
+}
+cout << sum;
+
+    return 0;
+}
