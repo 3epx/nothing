@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std; 
+int ispwo(int n , int p){
+    if (n %p == 0){return true;}
+    else {return false;}
+    return true;
+}
+
+
+int main() {
+int n = 0 , p = 0;
+cout << "enter the number pls : ";
+cin >> n;
+cout << "enter the power pls : ";
+cin >> p;
+
+int z = ispwo(n,p);
+cout << z;
+
+    return 0;
+}
