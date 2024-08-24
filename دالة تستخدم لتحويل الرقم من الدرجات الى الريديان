@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+void rud(int n){
+    float u = n * 3.14 / 180;
+    cout << "the number in riduas is : " << u;
+}
+
+int main() {
+
+int n = 0;
+cout << "enter the number pls : ";
+cin >> n;
+
+rud(n);
+
+    return 0;
+}
