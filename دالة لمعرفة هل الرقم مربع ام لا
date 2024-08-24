@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void squ(int n){
+    float u = sqrt(n);
+    int k = u;
+    if (u == k){cout << "the number is square";}
+    else {cout << "the number is not square";}
+}
+
+int main() {
+
+float n = 0;
+cout << "enter the number pls : ";
+cin >> n;
+squ(n);
+    return 0;
+}
