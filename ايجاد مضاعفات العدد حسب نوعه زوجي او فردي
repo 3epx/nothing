@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+void rud(int n){
+
+
+if(n %2 == 0){
+    int sum = 1;
+    for (int i =2 ; i<=n; i+=2){
+    sum = sum * i;
+}
+    cout << "the factorial of number is : "<< sum ;
+}
+else if(n %2 == 1){
+    int sum = 1;
+    for (int i = 1 ; i<=n; i+=2){
+    sum = sum * i;
+}
+    cout << "the factorial of number is : "<< sum ;
+}
+
+}
+
+int main() {
+
+int n = 0;
+cout << "enter the number pls : ";
+cin >> n;
+rud(n);
+
+    return 0;
+}
