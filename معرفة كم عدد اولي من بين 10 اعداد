@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std; 
+int ispwo(int n){
+   int sum = 0;
+   for (int i = 1; i<=n;i++){
+       if (n %i == 0){sum = sum + 1;}
+   }
+   if (sum == 2){return true;}
+   else {return false;}
+   return true;
+}
+int main() { 
+int nums[10];
+int sum = 0;
+for (int i = 1; i <= 10; i++){
+    cout <<"enter the number : ";
+    cin >> nums[i];
+}
+for (int i = 1; i <= 10; i++){
+int z = ispwo(nums[i]);
+sum = sum + z; 
+}
+cout << sum;
+
+    return 0;
+}
