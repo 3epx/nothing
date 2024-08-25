@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void expo(float n){
+    float sum = 1;
+    float summ = 1;
+    float u = 2;
+    for (int i = 1; i <= 10; i++){
+        for (int k = 1; k <= u; k++){
+            summ = summ * k;
+        }
+    sum = sum + pow(n,u) / summ;
+    cout << sum << endl;
+    u++;
+}
+}
+
+int main() {
+
+float n = 0;
+cout << "enter the number pls : ";
+cin >> n;
+expo(n);
+    return 0;
+}
