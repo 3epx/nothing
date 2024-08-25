@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void fibo(int n1 , int n2 , int &repo){
+    repo = n1 + n2;
+}
+int main() {
+
+int repo = 0;
+int squ = 0;
+int nums[2] = {1,1};
+cout << "enter the numbers of fibonatchi sequanse : ";
+cin >> squ;
+
+for (int i = 1 ; i<= squ; i++){
+    fibo(nums[0],nums[1],repo);
+    nums [0] = nums [1];
+    nums [1] = repo;
+}
+cout << repo;
+
+    return 0;
+}
