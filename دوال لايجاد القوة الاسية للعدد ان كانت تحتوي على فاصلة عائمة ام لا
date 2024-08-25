@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void p1(float a , float b){
+    cout << pow(a , b);
+}
+void p2(float a , float b){
+    cout << pow(a , b);
+}
+void p3(float a , float b){
+    int k = b;
+    float u = b - k;
+    if (u > 0){
+        p1(a,b);
+    }else if (u == 0){
+        p2(a,b);
+    }
+}
+int main() {
+float a = 0 , b = 0;
+
+cout << "enter the number pls : ";
+cin >> a;
+cout << "enter the power pls : ";
+cin >> b;
+p3(a,b);
+    return 0;
+}
