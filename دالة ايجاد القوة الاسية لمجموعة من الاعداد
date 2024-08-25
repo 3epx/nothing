@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void power(int &a , int &b , int &c , int p){
+    
+    if (a <= 0){cout <<"worng!!!";}
+    else if (a > 0){
+        a = pow(a,p);
+        b = pow(b,p);
+        c = pow(c,p);
+    }
+}
+
+int main() {
+
+int a = 0 , b = 0 , c = 0 , p = 0;
+cout << "enter the value of a : ";
+cin >> a;
+cout << "enter the value of b : ";
+cin >> b;
+cout << "enter the value of c : ";
+cin >> c;
+cout << "enter the value of power : ";
+cin >> p;
+
+power(a,b,c,p);
+cout << "new value of a is : " << a << " and b is : " << b << " and c is : " << c;
+
+    return 0;
+}
