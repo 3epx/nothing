@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+double pnc(int pc , int p){
+    int pnc = 1;
+    for (int i = 1; i < pc; i++){
+        pnc = pnc * (p-i);
+    }
+    return pnc;
+}
+
+void Acy(double x ,int p , double e){
+    int pc = 2;
+        double sum = 1;
+        int k = 1;
+    for (; sum > e ;){
+        double z = pnc(pc,p);
+        for(;k<=pc;k++){
+            k=k*k;
+        }
+        sum = sum + pow(p,pc) *z*x/k;
+        k = 1;
+        pc++;
+    }
+    sum = sum + 1 + p*x;
+    cout << sum;
+}
+
+int main() {
+    
+    double x = 0,  e = 0;int p = 0;
+    cout << "enter the number of x : ";
+    cin >> x;
+    cout << "enter the number of power : ";
+    cin >> p;
+    cout << "enter the number of Accuracy : ";
+    cin >> e;
+
+Acy (x,p,e);
+
+
+    return 0;
+}
