@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void sinx(int x){
+    int sum = 1; 
+    int sign = -1; 
+    int p = 2;
+    int u = 1;
+    for(int i = 1; i <= 10; i++){
+        for ( ;u<= p; u++){
+            u = u * u;
+        }
+        sum = sum + pow(x,p)/u * sign;
+        p = p + 2;
+        sign = sign * -1;
+        u = 1;
+    }
+    cout << "final sum is : " << sum;
+}
+int main() {
+int x = 0;
+cout << "enter the number pls : ";
+cin >> x;
+sinx(x);
+
+    return 0;
+}
