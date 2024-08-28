@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+void ttohms(int tis){
+    int u = 0;
+    int h = 0;
+    int m = 0;
+    int k = 0;
+    if (tis >= 3600){
+    u = tis % 3600; 
+    k = u; 
+     h = tis - u;
+    h = h / 3600;
+    cout << "hours = " << h << endl; 
+    if (u >= 60){
+        u = k %60; 
+        m = k - u; 
+        m = m /60; 
+        cout << "minutes = " << m<< endl;
+        cout << "secons = " << u;
+    }else {cout << "minute = 0" <<endl;cout << "seconds = " <<tis;}
+}else if (tis < 3600){
+    cout << "hours = 0" << endl;
+    
+    if (tis >= 60){
+        u = tis %60; 
+        m = tis - u; 
+        m = m /60;
+        cout << "minutes = " << m<< endl;
+        cout << "secons = " << u;
+    }else {cout << "minute = 0" <<endl;cout << "seconds = " <<tis;} // 
+}
+}
+int main() {
+
+int tis = 0;
+cout << "enter the number in seconds : ";
+cin >> tis;
+
+ttohms(tis);
+
+    return 0;
+}
