@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+int leapy(long double y){
+    if (y >= 400){
+    long double k = y / 4;
+    int u = int(k);
+    long double o = k - u;
+    if (o == 0){
+        k = y / 100;
+        u = int(k);
+        o = k - u;
+        if (o > 0){return true;}
+    }
+    if (o == 0){
+        k = y / 100;
+        u = int(k);
+        o = k - u;
+        if (o == 0){
+            k = y / 400;
+            u = int(k);
+            o = k - u;
+            if (o == 0){return true;}
+            else if (o > 0){return false;}
+        }else if (o > 0){
+            k = y / 400;
+            u = int(k);
+            o = k - u;
+            if (o == 0){return true;}
+            else if (o > 0){return false;}
+        }
+    }else if (o > 0){return false;}
+        
+    }
+    else if (y < 400 and y >=100){
+    long double k = y / 4;
+    int u = int(k);
+    long double o = k - u;
+    if (o == 0){
+        k = y / 100;
+        u = int(k);
+        o = k - u;
+        if (o > 0){return true;}
+        else {return false;}
+    }else {return false;}
+}else if (y < 100 and y >=1){
+    long double k = y / 4;
+    int u = int(k);
+    long double o = k - u;
+    if (o == 0){return true;}
+    else {return false;}
+}
+return true;
+}
+int main() {
+long double y = 0; int m = 0;
+cout << "enter the year pls : ";
+cin >> y;
+cout << "enter the month pls : ";
+cin >> m;
+int z = leapy(y);
+
+if (z == 1 and m == 2){
+    int mon[12] = {31,29,31,30,31,30,31,31,30,31,30,31};
+    cout << "the year is : " << int(y) << endl << "and month is : " <<  mon[m-1];
+}
+else {
+    int mon[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
+    cout << "the year is : " << int(y) << endl << "and month is : " <<  mon[m-1];
+}
+    return 0;
+}
