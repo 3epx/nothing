@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+void ttohms(int &h , int &m , int &s , int tis){
+    int u = 0;
+    if (tis >= 3600){
+    u = tis % 3600; 
+    h = tis - u;
+    h = h / 3600;
+    if (u >= 60){
+        m = u;
+        u = u %60; 
+        m = m - u;
+        m = m /60; 
+        s = u;
+}else if (tis < 3600){
+    if (tis >= 60){
+        u = tis %60; 
+        m = tis - u; 
+        m = m /60;
+        s = u;
+    }else if (tis < 60){
+        s = tis;
+    }
+}
+}
+}
+
+
+
+int main(){
+int hor = 0, min = 0 , sec = 0;
+cout << "enter the number of hors : ";
+cin >> hor;
+cout << "enter the number of minutes : ";
+cin >> min;
+cout << "enter the number of seconds : ";
+cin >> sec;
+int h = 0, m = 0 , s = 0 , tis = 0;
+cout << "enter the additional seconds : ";
+cin >> tis;
+cout << "\n\n\n\n\n";
+cout << "old time is : " << "hors = " << hor  << endl << "minutes is : "<< min << endl << "seconds is : " << sec;
+ttohms(h,m,s,tis);
+
+sec = sec + s;
+if (sec > 60){
+    int k = sec %60;
+    int mm = sec - k;
+    m = m + mm/60;
+    sec = k;
+}
+min = min + m;
+if (min > 60 ){
+    int k = min %60;
+    int mm = min - k;
+    h = h + mm/60;
+    min = k;
+}
+hor = hor + h;
+
+cout << "\n\n";
+cout << "new numbers is \n";
+cout << "horus is : " << hor << endl;
+cout << "minutes is : " << min << endl;
+cout << "seconds is : " << sec;
+
+    return 0;
+}
