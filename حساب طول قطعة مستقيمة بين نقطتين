@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void leng(int xa , int xb , int ya , int yb){
+    
+    int x = xa - xb;
+    if (x < 0){x = x *-1;}
+    int y = ya - yb;
+    if (y < 0){y = y *-1;}
+    int result = x * x + y * y;
+    result = sqrt(result);
+    cout << "the result is : " << result;
+}
+
+int main() {
+int xa = 0 , xb = 0 , ya = 0 , yb = 0;
+cout << "enter the points of x1 then x2 : ";
+cin >> xa >> xb;
+cout << "enter the points of y1 then y2 : ";
+cin >> ya >> yb;
+leng(xa,xb,ya,yb);
+
+    return 0;
+}
