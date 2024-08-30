@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void SumRange(int a , int b){
+    int sum = 0;
+    for (;a<=b;a++){
+        sum = sum + a;
+    }
+    cout << "final result is : " << sum;
+}
+int main() {
+
+int a = 0 , b = 0;
+cout << "enter first value : ";
+cin >> a;
+cout << "enter the second value : ";
+cin >> b;
+
+SumRange(a,b);
+
+
+
+
+    return 0;
+}
