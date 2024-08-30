@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void TriangleP(int a ,int h) {
+    int b = pow(a/2,2) + pow(h,2);
+    b = sqrt(b);
+    cout << b;
+}
+
+int main() {
+    int a = 0, h = 0;
+    cout << "enter the value of a :";
+    cin >> a;
+    cout << "enter the value of h :";
+    cin >> h;
+    TriangleP(a,h);
+
+
+    return 0;
+}
