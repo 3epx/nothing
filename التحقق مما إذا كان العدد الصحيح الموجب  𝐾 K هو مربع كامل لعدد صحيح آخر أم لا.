@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int issq(int n){
+    long double z = sqrt(n);
+    int k = int(z);
+    if (z - k == 0){return true;}
+    else {return false;}
+    return true;
+}
+int main() {
+
+int n = 0, sum = 0; 
+
+for (int i = 0 ; i <= 10 ; i++){
+    cout << "enter the number pls : ";
+    cin >> n;
+    int z = issq(n);
+    sum = sum + z;
+}
+cout << sum;
+
+
+    return 0;
+}
