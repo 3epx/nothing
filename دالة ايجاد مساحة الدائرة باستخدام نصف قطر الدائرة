@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+void circle(int r){
+    int s = r*r * 3.14;
+    cout << s;
+}
+
+int main() {
+    int r = 0;
+    cout << "enter the value pls : ";
+    cin >> r;
+    circle(r);
+
+
+    return 0;
+}
