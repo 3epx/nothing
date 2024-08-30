@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int RootCount(int a , int b , int c){
+    int result = c * a * 4 - b*b;
+    if (result == 0){return true;}
+    else {return false;}
+    return true;
+}
+
+int main() {
+    int a = 0 , b = 0 , c = 0;
+    cout << "enter the numbers pls : ";
+    cin >> a >> b >> c;
+    int z = RootCount(a, b , c);
+    cout << z;
+    return 0;
+}
