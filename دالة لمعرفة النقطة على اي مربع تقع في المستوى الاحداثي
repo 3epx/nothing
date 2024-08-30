@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+void quarter(int x , int y){
+    if (x > 0 and y > 0){cout << "first quarter";}
+    else if (x < 0 and y > 0){cout << "second quarter";}
+    else if (x < 0 and y < 0){cout << "third quarter";}
+    else if (x > 0 and y < 0){cout << "fourd quarter";}
+    else if (x == 0 and y == 0){cout << "center point";}
+    else if (x == 0 and y > 0 or x == 0 and y < 0 ){cout << "y axis";}
+    else if (x > 0 and y == 0 or x < 0 and y == 0){cout << "x axis";}
+    else {cout << "worng!!!!";}
+}
+int main() {
+    int x = 0 , y = 0;
+    cout << "enter the value of x : ";
+    cin >> x;
+    cout << "enter the value of y : ";
+    cin >> y;
+    quarter(x,y);
+    return 0;
+}
