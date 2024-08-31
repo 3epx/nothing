@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int nod(int n, int nn){
+    int k = 10;
+    int u = n;
+    for (int i = 1; i < nn; i++){ // 
+        k = k * 10;
+    }
+    u = n %k;
+    k = k / 10; 
+    u = u / k;
+    return u;
+}
+int main() {
+
+int n = 0;
+int nn = 0;
+cout << "enter the number pls : ";
+cin >> n;
+cout << "enter the number of digit : ";
+cin >> nn;
+int u = nod(n,nn);
+cout << u;
+
+
+    return 0;
+}
