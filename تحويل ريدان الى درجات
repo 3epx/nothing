@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+void rtd(float n){
+    float result = n * 180/3.14;
+    cout << result;
+}
+int main() {
+     for (int i = 1; i<=5;i++){
+    float n = 0 ;
+    cout << "enter the number pls : ";
+    cin >> n;
+    rtd(n);}
+    return 0;
+}
