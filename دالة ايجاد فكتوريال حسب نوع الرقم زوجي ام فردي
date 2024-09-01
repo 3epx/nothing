@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void fact(int n){
+    int sum = 1;
+    if (n %2 == 0){
+    for(int i = 2; i <= n; i+=2){
+        sum = sum * i;
+    }}
+    else if (n %2 == 1){
+    for(int i = 1; i <= n; i+=2){
+        sum = sum * i;
+    } }
+    cout << "factorial of " << n << " = " << sum;
+}
+int main() {
+    
+    int n = 0; 
+    cout << "enter the number pls : ";
+    cin >> n;
+    fact(n);
+    return 0;
+}
