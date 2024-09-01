@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+void rtd(float n , int nn){
+    if (nn = 1){
+    float result = n * 3.14/180;
+    cout << result;}
+    else if (nn = 2){
+    float result = n * 180/3.14;
+    cout << result;
+    }
+    else {"worng!!!!!!!!";}cout<< endl;
+}
+int main() { for(int i = 1; i<=5;i++){
+    float n = 0;int nn = 0;
+    cout << "chose any one from the choesies : " << endl << "1. d to r" << endl << "2. r to d" << endl;
+    cin >> nn;
+    cout << "enter the number pls : ";
+    cin >> n;
+    rtd(n , nn);}
+    return 0;
+}
