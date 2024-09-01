@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std; 
+void RectPS(int x1 , int x2 , int y1 , int y2){
+    int w = x1 - x2;
+    if (w < 0){w = w * -1;}
+    int t = y1 - y2;
+    if (t < 0){t = t * -1;}
+    int p = 2 * (t + w);
+    int s = t * w;
+    cout << "the perimeter is " << p << endl;
+    cout << "the area is " << s << endl;
+}
+int main() {
+int x1 = 0 , x2 = 0 , y1 = 0 , y2 = 0;
+for (int i = 1 ; i<=3 ; i++){
+cout << "enter the values of x1 then x2 : "; 
+cin >> x1 >> x2; 
+cout << "enter the values of y1 then y2 : "; 
+cin >> y1 >> y2; 
+RectPS(x1, x2,y1 , y2);
+}
+    return 0;
+}
