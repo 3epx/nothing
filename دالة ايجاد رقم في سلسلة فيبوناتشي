@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void fibo(int n , int n1 , int n2){
+int sum = 0;
+for (int i = 1; i < n; i++){
+    sum = n1 + n2;
+    n1 = n2;
+    n2 = sum;
+}
+cout << sum<< endl;
+}
+int main() {
+
+int n = 0, n1 = 0 , n2 = 1;
+
+for (int i = 1; i<=5;i++){
+    cout << "enter the number pls : ";
+    cin >> n;
+    fibo(n,n1,n2);}
+
+
+
+    return 0;
+}
