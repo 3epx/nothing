@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void summ(int n, int& sum) {
+    sum = sum * n;
+}
+int main() {
+    int n = 0, sum = 1; 
+    for (int i = 1; i <= 10; i++) {
+        cout << "enter the number pls : ";
+        cin >> n;
+        summ(n, sum);
+    }
+    cout << sum;
+    return 0;
+}
