@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void pow234(int x , int y){
+    int z= x + y;
+    z = z / 2;
+    cout << z << endl;
+    z = x * y;
+    z = sqrt(z);
+    cout  << z << endl;
+}
+int main() {
+    int x = 0 , y = 0;
+    for (int i = 1; i <= 5; i++){
+    cout << "enter the number pls : ";
+    cin >> x;
+    cout << "enter the number pls : ";
+    cin >> y;
+    pow234(x , y);
+    }
+    return 0;
+}
