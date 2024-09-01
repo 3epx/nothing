@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void  TrianglePS(float a) {
+    float s = a * a * sqrt(3) / 4;
+    cout << s << endl;
+    float p = 3 * a;
+    cout << p << endl;
+}
+int main() {
+    int a = 0;
+    cout << "enter the value of a : ";
+    cin >> a;
+    TrianglePS(a);
+    return 0;
+}
