@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void summ(int n, int& sum) {
+    sum = sum + n;
+}
+void proo(int n, int& pro) {
+    pro = pro + n;
+}
+int main() {
+    int n = 0, sum = 0 , pro = 1; 
+    int io = 10;
+    for (int i = 1; i <= io; i++) {
+        cout << "enter the number pls : ";
+        cin >> n;
+        summ(n, sum);
+        proo(n, pro);
+        if (n == 'stop') {break;}
+    }
+    cout << "sum of numbers is : " << sum << endl;
+    cout << "produac of numbers is : " << pro << endl;
+    return 0;
+}
