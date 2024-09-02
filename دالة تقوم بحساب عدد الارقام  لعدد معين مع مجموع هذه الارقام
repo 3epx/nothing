@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+void DigitCS(int n){
+    int sum = 0; 
+    int u = n;
+    int i = 1;
+    for (;u > 0;){
+        u = u/10;
+        i++;
+    }
+    int dev = 1;
+    int devid = 10;
+    for (int k = 1; k <= i; k++){
+        u = n;
+        u = u %devid;
+        u = u /dev; 
+        sum = sum + u;
+        dev = dev * 10;
+        devid = devid * 10;
+    }
+    cout << i << endl;
+    cout << sum;
+}
+int main() {
+int n = 0;
+cout << "enter the number pls : "; 
+cin >> n; 
+DigitCS(n);
+    return 0;
+}
