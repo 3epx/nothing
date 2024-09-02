@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+void swap(int a , int b , int c , int d){
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    cout << "new value of a is : " << a << endl;
+    cout << "new value of b is : " << b << endl;
+    c = c + d;
+    d = c - d;
+    c = c - d;
+    cout << "new value of c is : " << c << endl;
+    cout << "new value of d is : " << d << endl;   
+}
+int main() {
+    int a = 0 , b = 0 , c = 0 , d = 0;
+    cout << "enter the number of a : ";
+    cin >> a;
+    cout << "enter the number of b : ";
+    cin >> b;
+    cout << "enter the number of c : ";
+    cin >> c;
+    cout << "enter the number of d : ";
+    cin >> d;
+    swap(a,b,c,d);
+    return 0;
+}
