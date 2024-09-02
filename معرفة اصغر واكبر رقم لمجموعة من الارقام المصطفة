@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+void sort3(int n[]){
+    int bign = 0;
+    for (int i = 0; i <= 8 ; i++){
+        if (bign < n[i]){bign = n[i];}
+    }
+    int smalln = bign;
+    for (int i = 0; i <= 8; i++){
+        if (smalln > n[i]){smalln = n[i];}
+    }
+    cout << "small number is : " << smalln << endl;
+    cout << "big number is : " << bign;
+}
+int main() {
+   int n[9] = {3,4,5,3,4,3,2,4,5};
+   sort3 (n);
+    return 0;
+}
