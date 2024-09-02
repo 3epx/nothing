@@ -10,7 +10,7 @@ cin >> a >> b;
 if (a %b == 0){
     cout << "multiplaes";
 }
-else {cout << "thousnd cock in your mother pussy";}
+else {cout << "worng!!!!!!!!!!";}
 
 
     return 0;
