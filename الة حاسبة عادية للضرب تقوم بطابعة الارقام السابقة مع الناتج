@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a[100];
+	int sum = 1; 
+	for (int i = 0; i < 100; i++) {
+		cout << "enter the number pls : ";
+		cin >> a[i];
+		for (int u = 0; u <= i; u++) {
+			cout << a[u] << " ,";
+		}
+		sum = sum * a[i];
+		cout << " = " << sum;
+		cout << endl;
+	}
+	cout << sum;
+}
+
