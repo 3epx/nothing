@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	while (true) {
+		int x = 0;
+		cout << "enter positive number pls : ";
+		cin >> x; 
+		if (x < 0) { cout << "false , "; }
+		else if (x > 0) {
+			cout << "the number is : " << x;
+			break;
+		}
+		
+	}
+
+
+}
+
