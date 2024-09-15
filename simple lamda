@@ -1,0 +1,13 @@
+#include <iostream>
+#include <functional>
+using namespace std;
+int main()
+{
+	int x = 19 , y = 20;
+	auto u = [&](){
+		return x + y;
+		};
+		 cout << u() << endl;
+	 x = 9, y = 10;
+	 cout << u();
+}
