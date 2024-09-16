@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Ahmed {
+private:
+	string name;
+	int age;
+	int hight;
+public:
+	void set(string p_name, int p_age, int p_hight) {
+	    this -> age = p_age;
+	    this -> name = p_name;
+	    this -> hight = p_hight;
+	}
+	void get(){
+cout << name << " has an " << age << " years old and he has an " << hight << "cm";	}
+}
+
+int main()
+{
+	Ahmed ahmed1;
+	ahmed1.set("ahmed", 13, 167);
+	cout << endl;
+	Ahmed ahmed2;
+	ahmed2.set("Ali", 19, 175);
+	ahmed1.get();
+	cout << endl;
+	ahmed2.get();
+}
