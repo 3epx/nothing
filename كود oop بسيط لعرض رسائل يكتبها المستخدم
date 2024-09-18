@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class wel {
+    public: 
+    string hi;
+    void hii(){
+        cout << hi << endl;
+    }
+};
+int main() {
+    string hi;
+cout << "enter the letter pls : ";
+getline(cin,hi);
+wel wel1;
+wel1.hi = hi;
+wel1.hii();
+cout << "enter the letter pls : ";
+getline(cin,hi);
+wel wel2;
+wel2.hi = hi;
+wel2.hii();
+
+    return 0;
+}
