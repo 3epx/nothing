@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class wel {
+    public: 
+    int n1 = 0;
+    int n2 = 0;
+    char op;
+    void hii(){
+        if (op == '-'){
+            cout << n1 - n2;
+        }
+        else if (op == '+'){
+            cout << n1 + n2;
+        }
+        else if (op == '*'){
+            cout << n1 * n2;
+        }
+        else if (op == '/'){
+            cout << n1 / n2;
+        }
+        else {cout << "worng!!!!, pls try again..";}
+
+    }
+};
+int main() {
+int n1 =0, n2 = 0; char op;
+
+cout << "enter the first number pls : ";
+cin >> n1;
+cout << "enter the operator : ";
+cin >> op;
+cout << "enter the second number pls : ";
+cin >> n2;
+
+wel wel1;
+wel1.n1 = n1;
+wel1.n2 = n2;
+wel1.op = op;
+wel1.hii();
+    return 0;
+}
