@@ -1,0 +1,46 @@
+#include <iostream>
+#include <climits>  
+using namespace std;
+
+
+class anm{
+    public : 
+    int u , s;
+    
+    void pmm (){
+        if (u == 1 and s == 1){cout << INT_MAX;}
+        else if (u == 1 and s == 2){cout << INT_MIN;}
+        else if (u == 2 and s == 1){cout << SHRT_MAX;}
+        else if (u == 2 and s == 2){cout << SHRT_MIN;}
+        else if (u == 3 and s == 1){cout << CHAR_MAX;}
+        else if (u == 3 and s == 2){cout << CHAR_MIN;}
+
+    
+        
+    }
+    
+};
+
+
+int main() {
+
+int u , s;
+
+cout << "chosse anyone form the list.." << endl;
+cout << "1.int" << endl;
+cout << "2.string" << endl;
+cout << "3.char" << endl;
+cout << "chosse : ";
+cin >> u;
+cout << "1.Max" << endl;
+cout << "2.Min" << endl;
+cout << "chosse : ";
+cin >> s;
+anm anm1;
+anm1.u = u;
+anm1.s = s;
+anm1.pmm();
+
+
+    return 0;
+}
