@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+class books{
+    public: 
+    string name;
+    int price;
+    string aouther;
+    int pages;
+    void booksp(){
+        if (price == 0){
+                    cout << "The " << name << " Book" << " it's write by aouther called " << aouther << " and this book has " << pages << " of pages and you can buy this book for free" << endl << endl;
+            
+        }else {        cout << "The " << name << " Book" << " it's write by aouther called " << aouther << " and this book has " << pages << " of pages and you can buy this book for " << price << " dollar" << endl<< endl;}
+
+    }
+};
+int main()
+{
+    
+    books b1; b1.name = "happy live"; b1.aouther = "ali";  b1.pages = 359;  b1.price = 25; 
+    b1.booksp();
+    
+    books b2; b1.name = "sad live"; b2.aouther = "mohamed";  b2.pages = 349;  b2.price = 0; 
+    b2.booksp();
+
+    return 0;
+}
