@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class wel {
+    public: 
+    string hi;
+    void hii(){
+        cout << hi << endl;
+    }
+};
+int main() {
+wel wel1;
+wel1.hi = "Hello World";
+wel1.hii();
+wel wel2;
+wel2.hi = "Hello Guys";
+wel2.hii();
+
+    return 0;
+}
