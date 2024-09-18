@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+class sopu {
+    
+    public: 
+    int u = 0;
+    int m = 0;
+    void pr(){
+        int z;
+        if (u == 1){
+            z = sizeof(int);
+            cout << "the size of int is : " << z << endl;
+            cout << "so the final result is : " << m * z;
+        }
+        else if (u == 2){
+            z = sizeof(string);
+            cout << "the size of string is : " << z << endl;
+            cout << "so the final result is : " << m * z;
+        }
+        else if (u == 3){
+            z = sizeof(char);
+            cout << "the size of char is : " << z << endl;
+            cout << "so the final result is : " << m * z;
+        }
+        else if (u == 4){
+            z = sizeof(float);
+            cout << "the size of float is : " << z << endl;
+            cout << "so the final result is : " << m * z;
+        }
+        else if (u == 5){
+            z = sizeof(double);
+            cout << "the size of double is : " << z << endl;
+            cout << "so the final result is : " << m * z;
+        }
+        else {cout << "worng pls try again with true values..";}
+}
+    
+};
+
+int main() {
+    
+    int u , m;
+    cout << "find the size of fundamental data types, chosee anyone from the list : " << endl;
+    cout << "1. int" << endl;
+    cout << "2. string" << endl;
+    cout << "3. char" << endl;
+    cout << "4. float" << endl;
+    cout << "5. double" << endl;
+    
+    cout << "chosee anyone from the list above : ";
+    cin >> u;
+    cout << "enter the number of this unit pls : ";
+    cin >> m;
+    sopu s1; 
+    s1.u = u;
+    s1.m = m;
+    s1.pr();
+    
+    
+    return 0;
+}
