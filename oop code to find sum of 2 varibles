@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class sum{
+    public: 
+    int n1 = 0 , n2 = 0;
+    void psum(){
+        cout << "Resut of sum is : " << n1 + n2 << endl;
+    }
+};
+
+int main() {
+
+sum sum1; sum1.n1 = 19; sum1.n2 = 12; sum1.psum();
+sum sum2; sum2.n1 = 18; sum2.n2 = 12; sum2.psum();
+sum sum3; sum3.n1 = 12; sum3.n2 = 54; sum3.psum();
+sum sum4; sum4.n1 = 93; sum4.n2 = 2323; sum4.psum();
+
+
+    return 0;
+}
