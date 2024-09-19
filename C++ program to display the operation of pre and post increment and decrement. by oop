@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class dip{
+    public : 
+    int n = 0 , r = 0 ;
+    void print (){
+        
+        for (int i = 0; i <= r ; i++){
+            cout << n << endl;
+            n++;
+        }
+        for (int i = 0; i <= r ; i++){
+            n--;
+            cout << n << endl;
+        }
+    }
+};
+
+int main() {
+    
+    int n = 0 , r = 0 ;
+cout << "enter the number pls : ";
+cin >> n;
+cout << "enter the range pls : ";
+cin >> r;
+
+dip dip1;
+dip1.n = n;
+dip1.r = r;
+dip1.print();
+
+    return 0;
+}
