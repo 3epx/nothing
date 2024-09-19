@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class test{
+    
+    private : 
+    int age;
+    int hight;
+    string name;
+    public : 
+    void set(int age , int hight , string name){
+        this -> age = age;
+        this -> hight = hight;
+        this -> name = name;
+    }
+    void get(){
+        cout << this -> name << endl;
+        cout << this -> age << endl;
+        cout << this -> hight << endl;
+    }
+};
+int main() {
+
+test t1;
+t1.set(19,170,"Ali");
+t1.get();
+
+
+
+
+    return 0;
+}
