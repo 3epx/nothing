@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class company{
+  private:
+  int salary;
+  public:
+  void Set(int s){
+       salary = s;
+  }
+    void Get(){
+      cout << "the salary is : " << salary << endl;
+  }
+  int Getint(){
+      return salary;
+  }
+};
+int main() {
+    company e1;
+    e1.Set(1900);
+    e1.Get();
+    int z = e1.Getint();
+    company e2;
+    e2.Set(1300);
+    e2.Get();
+    z = z + e2.Getint();
+    company e3;
+    e3.Set(1690);
+    e3.Get();
+    z = z + e3.Getint();
+    cout << "the sum of salaries is : " << z;
+    return 0;
+}
