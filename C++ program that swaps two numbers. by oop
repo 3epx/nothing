@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+
+class so{
+    public:
+    int n1 , n2;
+    
+    void sw(){
+        n1 = n1 + n2;
+        n2 = n1 - n2;
+        n1 = n1 - n2;
+        cout << "new value of n1 is : " << n1 << endl;
+        cout << "new value of n2 is : " << n2 << endl;
+        
+    }
+    
+    
+};
+
+int main() {
+
+int n1 , n2;
+
+cout << "enter the first number pls : ";
+cin >> n1;
+cout << "enter the second number pls : ";
+cin >> n2;
+
+so sw1;
+sw1.n1 = n1;
+sw1.n2 = n2;
+sw1.sw();
+
+
+
+    return 0;
+}
