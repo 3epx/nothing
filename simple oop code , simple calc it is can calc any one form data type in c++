@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class scalc{
+    public : 
+    double n1 , n2; char op;
+    int cn1 = n1 , cn2 = n2;
+    void print(){
+        if (n1 - cn1 == 0 and n2 - cn2 == 0){
+            if (op == '-'){cout << cn1 - cn2 << endl;}
+            else if (op == '*'){cout << cn1 * cn2 << endl;}
+            else if (op == '/'){cout << cn1 / cn2 << endl;}
+            else if (op == '+'){cout << cn1 + cn2 << endl;}
+        }
+        else {
+            if (op == '-'){cout << n1 - n2 << endl;}
+            else if (op == '*'){cout << n1 * n2 << endl;}
+            else if (op == '/'){cout << n1 / n2 << endl;}
+            else if (op == '+'){cout << n1 + n2 << endl;}
+        }
+    }
+    
+};
+
+int main() {
+    double n1 , n2; char op;
+
+cout << "enter the fisrt number pls : ";
+cin >> n1;
+cout << "enter the operator pls : ";
+cin >> op;
+cout << "enter the second number pls : ";
+cin >> n2;
+
+scalc s1;
+s1.n1 = n1;
+s1.n2 = n2;
+s1.op = op;
+s1.print();
+
+
+
+    return 0;
+}
