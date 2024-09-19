@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class Circle{
+    private: 
+    double r;
+    public : 
+    void set (int r){
+        this -> r = r;
+    };
+    void get (){
+        cout << "Area = " << 3.14 * r*r;
+    };
+};
+int main() {
+    Circle c1; 
+    c1.set(12.12);
+    c1.get();
+    return 0;
+}
