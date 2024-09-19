@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class so{
+    public:
+    int n;
+    void sw(){
+        int result = (4 * 3.14 * n * n * n) / 3;
+        cout << "The Result is : " << result << endl;
+    }
+};
+int main() {
+int n;
+cout << "enter the first number pls : ";
+cin >> n;
+so so1;
+so1.n = n;
+so1.sw();
+    return 0;
+}
