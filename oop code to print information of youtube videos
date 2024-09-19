@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std; 
+
+class Youtube{
+    
+    private : 
+    int coment;
+    int like;
+    int dislike;
+    int viwes;
+    string video;
+    string channel;
+    
+    public :
+    
+    void set (int c , int l , int d , int v , string vin , string ch){
+        this -> coment = c;
+        this -> like = l;
+        this -> dislike = d;
+        this -> viwes = v;
+        this -> video = vin;
+        this -> channel = ch;
+    }
+    void get(){
+       cout << "channel name : " << this -> channel << endl;
+       cout << "video name : " << this -> video << endl;
+       cout << "many likes : " << this -> like << endl;
+       cout <<  "many dis likes : " <<this -> dislike << endl;
+       cout <<  "many viwes : " <<this -> viwes << endl;
+       cout << "many comments : " << this -> coment << endl;
+       cout << endl;
+    }
+    
+};
+
+int main() {
+    
+    Youtube y1;
+    y1.set(1872 , 99182 , 3012 , 2001031 , "جولة في جامعة النهرين", "Ahmed Khairy");
+    y1.get();
+    
+        Youtube y2;
+    y2.set(81 , 27 , 39 , 922 , "جولة في جامعة بغداد", "Ahmed Khairy");
+    y2.get();
+
+    return 0;
+}
