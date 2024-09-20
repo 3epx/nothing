@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+class calc{
+    private : 
+    int n1 , n2;
+    public:
+    calc(int n1 , int n2){
+        this -> n1 = n1;
+        this -> n2 = n2;
+    }
+    void sum(){
+        cout << "result of sum is : " <<  n1 + n2 << endl;
+    }
+    void divi(){
+        cout << "result of divide is : " <<  n1 / n2 << endl;
+    }
+    void mult(){
+        cout << "result of multiply is : " <<  n1 * n2 << endl;
+    }
+    void mod(){
+        cout << "result of moduluas is : " << n1 % n2 <<endl;
+    }
+    void sub(){
+        cout << "result of subtraction is : " << n1 - n2 << endl;
+    }
+};
+int main() {
+int n1 , n2;
+cout<< "enter the value of first number : ";
+cin >> n1;
+cout<< "enter the value of second number : ";
+cin >> n2;
+calc c1(n1 , n2);
+c1.sum();
+c1.divi();
+c1.sub();
+c1.mod();
+c1.mult();
+cout<< endl;
+calc c2(23 , 28);
+c2.sum();
+c2.divi();
+c2.sub();
+c2.mod();
+c2.mult();
+    return 0;
+}
