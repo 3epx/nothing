@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class stu{
+    private : 
+    string name;
+    int mark;
+    public : 
+    stu(int mark , string name){
+        this -> name = name;
+        this -> mark = mark;
+    }
+    stu(string name , int mark){
+        this -> name = name;
+        this -> mark = mark;
+    }
+    friend void summark(stu ob1, stu ob2 , stu ob3){
+        cout << "The Sum of marks is : " <<ob1.mark + ob2.mark + ob3.mark << endl;
+    }
+    friend void chmark(stu ob1, stu ob2 , stu ob3){
+        if (ob1.mark > ob2.mark and ob1.mark > ob3.mark){
+            cout << "The bigger mark is : " <<  ob1.mark << " it followed to " << ob1.name;
+        }
+        else if (ob2.mark > ob1.mark and ob2.mark > ob3.mark){
+            cout << "The bigger mark is : " <<  ob2.mark << " it followed to " << ob2.name;
+        }
+        else if (ob3.mark > ob1.mark and ob3.mark > ob2.mark){
+            cout << "The bigger mark is : " <<  ob3.mark << " it followed to " << ob3.name;
+        }
+    }
+};
+int main() {
+stu s1("Ahmed" , 100);
+stu s2("Ali" , 90);
+stu s3("Majeed" , 80);
+summark(s1, s2 , s3);
+chmark(s1, s2 , s3);
+    return 0;
+}
