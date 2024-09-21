@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class fibo{
+  private :
+  int lim;
+  int n1 = 0;
+  int n2 = 1;
+  int sum = 0;
+  public :
+  fibo(int beg , int lim){
+     this -> n1 = beg;
+     this -> lim = lim;
+  };
+  void pr(){
+      for (; sum <= lim ;){
+      sum = n1 + n2;
+            n2 = n1;
+      n1 = sum;
+      cout << sum << endl;
+      }
+  }
+};
+
+int main()
+{
+fibo f1(0 , 1890);f1.pr();
+fibo f2(4 , 1890);f2.pr();
+    return 0;
+}
