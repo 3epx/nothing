@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class ktf{
+    
+    private :
+    float k;
+    public : 
+    ktf(int k){
+        this -> k = k;
+    }
+    void pr(){
+        cout << "the temp in fihrnhite is  : " << (9.0 / 5) * (k - 273.15) + 32 << endl;
+    }
+};
+
+
+
+int main() {
+
+
+ktf k1(1283);k1.pr();
+ktf k2(283);k2.pr();
+ktf k3(1912);k3.pr();
+
+
+
+
+
+    return 0;
+}
