@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class dis{
+  private : 
+  int dev;
+  int diso;
+  public:
+  dis(int dev , int diso){
+      this -> dev = dev;
+      this -> diso = diso;
+  }
+  void pr (){
+      cout << "the number of dev is : "<< dev / diso << endl;
+      cout << "the modulas is : " << dev %diso << endl;
+  }
+    
+    
+};
+
+int main() {
+dis d1(25,3);d1.pr();
+dis d2(282,4);d2.pr();
+dis d3(292,9);d3.pr();
+
+
+
+    return 0;
+}
