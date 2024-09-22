@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class swapp{
+    private: 
+    int x;
+    int y;
+    public :
+    swapp(int x , int y){
+        this -> x = y;
+        this -> y = x;
+    }
+    void pr(){
+        cout << "the new value of x is : " << x << endl;
+        cout << "the new value of y is : " << y;
+    } 
+};
+int main() {
+int x = 0 , y = 0;
+cout << "enter the value of x : ";
+cin >> x;
+cout << "enter the value of y : ";
+cin >> y;
+swapp s1(x,y);
+s1.pr();
+    return 0;
+}
