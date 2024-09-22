@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+class ktm{
+    
+    private :
+    float km;
+    public : 
+    ktm(int km){
+        this -> km = km;
+    }
+    void pr(){
+        cout << "the size in miles is : " << km * 0.6213712 << endl;
+    }
+};
+
+
+
+int main() {
+
+
+ktm k1(1283);k1.pr();
+ktm k2(283);k2.pr();
+ktm k3(1912);k3.pr();
+
+
+
+
+
+    return 0;
+}
