@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class swapp{
+    private: 
+    int w;
+    int l;
+    public :
+    swapp(int w, int l){
+        this -> w = w;
+        this -> l = l;
+    }
+    void pr(){
+        
+        cout << "the result of area is : " << (l * w) << endl;
+        cout << "the result of Perimeter  is : " << 2 *(l + w);
+
+    }
+    
+};
+
+
+int main() {
+
+int w = 0 , l = 0;
+
+cout << "enter the value of width : ";
+cin >> w;
+cout << "enter the value of length : ";
+cin >> l;
+
+swapp s1(w,l);
+s1.pr();
+
+
+
+    return 0;
+}
