@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class ftri{
+  
+  private : 
+  int w , h;
+  public : 
+  void set(int w , int h){
+      this -> w = w; 
+      this -> h = h;
+  }
+  void get(){
+      cout << "the size of tringle area is : " << w * h  << endl;
+  }
+};
+
+int main() {
+ftri t1;t1.set(123,14);t1.get();
+    return 0;
+}
