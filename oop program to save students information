@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class stu{
+    private : 
+    int age , grade ;
+    string name;
+    public: 
+    void set(int age, int grade , string name){
+         this -> age = age; 
+         this -> name = name; 
+         this -> grade = grade; 
+        
+    }
+    void get(){
+        cout << "the name of student is : " << name << " and he age is : " << age << " and he has a grade is : " << grade << endl;
+    }
+    
+};
+
+int main() {
+
+stu s1;s1.set(25,99,"ahmed");s1.get();
+stu s2;s2.set(22,99,"ali");s2.get();
+stu s3;s3.set(29,99,"husain");s3.get();
+stu s4;s4.set(35,99,"montazer");s4.get();
+
+
+    return 0;
+}
