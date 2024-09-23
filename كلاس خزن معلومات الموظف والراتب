@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class cspd{
+  private : 
+  float n , v;string name;
+  public : 
+  void set (string name,int n , float v){
+      this -> n = n;
+      this -> v = v;
+      this -> name = name;
+  }
+  void get(){
+      cout << "the emplooy " << name << "back accout : " << n <<  " has " << v << " money" <<endl;
+  }
+};
+int main() {
+cspd c1;c1.set("ahmed",283923,1250.1231);c1.get();
+    return 0;
+}
