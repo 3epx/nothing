@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class fcir{
+    private : 
+    int r; 
+    public :
+    void set(int r){
+        this -> r = r;
+    };
+    void get(){
+        cout <<"the size of circle is : " << 3.14 * r * r << endl;
+    }
+};
+
+int main() {
+
+fcir c1; c1.set(182);c1.get();
+fcir c2; c2.set(293);c2.get();
+    return 0;
+}
