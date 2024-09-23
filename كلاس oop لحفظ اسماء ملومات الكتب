@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+
+class books{
+  private : 
+  int pages, price; string name; 
+  public : 
+void set(int pages , int price , string name){
+    this -> pages = pages;
+    this -> price = price;
+    this -> name = name;
+};
+void get(){
+    cout << "the auther of the book is : " << name << " and the number of the book pages is : " << pages << " and finally the price of this book is : " << price << endl;
+    
+};
+    
+};
+
+
+
+int main() {
+
+books b1;b1.set(334,20,"mohameed ali");b1.get();
+books b2;b2.set(223,25,"ali walied");b2.get();
+
+
+    return 0;
+}
