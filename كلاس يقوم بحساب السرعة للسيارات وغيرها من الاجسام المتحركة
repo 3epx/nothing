@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class cspd{
+  private : 
+  float t , d;
+  public : 
+  void set (float t , float d){
+      this -> d = d;
+      this -> t = t;
+  }
+  void get(){
+      cout << "car speed is : " << d/t << endl;
+  }
+};
+
+
+int main() {
+
+cspd c1;c1.set(22,1235);c1.get();
+
+    return 0;
+}
