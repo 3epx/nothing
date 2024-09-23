@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class cars{
+    private : 
+    int speed;
+    string name;
+    int hp;
+    public : 
+    void set(int speed, int hp, string name){
+        this -> speed = speed;
+        this -> name = name;
+        this -> hp = hp;
+    }
+    void get(){
+        cout << "the name of the car is : " << name << endl;
+        cout << "the speed of the car is : " << speed << endl;
+        cout << "the hp of the car is : " << hp << endl;
+        
+        
+    }
+    
+};
+
+int main() {
+
+cars car1;car1.set(320,800,"bmw gtr");car1.get();
+
+    return 0;
+}
