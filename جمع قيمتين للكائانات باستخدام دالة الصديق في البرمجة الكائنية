@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class num{
+    private:
+    int n;
+    string name;
+    public: 
+    num(int n , string name){
+        this -> n = n;
+        this -> name = name;
+    }
+    friend void ahmed(num ob1 , num ob2){
+        cout << ob1.n + ob2.n;
+    }
+};
+
+
+int main() {
+
+num n1(192,"ahmed");
+num n2 (182,"ali");
+ahmed(n1 , n2);
+
+    return 0;
+}
