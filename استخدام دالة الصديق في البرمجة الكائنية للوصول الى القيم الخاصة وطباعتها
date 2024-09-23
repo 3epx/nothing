@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class num{
+    private:
+    int n;
+    string name;
+    public: 
+    num(int n , string name){
+        this -> n = n;
+        this -> name = name;
+    }
+    friend void ahmed(num ob1 , num ob2){
+        cout << "object one has name is : " << ob1.name << " : and number is : " << ob1.n << endl;
+                cout << "object two has name is : " << ob2.name << " : and number is : " << ob2.n;
+    }
+};
+
+
+int main() {
+
+num n1(192,"ahmed");
+num n2 (182,"ali");
+ahmed(n1 , n2);
+
+    return 0;
+}
