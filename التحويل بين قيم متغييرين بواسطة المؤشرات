@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int a = 2004 , b = 2008;
+
+int *p1 = &a;
+int *p2 = &b;
+int **p3 = &p1;
+
+cout << "the value of a is : " << *p1 << endl;
+cout << "the value of b is : " << *p2 << endl;
+
+*p1 = *p2;
+*p2 = **p3;
+
+cout << "the value of a is : " << *p1 << endl;
+cout << "the value of b is : " << *p2 << endl;
+
+    return 0;
+}
