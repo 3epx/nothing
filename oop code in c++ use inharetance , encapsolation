@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std; 
+class dog {
+    protected : 
+    int speed;
+};
+class cat : protected dog {
+    protected :
+    int legs;
+};
+class ani : protected cat {
+    protected :
+    string name;
+    public:
+    ani(int speed , int legs , string name){
+        this -> name = name; 
+        this -> legs = legs;
+        this -> speed = speed;
+    }
+    void pr(){
+        cout << "animal name :  " << name << endl << "legs : " << legs <<  endl << "speed : " << speed << endl;
+    }
+};
+int main() {
+ ani cat1(193,4,"cat");
+ cat1.pr();
+    return 0;
+}
