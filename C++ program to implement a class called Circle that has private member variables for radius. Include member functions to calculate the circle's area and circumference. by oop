@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class Circle{
+    private : 
+    const double pi = 3.1415;
+    int r = 0;
+    public : 
+    void set(int r){
+        this -> r = r; 
+    }
+    void get(){
+        cout << "the size of area is : " << pi * r*r << endl;
+        cout << "the size of circumference is : " << 2* pi * r<< endl;
+    }
+};
+
+int main() {
+Circle c1; c1.set(82);c1.get();
+Circle c2; c2.set(21);c2.get();
+Circle c3; c3.set(13);c3.get();
+    return 0;
+}
