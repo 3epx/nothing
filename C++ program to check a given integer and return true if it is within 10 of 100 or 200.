@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class ttu{
+    private : 
+    int n;
+    public : 
+    void set(int n){
+        this -> n = n;
+    }
+    void get(){
+        if (n >= 10 and n <= 200){
+            cout << "yes" << endl;
+        }
+        else {cout << "no"<< endl;}
+    }
+};
+
+int main() {
+
+ttu t1; t1.set(199);t1.get();
+ttu t2; t2.set(293);t2.get();
+ttu t3; t3.set(9);t3.get();
+ttu t4; t4.set(89);t4.get();
+
+
+
+    return 0;
+}
