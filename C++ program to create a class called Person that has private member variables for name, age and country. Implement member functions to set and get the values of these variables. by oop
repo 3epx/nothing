@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std; 
+class Rectangle{
+    private : 
+    int l , w;
+    public : 
+    void set (int w , int l){
+        this -> l = l;
+        this -> w = w; 
+    }
+    void get(){
+        cout << "this size of Area is : " << w * l << endl;
+        cout << "this size of Perimeter is : " << 2 * (w + l) << endl;
+    }
+};
+int main() {
+Rectangle r1; r1.set(18,23);r1.get();
+Rectangle r2; r2.set(2,29);r2.get();
+Rectangle r3; r3.set(23,12);r3.get();
+    return 0;
+}
