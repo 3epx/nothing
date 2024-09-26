@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+class sum{
+
+private : 
+int n1 = 0 , n2 = 0;
+public : 
+void set(int n1 , int n2){
+    this -> n1 = n1;
+    this -> n2 = n2;
+}
+void get(){
+    if (n1 == n2){
+        int sum = n1 + n2;
+        cout << sum * 3;
+    }
+    else {
+        cout << n1 + n2;
+    }
+}
+};
+int main() {
+sum s1; s1.set(8,8);s1.get();
+cout << endl;
+sum s2; s2.set(8,2);s2.get();
+    return 0;
+}
