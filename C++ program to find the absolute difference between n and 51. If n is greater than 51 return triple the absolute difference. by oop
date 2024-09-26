@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class dff{
+
+private : 
+int n = 0;
+public : 
+void set(int n){
+    this -> n = n;
+}
+void get(){
+    if (n > 51){
+        int d = n - 51;
+        cout << d * 3;
+    }
+    else if (n == 51){
+        cout << n;
+    }
+    else if (n < 51){
+        int d = 51 - n;
+        cout << d;
+    }
+}
+};
+
+int main() {
+
+dff s1; s1.set(52);s1.get();
+cout << endl;
+dff s2; s2.set(8);s2.get();
+
+
+
+    return 0;
+}
