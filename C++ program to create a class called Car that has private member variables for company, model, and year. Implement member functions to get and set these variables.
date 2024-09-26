@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class Car{
+    private : 
+    string comany;
+    string model;
+    int year; 
+    public : 
+    void set (int year , string comany, string model){
+        this -> comany = comany;
+        this -> model = model; 
+        this -> year = year;
+    }
+    void get(){
+        cout << "the car " << comany << " model : "<<  model << " created in " << year << endl;
+    }
+};
+
+int main() {
+
+Car c1; c1.set(2024,"BMW","GTR 350");c1.get();
+Car c2; c2.set(2024,"SABA","SAIBA");c2.get();
+
+    return 0;
+}
