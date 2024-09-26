@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class tc {
+    
+    private : 
+    int  n1 = 0 , n2 = 0 ;
+    public : 
+    void set (int n1 , int n2){
+        this -> n1 = n1; 
+        this -> n2 = n2;
+    }
+    void get(){
+        
+    if (n1 + n2 == 30 or n1 == 30 or n2 == 30){
+        cout << 1<< endl;
+    }
+    else{
+        cout << 0 << endl;
+    }
+        
+    }
+    
+};
+
+int main() {
+tc c1; c1.set(29,1);c1.get();
+tc c2; c2.set(30,1);c2.get();
+tc c3; c3.set(23,0);c3.get();
+
+    return 0;
+}
