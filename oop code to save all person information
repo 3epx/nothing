@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+class location {
+protected:
+    string street; // المتغير الخاص بتخزين اسم الشارع
+    string city; // المتغير الخاص بتخزين اسم المدينة
+    string country; // المتغير الخاص بتخزين اسم الدولة
+};
+
+class family : protected location {
+protected:
+    int nofp; // المتغير الخاص بتخزين عدد افراد الاسرة
+    int nofpg; // المتغير الخاص بتخزين عدد الاولاد
+    int nofpb; // المتغير الخاص بتخزين عدد البنات
+};
+
+class house : protected family {
+protected:
+    int norh; // المتغير الخاص بتخزين عدد الغرف 
+    int noroh; // المتغير الخاص بتخزين عدد الطوابق
+};
+
+class car : protected house {
+protected:
+    string carname; // المتغير الخاص بتخزين اسم السيارة
+    string carmodel; // المتغير الخاص بتخزين موديل السيارة
+    int hp; // المتغير الخاص بتخزين عدد الاحصنة
+    int carspeed; // المتغير الخاص بتخزين سرعة السيارة
+    int carprice; // المتغير الخاص بتخزين سعر السيارة
+};
+
+class person : protected car {
+protected:
+    int age;// المتغير الخاص بتخزين عمر الشخص
+    int salary; // المتغير الخاص بتخزين راتب الشخص
+    string name; // المتغير الخاص بتخزين اسم الشخص
+
+public : 
+    void set(string name, int age, int salary , string carname , string carmodel , int hp , int carspeed , int carprice , int norh , int noroh
+    , int nofp , int nofpg , int nofpb , string street , string city , string country) {
+        this->name = name;
+        this->age = age;
+        this->salary = salary;
+        this->carname = carname;
+        this->carmodel = carmodel;
+        this->hp = hp;
+        this->carspeed = carspeed;
+        this->carprice = carprice;
+        this->norh = norh;
+        this -> noroh = noroh;
+        this->nofp = nofp;
+        this->nofpg = nofpg;
+        this ->nofpb = nofpb;
+        this->street = street;
+        this->city = city;
+        this->country = country;
+    }
+    void get() {
+        cout << name << " is 20 years old and his salary is "  << salary << " US dollars.He has a " << carname << " " << carmodel <<   " car.The number of horsepower in the engine is " << hp << " and the maximum speed of the car is " << carspeed << " mph.The price of the car is " << carprice << " thousand dollars." << name << " has a house consisting of " << noroh << " floors with a total of " << norh << " rooms and he has A family consisting of " << nofp << " people, consisting of " << nofpg << " girls and " <<  nofpb << " boys.He lives in " << country << " in the city of " << city << " on " << street << " Street.";
+        cout << endl << endl << endl;
+    }
+};
+
+
+int main() {
+
+    person p1; p1.set("Ali Jassem", 22, 35000, "BMW ", "GTR 350", 800, 320, 200, 5, 2
+        , 8, 3, 5, "al-sinaa", "baghdad", "Iraq"); p1.get();
+    person p2; p2.set("Ali Mohammed", 19, 20000, "BMW ", "UOMI 220", 599, 280, 69, 7, 3
+        , 8, 3, 5, "al-sinaa", "al nasrea", "Iraq"); p2.get();
+
+
+
+    return 0;
+}
