@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class A {
+
+private : 
+    int age;
+    int hight; 
+public : 
+    A(int age , int hight) {
+        this->age = age;
+        this->hight = hight;
+    }
+    void print() {
+        cout << " ,He has age is : " << age << " and hight is : " << hight;
+    }
+};
+
+class B : public A{
+
+private : 
+    string name;
+public : 
+    B(int age, int hight, string name): A ( age,  hight) {
+        this->name = name;
+    }
+    void print() {
+        cout << "the name is : " << name; 
+        A::print();
+    }
+
+};
+int main() {
+
+    B P1(34, 190, "Ali Mohammed"); P1.print();
+
+    return 0;
+}
