@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class kch{
+    private :
+    int k = 1;
+    int n;
+    public: 
+    kch(int n ){
+        this -> n = n;
+    }
+    void checker(){
+        while(true){
+            int z = 0;
+            z = k*k;
+            if (z >= n){cout << "the value is : " << k << endl;break;}
+            k = k+1;
+        }
+    }
+};
+int main() {
+
+kch k1(10);k1.checker();
+    return 0;
+}
