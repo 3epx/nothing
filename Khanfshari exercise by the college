@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class rect {
+    int w = 0, h = 0;
+public : 
+    rect(int w, int h) {
+        this->h = h;
+        this->w = w;
+    }
+    void area() { cout <<  w * h; }
+};
+
+int main() {
+    int w, h;
+    cout << "enter the value of width : ";
+    cin >> w;
+    cout << "entwr the value of hight : ";
+    cin >> h;
+    rect r1(w, h);
+    rect* foo, * baz, * bar;
+    foo = &r1;
+    bar = new rect(7, 3);
+    baz = new rect[6]{ {3,4} , {8,3} , {3,4} , {8,3} , {3,4} , {8,3}};
+    cout << "area of r1 = "; r1.area(); cout << endl;
+    cout << "area of foo = "; foo->area(); cout << endl;
+    cout << "area of bar is "; bar->area(); cout << endl;
+    cout << "area of baz 1 is "; baz[0].area(); cout << endl;
+    cout << "area of baz 2 is "; baz[1].area(); cout << endl;
+    cout << "area of baz 3 is "; baz[2].area(); cout << endl;
+    cout << "area of baz 4 is "; baz[3].area(); cout << endl;
+    cout << "area of baz 5 is "; baz[4].area(); cout << endl;
+    cout << "area of baz 6 is "; baz[5].area(); cout << endl;
+
+    return 0;
+}
