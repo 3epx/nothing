@@ -1,0 +1,153 @@
+#include <iostream>
+using namespace std;
+class A {
+private : 
+    string name;
+public : 
+    A(string name){
+        this->name = name; 
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "A" << " Class." << endl;
+    }
+};
+class B : public A {
+private:
+    string name;
+public:
+    B(string name) :A(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "B" << " Class." << endl;
+    }
+};
+class C : public B {
+private:
+    string name;
+public:
+    C(string name) : B(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "C" << " Class." << endl;
+    }
+};
+class D : public C {
+private:
+    string name;
+public:
+    D(string name) : C(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "D" << " Class." << endl;
+    }
+};
+class E : public D{
+private:
+    string name;
+public:
+    E(string name): D(name) {
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "E" << " Class." << endl;
+    }
+};
+class F : public E {
+private:
+    string name;
+public:
+    F(string name) : E(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "F" << " Class." << endl;
+    }
+};
+class G : public F {
+private:
+    string name;
+public:
+    G(string name) : F(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "G" << " Class." << endl;
+    }
+};
+class H : public G {
+private:
+    string name;
+public:
+    H(string name) : G(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "H" << " Class." << endl;
+    }
+};
+class I : public H{
+private:
+    string name;
+public:
+    I(string name) : H(name) {
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "I" << " Class." << endl;
+    }
+};
+class J  : public I{
+private:
+    string name;
+public:
+    J(string name) : I(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "J" << " Class." << endl;
+    }
+};
+class K: public J{
+private:
+    string name;
+public:
+    K(string name) :J(name){
+        this->name = name;
+    }
+    void print() {
+        cout << "Hello " << name << " I'm " << "K" << " Class." << endl;
+    }
+};
+class L : public K {
+private:
+    string name;
+public:
+    L(string name) :K (name){
+        this->name = name;
+    }
+    void print() {
+        A::print();
+        B::print();
+        C::print();
+        D::print();
+        E::print();
+        F::print();
+        G::print();
+        H::print();
+        I::print();
+        J::print();
+        K::print();
+        cout << "Hello " << name << " I'm " << "L" << " Class." << endl;
+    }
+};
+
+int main() {
+
+    L n1("Nahrine"); n1.print();
+
+    return 0;
+}
+
