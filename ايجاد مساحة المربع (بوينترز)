@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int s = 10;
+    int* ptr = &s;
+    cout << *ptr * *ptr;
+
+
+    return 0;
+}
