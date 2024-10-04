@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a = 192; int b = 192;
+
+int *p1 = &a , *p2 = &b;
+
+cout << "the avarge of numbers is : " << *p1 + *p2 / 2;
+
+
+    return 0;
+}
