@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int d = 10; double pi = 3.14;
+
+    int* p1 = &d; double *p2 = &pi;
+    cout << "the length os the circle is : " << *p1 * *p2;
+
+
+
+    return 0;
+}
