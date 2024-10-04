@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+int a = 18 , b = 11;
+int *a1 = &a; int ** a2 = &a1; int *** a3 = &a2;
+int *b1 = &b; int ** b2 = &b1; int ***b3 = &b2;
+double c = sqrt(***a3 + ***b3);
+double *c1 = &c;
+cout << "the hypotenuse is : " << *c1 << endl;
+cout << "the perimeter is " << *** a3 + ***b3 + *c1;
+
+    return 0;
+}
