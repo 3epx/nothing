@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std; 
+
+int main() {
+
+int *p = new int(9);
+
+cout << "the area of the circle is : " << 3.14 * *p * *p << endl;
+cout << "the circumference is : " << 2 * 3.14 * *p;
+
+delete p;
+
+
+    return 0;
+}
