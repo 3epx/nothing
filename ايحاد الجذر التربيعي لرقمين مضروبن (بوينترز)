@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+int main() {
+
+int a = 12, b = 82;
+int *p1 = &a , *p2 = &b;
+
+cout << "the root of two numbers is : " << sqrt(*p1 * *p2);
+
+    return 0;
+}
