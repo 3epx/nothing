@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int a = 10; int b = 90;
+
+    int* p1 = &a; int* p2 = &b;
+
+    cout << "the area of rect is : " << *p1 * *p2 << endl;
+    cout << "the perimeter of rect is : " << 2 * (*p1 + *p2);
+
+
+    return 0;
+}
