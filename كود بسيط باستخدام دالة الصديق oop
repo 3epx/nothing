@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+
+class car{
+    int price;
+    string name;
+    
+    public :
+    car(int price , string name){
+        this -> name = name;
+        this -> price = price;
+    }
+    void get(){
+        cout << "the car " << name << " price is : " << price << endl;
+    }
+    friend void cpt(car c1);
+    
+};
+ void cpt(car c1){cout << "the car " << c1.name << " price is : " << c1.price + 1000 << endl;
+};
+
+
+int main() {
+
+car c1(200000 ,"BMW" );c1.get();
+cpt(c1);
+
+
+
+    return 0;
+}
