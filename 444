@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int array[10] = {1323,2332,4243,524,525,2556,723,8233,4249,1320};
+
+cout << endl;
+int hh;
+int jj;
+for (int i = 0 ; i< 10; i++){
+    if(array[i] > hh ){hh = array[i];}
+}
+cout << hh << endl;
+
+for (int m = 1; m <= 10 ; m++){
+    for (int u = 0; u<10; u++){
+        if (array[u] > jj and array[u] < hh){
+            jj = array[u];
+            hh = array[u];
+            cout << jj << endl;
+            jj = 0;
+        }
+    }
+}
+    return 0;
+}
