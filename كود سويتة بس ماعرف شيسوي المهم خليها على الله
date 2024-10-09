@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+
+class square{
+    
+    private :
+    int side;
+    public : 
+    void set (int side){
+        this -> side = side;
+    }
+    int area(){return side * 4;}
+};
+
+
+int main() {
+
+int objs[10];
+
+for (int i = 1; i<= 3 ; i++){
+    int s;
+    cout << "enter the length of side : ";
+    cin >> s;
+    square objs[i];objs[i].set(s);
+    for (int u = 1; i == 3 and u <= 3; u++){
+    cout << objs[u].area() << endl;
+}
+}
+
+    return 0;
+}
