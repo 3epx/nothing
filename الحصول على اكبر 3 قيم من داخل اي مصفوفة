@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int array[10] = {1,2,3,4,5,6,7,8,9,10};
+
+int max = 0;
+int mmax = 0;
+int mmmax = 0;
+
+    for (int u = 0 ; u <= 9; u++){
+        if (array[u] > max){
+        max = array[u];
+        }
+    }
+    for (int u = 0 ; u <= 9; u++){
+        if (array[u] > mmax and array[u] < max){
+        mmax = array[u];
+        }
+    }
+    for (int u = 0 ; u <= 9; u++){
+        if (array[u] > mmmax and array[u] < mmax){
+        mmmax = array[u];
+        }
+    }
+
+cout << "the fisrt number is : " << max << endl;
+cout << "the second number is : " << mmax << endl;
+cout << "the third number is : " << mmmax << endl;
+
+    return 0;
+}
