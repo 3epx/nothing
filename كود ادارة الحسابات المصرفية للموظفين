@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+class company{
+    
+    
+    private : 
+    string name; // اسم الموظف
+    int salary; // المتغير اللي نخزن بيه الرواتب
+    int sahb; // المتغير اللي ندخل بيه كمية الاموال اللي نريد نسحبها
+    int status; // المتغير اللي يصف حالة الراتب , سحب او عرض او سحب جزء من الراتب
+    public:
+    company(string name , int salary){
+        this -> name = name; // هنا من خلال كوسنتركتر نخلي اسم الموظف
+        this -> salary = salary; // هم من خلال الكونستررركتر نخلي الراتب
+    }
+    void set(int sahb , int status){
+        this -> sahb = sahb; // هنا دالة السيتر اللي من خلالها ندخل كمية السحب 
+        this -> status = status; // هنا المتغير اللي راح يوصف حالة الراتب
+    }
+    void get(){  // هنا دالة الكيتر اللي راح تطبق كمية الراتب حسب اختيار الموظف
+        if (status == 1){ // طباعة الراتب فقط
+        cout << "the empoloy " << name << " has " << salary << " in his account.";}
+        else if (status == 2 and salary >= status){ // سحب جزء من الراتب بعدها طبع الباقي 
+            this -> salary = this -> salary - sahb;
+        cout << "the empoloy " << name << " has " << salary << " in his account.";}
+        else if (status == 3 ){ // سحب كل الراتب مرة وحدة وطبع الباقي
+        cout << "the empoloy " << name << " has " << 0 << " in his account";
+        }
+        else {cout << "worng!!!!!";}
+    }
+};
+
+int main() {
+company e1("ahmed",500000); // اسماء الموظفين
+company e2("ali",399904);
+company e3("majeed",392322);
+company e4("hakeem",429302);
+while(true){ // هنا اللوب اللي راح يسالني عن الموظف اللي اريد اطلع راتبة ويبدي ياخذ مني التفاصيل 
+    int e;
+    int sahb;
+    int status;
+    cout << "choose any empoloy." << endl;
+    cout << "1. ahmed" << endl;
+    cout << "2. ali" << endl;
+    cout << "3. majeed" << endl;
+    cout << "4. hakeem" << endl;
+    cin >> e; // هنا المتغيير اللي راح ياخذ رقم الموظف
+    
+    // بعدها ادخل الرقم بشرط حتى من بعدها اطبق العمليات اللي اريدها على الراتب مثل الطباعة او السحب 
+    if (e == 1){cout << "1. show how much money in the accont." << endl;
+        cout << "2. get some of money from the account." << endl;
+        cout << "3. get all money from the account." << endl;
+        cin >> status; // هنا تتخزن الحالة بعد ما اختاريت رقمها 
+        if (status == 2){
+            cout << "how moch you want : "; 
+            cin >> sahb; // هنا اذا اختاريت حالة السحب 2 فراح  يسالني شكد المبلغ اللي اريد اسحبة من الراتب
+        }
+        e1.set(sahb , status);
+        e1.get(); // هنا المرحلة الاخيرة وهي طباعة الراتب 
+    }
+    // نفس العملية تطبق مع كل موظف من الموظفين ادناه
+    else if (e == 2){cout << "1. show how much money in the accont." << endl;
+        cout << "2. get some of money from the account." << endl;
+        cout << "3. get all money from the account." << endl;
+        cin >> status;
+        if (status == 2){
+            cout << "how moch you want : ";
+            cin >> sahb;
+        }
+        e2.set(sahb , status);
+        e2.get();
+    }
+    else if (e == 3){cout << "1. show how much money in the accont." << endl;
+        cout << "2. get some of money from the account." << endl;
+        cout << "3. get all money from the account." << endl;
+        cin >> status;
+        if (status == 2){
+            cout << "how moch you want : ";
+            cin >> sahb;
+        }
+        e3.set(sahb , status);
+        e3.get();
+    }
+    else if (e == 4){cout << "1. show how much money in the accont." << endl;
+        cout << "2. get some of money from the account." << endl;
+        cout << "3. get all money from the account." << endl;
+        cin >> status;
+        if (status == 2){
+            cout << "how moch you want : ";
+            cin >> sahb;
+        }
+        e4.set(sahb , status);
+        e4.get();
+    }
+    
+    }
+    
+    return 0;
+}
