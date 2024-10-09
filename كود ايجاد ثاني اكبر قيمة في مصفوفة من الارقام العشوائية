@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+int array[10] = {1,9232,3923,4,5293,6,427,238,29,1323};
+int max = 0;
+int mmax = 0;
+int mmmax = 0;
+    for (int u = 0 ; u <= 9; u++){
+        if (array[u] > max){
+        max = array[u];
+        }
+    }
+    for (int u = 0 ; u <= 9; u++){
+        if (array[u] > mmax and array[u] < max){
+        mmax = array[u];
+        }
+    }
+
+cout << "the second number is : " << mmax << endl;
+    return 0;
+}
