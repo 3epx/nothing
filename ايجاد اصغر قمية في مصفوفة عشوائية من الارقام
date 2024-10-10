@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+int x[10]={131,2,43,134,415,216,147,128,91,1210};
+
+int min = x[0];
+
+for(int i = 0; i<10; i++){
+    
+    if (min > x[i]){
+        min = x[i];
+    }
+}
+
+cout << "the smallest number is : " << min;
+
+
+
+
+
+    return 0;
+}
