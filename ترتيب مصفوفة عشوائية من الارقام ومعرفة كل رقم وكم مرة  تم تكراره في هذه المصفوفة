@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int x[10] = {14,14,14,14,3,3,2,2,6,120};
+
+for(int i = 0; i<10; i++){
+    int hmn = 1;
+    for (int y = 0; y<i;y++){
+        if (x[y] == x[i]){
+            i++;
+        }
+    }
+    for (int u = 0; u<10; u++){
+        if (i == u){
+            u++;
+        }
+        if(x[u] == x[i]){
+            hmn++;
+        }
+    }
+    cout << x[i] << " is : " << hmn << endl;
+}
+    return 0;
+}
