@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+int x[10] = {1212,212,312,412,51212,6122,1227,8122,912,121};
+
+for (int i = 0 ; i<10; i++){
+    cout << x[i];
+    if (x[i] >= x[i+1]){cout << " >= ";}
+    else if (x[i] <= x[i+1]){cout << " <= ";}
+}
+
+
+
+
+    return 0;
+}
