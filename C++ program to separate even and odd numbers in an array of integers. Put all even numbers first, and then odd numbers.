@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+int x[10] = {1,2132,12312,1241,1241,1231,1231,82132,3129,10};
+int xood[10];
+int xeven[10];
+for (int u = 1; u<=2 ; u++){
+for (int i = 0; i<10 ;i++){
+    if (x[i] %2 == 0){xood[i] = x[i];xeven[i] = 0;}
+    else if (x[i] %2 == 1){xeven[i] = x[i];xood[i] = 0;}
+}
+}
+for (int i = 0 ; i< 10 ; i++){
+    if (xood[i] == 0){continue;}
+    else {cout << xood[i] << "  ";}
+}
+cout << endl;
+for (int i = 0 ; i< 10 ; i++){
+    if (xeven[i] == 0){continue;}
+    else {cout << xeven[i] << "  ";}
+}
+    return 0;
+}
