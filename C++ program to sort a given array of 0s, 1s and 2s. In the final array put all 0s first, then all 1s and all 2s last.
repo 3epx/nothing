@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int x[10] = {1,2,0,0,0,1,1,2,2,1};
+    int y[10];
+int z = 0;
+for (int u = 0; u<3 ; u++){
+for(int i = 0 ; i< 10; i++){
+    if (x[i] == u){
+        y[z] = x[i];
+        z++;
+    }
+}}
+for (int i = 0; i<10;i++){
+    cout <<y[i] << " ";
+}
+    return 0;
+}
