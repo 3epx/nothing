@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int x[10] = {1,2,0,4,5,6,7,8,9,10};
+int odd , even;
+for (int i = 0 ; i<10 ; i++){
+    if (x[i] %2 == 0){even++;}
+    else if (x[i] %2 == 1){odd++;}
+}
+cout << "the even mubers is : " << even << " and odd nimbers is : " << odd;
+
+    return 0;
+}
