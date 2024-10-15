@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+int x[10] = {1,2,2,2,5,63,63,8,9,10};
+int con , t;
+for (int u = 0; u <10 ; u++){
+for (int i = 0 ; i<10 ; i++){
+for (t = 0; t<u; t++){
+    if (x [u] == x[t]){t = u;}
+}
+if (t == u){break;}
+if (x[u] == x[i]){con++;}
+}
+    if (con > 0){cout << "the number " << x[u] << " has " << con << endl;}
+    con = 0;
+}
+    return 0;
+}
