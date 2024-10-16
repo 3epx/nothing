@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int bign(int x[10]){
+    int max;
+    for (int i = 0 ; i<10;i++){
+       if (max < x[i]){max = x[i];}
+    }
+    return max;
+}
+
+int main() {
+
+int x[10] = {1,2,3,4,5,99,7,8,9,10};
+
+int z = bign(x);
+
+cout << z;
+
+    return 0;
+}
