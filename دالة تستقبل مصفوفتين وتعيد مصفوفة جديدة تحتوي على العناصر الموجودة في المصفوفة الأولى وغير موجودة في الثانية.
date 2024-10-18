@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void ex(int x[10] , int y[10] , int (&z)[10]){
+    for (int i = 0 ; i<10 ; i++){
+        for (int u = 0 ;u <10 ; u++){
+            if (x[i] != y[i]){z[i] = x[i];}
+            else if (x[i] == y[i]){z[i] = 0;}
+        }
+    }
+}
+int main() {
+int x[10] = {33,24,52,28,39,29,39,30,92,23};
+int y[10] = {33,1,2,28,39,3,39,4,3,23};
+int z[10];
+ex(x,y,z);
+for (int i = 0 ; i<10 ; i++){
+    if (z[i] != 0){cout << z[i] << endl;}
+}
+    return 0;
+}
