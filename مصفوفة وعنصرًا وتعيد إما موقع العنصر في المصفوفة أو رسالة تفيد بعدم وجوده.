@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void ex(int x[10],int s){
+    int h , p;
+    for (int i = 0; i<10 ; i++){
+        if (s != x[i]){h = 0;}
+        else if (s == x[i]){cout << "the number in " << i << " bit and the address of this bit is " << &i << endl;
+            s = 1;
+        }
+    }
+    if (h == 0 and p == 0){cout << "not found";}
+}
+int main() {
+int x[10] = {33,24,52,28,39,29,39,30,92,23};
+ex(x,39);
+    return 0;
+}
