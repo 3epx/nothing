@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+void sum(int x[3][3]){
+    int sum = 0;
+    for (int u = 0 ; u<3; u++){
+    for (int i = 0; i <3 ; i++){
+        sum = sum + x[u][i];}}
+        cout << "the sum of numbers is : " << sum;
+};
+int main() {
+
+int x[3][3] = {
+    {1,2,3},
+    {4,5,6},
+    {7,8,9}
+};
+sum(x);
+    return 0;
+}
