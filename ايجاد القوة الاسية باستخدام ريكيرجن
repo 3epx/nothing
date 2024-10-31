@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int fac(int n , int k){
+    if (k == 0)
+    return 1;
+    else 
+    return n * fac(n ,k -1);
+}
+int main() {
+
+cout << fac(5,3);
+
+    return 0;
+}
