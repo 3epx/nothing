@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class ali{
+    private:
+    int x;
+    public: 
+    
+    ali(int x){
+        this -> x = x;
+    }
+    void pr(){
+        cout << x << endl;
+    }
+    
+    ali operator +(ali obj){
+        return ali(this ->  x + obj.x);
+    }
+    
+};
+
+int main() {
+
+ali o(2323);
+ali u(2323);
+ali r = o + u;
+r.pr();
+
+
+
+    return 0;
+}
