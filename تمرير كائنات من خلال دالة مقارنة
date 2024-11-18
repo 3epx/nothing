@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std; 
+class comper{
+    private : 
+    int x;
+    public : 
+    comper (){
+        cout << "enter the value of x : ";
+        cin >> x;
+    }
+    void comp(comper obj1 , comper obj2){
+        if (obj1.x == obj2.x)
+        cout << obj1.x << " == " << obj2.x;
+        else 
+        cout << obj1.x << " != " << obj2.x;
+    }
+};
+int main() {
+comper c1;
+comper c2;
+c2.comp(c1, c2);
+    return 0;
+}
