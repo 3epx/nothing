@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class name {
+    private : 
+    string s_name;
+    public: 
+    name(string n) : s_name(n){}
+    name operator +(name obj){
+        return name(s_name + obj.s_name);
+    }
+    void display(){
+        cout << s_name;
+    }
+    
+};
+
+int main() {
+
+name a("jhone");
+name s(" smith");
+name k(" hitler");
+name d(" bonabert");
+
+name sum = a + s + k + d;
+sum.display();
+
+    return 0;
+}
