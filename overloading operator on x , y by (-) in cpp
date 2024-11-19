@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class cal{
+    int x;
+    int y;
+    public : 
+    cal(int x , int y){
+        this -> x = x;
+        this -> y = y;
+    }
+    cal operator -(cal ob){
+        return cal(x - ob.y, 0);
+    }
+    void dis(){
+        cout << x;
+    }
+};
+int main() {
+cal c1(34,23);
+cal c2(12,42);
+cal c3 = c1 - c2;
+c3.dis();
+    return 0;
+}
