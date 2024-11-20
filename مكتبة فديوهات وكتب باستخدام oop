@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+class library{
+    protected:
+    int mediaID;
+    string title;
+    string creator;
+    string publicationDate;
+    int duration;
+    string genre;
+    public : 
+    virtual void displayMedia(){}
+};
+class books : public library{
+    private: 
+    string author;
+    int nop;
+    int price;
+    public : 
+    books (int mediaID , string title , string creator , string publicationDate , string genre , string author , int nop , int price){
+    this->mediaID = mediaID;
+    this->title = title;
+    this->creator = creator;
+    this->publicationDate = publicationDate;
+    this->genre = genre;
+    this->author = author;
+    this->nop = nop;
+    this->price = price;
+    }
+    void displayMedia () override {
+        cout << "the aothor is " << author << endl;
+        cout << "the number of pages is " << nop << endl;
+        cout << "the price is " << price << endl;
+        cout << "the id of book is " << mediaID << endl;
+        cout << "the title is " << title << endl;
+        cout << "the creator is " << creator << endl;
+        cout << "the publicationDate is " << publicationDate << endl;
+        cout << "the genre is " << genre << endl;
+    }
+};
+class videos : public library{
+    private: 
+    string author;
+    int nop;
+    int price;
+    public : 
+    videos (int mediaID , string title , string creator , string publicationDate , string genre , string author , int price){
+    this->mediaID = mediaID;
+    this->title = title;
+    this->creator = creator;
+    this->publicationDate = publicationDate;
+    this->genre = genre;
+    this->author = author;
+    this->nop = nop;
+    this->price = price;
+    }
+    void displayMedia () override {
+        cout << "the aothor is " << author << endl;
+        cout << "the price is " << price << endl;
+        cout << "the id of video is " << mediaID << endl;
+        cout << "the title is " << title << endl;
+        cout << "the creator is " << creator << endl;
+        cout << "the publicationDate is " << publicationDate << endl;
+        cout << "the genre is " << genre << endl;
+    }
+};
+
+int main() {
+books b1(07711,"balck wolf" , "ahmed" , "ali" , "lolo", "mostafa" , 23, 42);
+b1.displayMedia();
+videos v1(07711,"balck wolf" , "ahmed" , "ali" , "lolo", "mostafa" , 42);
+v1.displayMedia();
+
+    return 0;
+}
