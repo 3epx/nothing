@@ -1,0 +1,120 @@
+#include <iostream>
+using namespace std;
+static int totalAccounts;
+class BankAccount{
+    protected:
+    int accountNumber;
+    string accountHolderName;
+    double balance;
+    string accountType;
+    public:
+    BankAccount(int accountNumber , string accountHolderName , double balance , string accountType ){
+        if (accountType == "Saving Account"){
+        this -> accountNumber = accountNumber;
+        this -> accountHolderName = accountHolderName;
+        this -> balance = balance;
+        this -> accountType = accountType;
+        totalAccounts+=1;
+        }
+        else if (accountType == "Checking Account" and balance >= 100){
+        this -> accountNumber = accountNumber;
+        this -> accountHolderName = accountHolderName;
+        this -> balance = balance;
+        this -> accountType = accountType;
+        totalAccounts+=1;
+        }
+        else {cout << "you don't can add this account";
+        this -> accountNumber = 0;
+        this -> accountHolderName = "null";
+        this -> balance = 0;
+        this -> accountType = "null";
+    }
+    }
+    virtual void deposit(double balance){
+        this -> balance = this -> balance + balance;
+    }
+    virtual void withdraw(double balance){
+        if (this -> balance >= balance){
+            this -> balance = this -> balance - balance;
+        }
+        else {cout << "worng!!!";}
+    }
+        virtual void printAccountDetails () {}
+        void set_b(double new_balance){
+            balance = balance + new_balance;
+        }        
+        double get_b(){
+            return balance;
+        }
+        
+};
+class CheckingAccount;
+
+class SavingsAccount : public BankAccount {
+    public : 
+    SavingsAccount(int accountNumber , string accountHolderName , double balance , string accountType ) : BankAccount(accountNumber, accountHolderName, balance, accountType){}
+    void applyInterest (){
+        double benefit = balance * 0.1;
+        balance = balance + benefit ;
+    }
+     void printAccountDetails () override{
+        if (accountNumber != 0){
+        cout << "Holder Name is : " << accountHolderName << endl;
+        cout << "Account Number is : " << accountNumber << endl;
+        cout << "Balance is : " << balance << endl;
+        cout << "Account Type is : " << accountType << endl;
+        cout << "___________________________" << endl;
+        }
+    }
+    friend void trans(SavingsAccount &s ,CheckingAccount &c ,int tr);
+    friend void trans(CheckingAccount &c , SavingsAccount &s ,int tr);
+
+};
+
+
+class CheckingAccount: public BankAccount {
+    private:
+    double minmBalance = 100;
+    public: 
+    CheckingAccount(int accountNumber , string accountHolderName , double balance , string accountType ) : BankAccount(accountNumber, accountHolderName, balance, accountType){
+    }
+        void printAccountDetails () override{
+        if (accountNumber != 0){
+        cout << "Holder Name is : " << accountHolderName << endl;
+        cout << "Account Number is : " << accountNumber << endl;
+        cout << "Balance is : " << balance << endl;
+        cout << "Account Type is : " << accountType << endl;
+        cout << "___________________________" << endl;
+            
+        }
+    }
+    friend void trans(SavingsAccount &s ,CheckingAccount &c ,int tr);
+    friend void trans(CheckingAccount &c, SavingsAccount &s ,int tr);
+    
+};
+
+void trans(SavingsAccount &s ,CheckingAccount &c ,int tr){
+    if (s.get_b() >= tr){
+        s.set_b(-tr);
+        c.set_b(tr);}
+};
+
+void trans(CheckingAccount &c , SavingsAccount &s , int tr){
+    if (c.get_b() >= tr){
+        c.set_b(-tr);
+        s.set_b(tr);}
+};
+
+int main() {
+    
+
+SavingsAccount s1(73844 , "Ahmed" , 800 , "Saving Account");
+s1.printAccountDetails();
+CheckingAccount c1(244242 , "Sarah" , 800 , "Checking Account");
+c1.printAccountDetails();
+
+
+cout << "The Number of Accounts is : " << totalAccounts << endl;
+
+    return 0;
+}
