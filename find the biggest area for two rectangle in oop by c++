@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class rect{
+    private:
+    int area;
+    public:
+    rect(){
+        area = 0;
+    }
+    rect(int w , int h){
+        area = w * h;
+    }
+    void dis(){
+        cout << "the area of this rect is : " << area << endl;
+    }
+    friend void big(rect ob1 , rect ob2);
+};
+void big(rect ob1 , rect ob2){
+        if (ob1.area > ob2.area){cout << ob1.area << " is big rect one";}
+        else if (ob1.area < ob2.area){cout << ob2.area << " is big rect two";}
+        else if (ob1.area == ob2.area){cout << ob1.area << " = "<< ob2.area;}
+    }
+int main() {
+rect r1(129,13);
+rect r2(182,23);
+big(r1,r2);
+    return 0;
+}
