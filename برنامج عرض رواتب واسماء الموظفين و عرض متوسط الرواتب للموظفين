@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int sum;
+class worker{
+    int salary;
+    string name;
+    int sum;
+    public : 
+    worker(int salary, string name){
+        this -> salary = salary;
+        this -> name = name;
+    }
+    friend void dis(worker obj);
+    friend void av_s(worker obj);
+};
+void dis(worker obj){
+        cout << "name of worker is : " << obj.name << endl;
+        cout << "salary of worker is : " << obj.salary << endl;
+        cout << "_____________________" << endl;
+    }
+void av_s (worker obj){
+        sum = sum + obj.salary;
+    }
+int main() {
+worker w1(400 , "Ahmed");
+worker w2(899 , "ali");
+worker w3(1200 , "walled");
+dis(w1);
+dis(w2);
+dis(w3);
+av_s(w1);
+av_s(w2);
+av_s(w3);
+cout << "the avage of salaries is : "<< sum /3;
+
+    return 0;
+}
