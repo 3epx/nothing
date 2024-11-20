@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+class eng;
+class tec {
+    int s;
+    string n;
+    public:
+    tec(string n, int s){
+        this -> n = n;
+        this -> s = s;
+    }
+    void dis(){
+        cout << "name : " << n << " : and salary is : " << s << endl;
+    }
+    friend void next(tec obt , eng obe);    
+};
+class eng{
+    int s;
+    string n;
+    public:
+    eng(string n, int s){
+        this -> n = n;
+        this -> s = s;
+    }
+    void dis(){
+        cout << "name : " << n << " : and salary is : " << s << endl;
+    }
+    friend void next(tec obt , eng obe);    
+};
+
+ void next(tec obt , eng obe){
+     obe.s += 1000;
+     obt.s += 1000;
+     obe.dis();
+     obt.dis();
+     
+ }
+int main() {
+
+eng e1("Ahmed", 200000);
+tec t1("ali", 238329);
+next(t1,e1);
+
+
+
+
+
+    return 0;
+}
