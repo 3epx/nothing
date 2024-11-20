@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void max (int a[]){
+    int max = 0;
+    for (int i = 0 ; i<10; i++){
+        if (max < a[i]){max = a[i];}
+    }
+    cout << max;
+}
+void min (int a[]){
+    int max = a[0];
+    for (int i = 0 ; i<10; i++){
+        if (max > a[i]){max = a[i];}
+    }
+    cout << max;
+}
+int main() {
+    
+    int a[10] ={12,313,41,413,21,12,31,2,213,13132};
+    max(a);
+    cout << endl;
+    min(a);
+    return 0;
+}
