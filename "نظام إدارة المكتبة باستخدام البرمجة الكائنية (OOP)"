@@ -1,0 +1,217 @@
+#include <iostream>
+using namespace std;
+
+class Book{
+    protected: 
+    string title;
+    string author;
+    int year;
+    public:
+    void set(string title , string author , int year){
+        this -> title = title;
+        this -> year = year;
+        this -> author = author;
+    }
+    string get_author_title(string type){
+        if (type == "title"){return title;}
+        else if (type == "author"){return author;}
+        else {return title;}
+    }
+    int get_year(){
+        return year;
+    }
+    
+};
+
+class ScienceBook;
+class Magazine;
+
+class Novel : public Book{
+    private: 
+    string genre;
+    int pageCount;
+    public : 
+    void setGenre(string genre){this -> genre = genre;}
+    string getGenre(){return genre;}
+    void setPageCount(int pageCount){this -> pageCount = pageCount;}
+    int getPageCount(){return pageCount;}
+    friend void comper(Novel obn , ScienceBook obs);
+    friend void comper(Novel obn , Magazine obm);
+    
+};
+    
+class ScienceBook : public Book{
+  private:
+  string field;
+  bool isPeerReviewed;
+  public: 
+  void setField(string field){this -> field = field;}
+  string getField(){return field;}
+  void setPeerReviewed(bool isPeerReviewed){this -> isPeerReviewed = isPeerReviewed;}
+  bool getPeerReviewed(){return isPeerReviewed;}
+    friend void comper(ScienceBook obs , Novel obn);
+    friend void comper(ScienceBook obs , Magazine obm);
+};
+
+class Magazine : public Book{
+    private : 
+    int issueNumber;
+    bool monthlyEdition;
+    public : 
+    void setIssueNumber(int issueNumber){
+        this -> issueNumber = issueNumber;
+    }
+    int getIssueNumber(){return issueNumber;}
+    void setMonthlyEdition(bool monthlyEdition){this -> monthlyEdition = monthlyEdition;}
+    bool getMonthlyEdition(){return monthlyEdition;}
+    friend void comper(Magazine obm , Novel obn);
+    friend void comper(Magazine obm , ScienceBook obs);
+};
+        void comper(Novel obn , ScienceBook obs){
+        cout << "the Information of Novel" << endl;
+        cout << "the author is : " << obn.get_author_title("author") << endl;
+        cout << "the title is : " << obn.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obn.get_year() << endl;
+        cout << "the Genre is : " << obn.getGenre() << endl;
+        cout << "the Pages is : " << obn.getPageCount() << endl;
+        cout << "__________________________________" << endl;
+        cout << "the Information of Science Book" << endl;
+        cout << "the author is : " << obs.get_author_title("author") << endl;
+        cout << "the title is : " << obs.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obn.get_year() << endl;
+        cout << "the field is : " << obs.getField() << endl;
+        if (obs.getPeerReviewed() == true){
+            cout << "the Book is Peer Reviewed " << endl;
+        }
+        else if (obs.getPeerReviewed() == false){
+            cout << "the Book isn't Peer Reviewed " << endl;
+        }
+    }
+        void comper(Novel obn , Magazine obm){
+        cout << "the Information of Novel" << endl;
+        cout << "the author is : " << obn.get_author_title("author") << endl;
+        cout << "the title is : " << obn.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obn.get_year() << endl;
+        cout << "the Genre is : " << obn.getGenre() << endl;
+        cout << "the Pages is : " << obn.getPageCount() << endl;
+        cout << "__________________________________" << endl;
+        cout << "the Information of Magazine" << endl;
+        cout << "the author is : " << obm.get_author_title("author") << endl;
+        cout << "the title is : " << obm.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obm.get_year() << endl;
+        cout << "the Issue Number is : " << obm.getIssueNumber() << endl;
+        if (obm.getMonthlyEdition() == true){
+            cout << "yes its there Monthly Edition " << endl;
+        }
+        else if (obm.getMonthlyEdition() == false){
+            cout << "no its not there Monthly Edition  " << endl;
+        }
+    }
+        void comper(Magazine obm , Novel obn){
+        cout << "the Information of Novel" << endl;
+        cout << "the author is : " << obn.get_author_title("author") << endl;
+        cout << "the title is : " << obn.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obn.get_year() << endl;
+        cout << "the Genre is : " << obn.getGenre() << endl;
+        cout << "the Pages is : " << obn.getPageCount() << endl;
+        cout << "__________________________________" << endl;
+        cout << "the Information of Magazine" << endl;
+        cout << "the author is : " << obm.get_author_title("author") << endl;
+        cout << "the title is : " << obm.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obm.get_year() << endl;
+        cout << "the Issue Number is : " << obm.getIssueNumber() << endl;
+        if (obm.getMonthlyEdition() == true){
+            cout << "yes its there Monthly Edition " << endl;
+        }
+        else if (obm.getMonthlyEdition() == false){
+            cout << "no its not there Monthly Edition  " << endl;
+        }
+    }
+        void comper(Magazine obm , ScienceBook obs){
+        cout << "the Information of Magazine" << endl;
+        cout << "the author is : " << obm.get_author_title("author") << endl;
+        cout << "the title is : " << obm.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obm.get_year() << endl;
+        cout << "the Issue Number is : " << obm.getIssueNumber() << endl;
+        if (obm.getMonthlyEdition() == true){
+            cout << "yes its there Monthly Edition " << endl;
+        }
+        else if (obm.getMonthlyEdition() == false){
+            cout << "no its not there Monthly Edition  " << endl;
+        }
+        cout << "__________________________________" << endl;
+        cout << "the Information of Science Book" << endl;
+        cout << "the author is : " << obs.get_author_title("author") << endl;
+        cout << "the title is : " << obs.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obs.get_year() << endl;
+        cout << "the field is : " << obs.getField() << endl;
+        if (obs.getPeerReviewed() == true){
+            cout << "the Book is Peer Reviewed " << endl;
+        }
+        else if (obs.getPeerReviewed() == false){
+            cout << "the Book isn't Peer Reviewed " << endl;
+        }
+    }
+        void comper(ScienceBook obs , Novel obn){
+        cout << "the Information of Novel" << endl;
+        cout << "the author is : " << obn.get_author_title("author") << endl;
+        cout << "the title is : " << obn.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obn.get_year() << endl;
+        cout << "the Genre is : " << obn.getGenre() << endl;
+        cout << "the Pages is : " << obn.getPageCount() << endl;
+        cout << "__________________________________" << endl;
+        cout << "the Information of Science Book" << endl;
+        cout << "the author is : " << obs.get_author_title("author") << endl;
+        cout << "the title is : " << obs.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obn.get_year() << endl;
+        cout << "the field is : " << obs.getField() << endl;
+        if (obs.getPeerReviewed() == true){
+            cout << "the Book is Peer Reviewed " << endl;
+        }
+        else if (obs.getPeerReviewed() == false){
+            cout << "the Book isn't Peer Reviewed " << endl;
+        }
+    }
+        void comper(ScienceBook obs , Magazine obm){
+        cout << "the Information of Magazine" << endl;
+        cout << "the author is : " << obm.get_author_title("author") << endl;
+        cout << "the title is : " << obm.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obm.get_year() << endl;
+        cout << "the Issue Number is : " << obm.getIssueNumber() << endl;
+        if (obm.getMonthlyEdition() == true){
+            cout << "yes its there Monthly Edition " << endl;
+        }
+        else if (obm.getMonthlyEdition() == false){
+            cout << "no its not there Monthly Edition  " << endl;
+        }
+        cout << "__________________________________" << endl;
+        cout << "the Information of Magazine Book" << endl;
+        cout << "the author is : " << obs.get_author_title("author") << endl;
+        cout << "the title is : " << obs.get_author_title("title") << endl;
+        cout << "the Year of the produact is : " << obs.get_year() << endl;
+        cout << "the field is : " << obs.getField() << endl;
+        if (obs.getPeerReviewed() == true){
+            cout << "the Book is Peer Reviewed " << endl;
+        }
+        else if (obs.getPeerReviewed() == false){
+            cout << "the Book isn't Peer Reviewed " << endl;
+        }
+    }
+
+int main() {
+
+Magazine m1;
+m1.set("Play Book" , "Ali" , 2018);
+m1.setIssueNumber(120);
+m1.setMonthlyEdition(true);
+ScienceBook s1;
+s1.set("the easy acceleration" , "Abd" , 2003);
+s1.setField("Physics");
+s1.setPeerReviewed(true);
+
+comper(m1,s1);
+
+
+
+    return 0;
+}
