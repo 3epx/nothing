@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+class animal{
+    protected : 
+    string name;
+    public : 
+    animal(string name ){
+        this -> name = name;
+    }
+    virtual void motion () = 0;
+};
+
+class birds : public animal {
+    private : 
+    string type_of_motion;
+    public :
+    birds(string name , string type_of_motion):type_of_motion(type_of_motion) ,  animal(name){}
+    void motion() override{
+        cout << "the Animal species is : " << name << endl;
+        cout << "the type of motion is : " << type_of_motion << endl;
+        cout << "______________________" << endl;
+
+    }
+};
+class Reptiles : public animal {
+    private : 
+    string type_of_motion;
+    public :
+    Reptiles(string name , string type_of_motion):type_of_motion(type_of_motion) ,  animal(name){}
+    void motion() override{
+        cout << "the Animal species is : " << name << endl;
+        cout << "the type of motion is : " << type_of_motion << endl;
+        cout << "______________________" << endl;
+
+    }
+    
+};
+class Aquatic : public animal {
+    private : 
+    string type_of_motion;
+    public :
+    Aquatic(string name , string type_of_motion):type_of_motion(type_of_motion) ,  animal(name){}
+    void motion() override{
+        cout << "the Animal species is : " << name << endl;
+        cout << "the type of motion is : " << type_of_motion << endl;
+        cout << "______________________" << endl;
+    }
+    
+};
+
+int main() {
+
+animal * a1 = new birds("falcon" , "Aviation");
+animal * a2 = new Reptiles("Crocodile" , "Crawl");
+animal * a3 = new Aquatic("Tuna" , "Swimming");
+
+a1 -> motion();
+a2 -> motion();
+a3 -> motion();
+
+delete a1;
+delete a2;
+delete a3;
+
+
+
+
+    return 0;
+}
