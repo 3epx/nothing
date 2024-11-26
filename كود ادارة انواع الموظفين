@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class employee{
+    protected : 
+    int salary;
+    string name;
+    string branch_of_employee;
+    public : 
+    employee (int salary , string name , string b_f_e){
+        this -> name = name;
+        this -> salary = salary;
+        this -> branch_of_employee = b_f_e;
+    }
+    virtual void print () = 0;
+};
+
+class HR : public employee{
+    
+    public:
+    HR (int salary , string name , string b_f_e) : employee (salary, name , b_f_e) {
+    }
+    void print () override{
+        cout << "the name of employee is : " << name << endl;
+        cout << "the salary of the employee is : " << salary  << "💲"<< endl;
+        cout << "the branch is : " << branch_of_employee << endl;
+    }
+};
+
+int main() {
+
+employee * e1 = new HR(200000 , "ahmed alalousi", "Senior Engineer");
+e1->print();
+
+delete e1;
+
+
+    return 0;
+}
