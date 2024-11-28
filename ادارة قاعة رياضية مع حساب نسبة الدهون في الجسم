@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+class Trainer{
+    protected:
+    string name;
+    string gender;
+    int age;
+    float wight;
+    float tall;
+    string workout_program;
+    public:
+    Trainer(string name , int age  , float wight , string wo_p , float tall , string gender){
+        this -> name = name;
+        this -> age = age;
+        this -> wight = wight;
+        workout_program = wo_p;
+        this -> tall = tall;
+        this -> gender = gender;
+    }
+    float get_tall(){return tall;}
+    string get_gender(){return gender;}
+    float get_wight(){return wight;}
+    int get_age(){return age;}
+    virtual void showDetails(){}
+    virtual void GymActivity() = 0;
+    
+};
+
+class any_Person : public Trainer {
+    public : 
+    any_Person(string name , int age  , float wight , string wo_p , float tall , string gender) : Trainer(name , age , wight , wo_p , tall , gender){}
+    void showDetails() override{
+        cout << "Name : " << name << endl;
+        cout << "age : " << age << endl;
+        cout << "wight : " << wight << endl;
+        cout << "Tall : " << tall << endl;
+        if (name == "Ahmed" or name == "ahmed"){
+        cout << "Gender : Man " << endl;}
+        else {cout << "Gender : " << gender << endl;}
+        cout << "workout program : " << workout_program << endl;
+        
+    }
+    void GymActivity() override{
+        cout << "Cardio Session : 3 x 15 " << endl;
+        cout << "Yoga Class  : 30 min " << endl;
+        cout << "Abdominal exercise : 50 x 4" << endl;
+    }
+    friend void calories(any_Person obj);
+};
+
+void colories (any_Person obj) {
+        float BMI;
+            BMI =(obj.get_tall() / 100);
+            BMI = BMI * BMI;
+            BMI = obj.get_wight() / BMI;
+        if(obj.get_gender() == "male"){
+            cout << 1.2 * BMI + 0.23 * obj.get_age() - 16.2;
+        }
+        else if (obj.get_gender() == "female"){
+             cout << 1.2 * BMI + 0.23 * obj.get_age() - 5.4;
+        }
+    }
+
+int main() {
+
+any_Person p1("Hamkeem" , 20 , 83 , "Drying fat" , 188 , "male");
+p1.showDetails();
+colories(p1);
+
+    return 0;
+}
