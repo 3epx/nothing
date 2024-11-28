@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class sensor{
+    private : 
+    float tempreature;
+    public : 
+    void set(float tempreature){this -> tempreature = tempreature;}
+    float get(){return tempreature;}
+};
+int main() {
+sensor s1, s2, s3 , s4 ,s5;
+s1.set(90);s2.set(89);s3.set(24);s4.set(98);s5.set(80);
+float sen[5] = {s1.get(),s2.get(),s3.get(),s4.get(),s5.get()};
+float avg = 0 , min_v = sen[1], max_v = 0, minus = 0;
+for(int i = 0; i<5; i++){if (max_v < sen[i]){max_v = sen[i];}}
+for(int i = 0; i<5; i++){if (min_v > sen[i]){min_v = sen[i];}}
+for(int i = 0; i<5; i++){avg = avg + sen[i];}
+if (avg / 5 > 70){
+    minus = s1.get(); s1.set(minus - 5);
+    minus = s2.get(); s2.set(minus - 5);
+    minus = s3.get(); s3.set(minus - 5);
+    minus = s4.get(); s4.set(minus - 5);
+    minus = s5.get(); s5.set(minus - 5);
+    avg = 0;
+    for(int i = 0; i<5; i++){avg = avg + sen[i];}
+}
+cout << "the max value is : " << max_v << endl;
+cout << "the min value is : " << min_v << endl;
+cout << "the average is : " << avg /5 << endl;
+
+    return 0;
+}
