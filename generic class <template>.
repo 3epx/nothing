@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+template <class a1  , class a2 , class a3 ,class a4>
+
+class book{
+    private:
+    a1 name;
+    a2 pages; 
+    a3 price;
+    a4 author;
+    public:
+    book (a1 name, a2 pages , a3 price , a4 author){
+        this -> name = name;
+        this -> pages = pages;
+        this -> price = price;
+        this -> author = author;
+    }
+    void display(){
+        cout << name << endl;
+        cout << pages << endl;
+        cout << price << endl;
+        cout << author << endl;
+    }
+};
+
+int main() {
+    
+    book <string , int  , int , string> b1("math easly" , 200 , 20 , "lolo");
+    b1.display();
+    book <double , int  , int , double> b2(2393 , 200 , 20 , 2324);
+    b2.display();
+    
+    
+    
+    return 0;
+}
