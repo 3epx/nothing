@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+template <class A1 , class A2, class A3>
+class book{
+    private:
+    A1 name;
+    A2 pages;
+    public:
+    void dis(A1 name , A2 pages){
+        this -> name = name;
+        this -> pages = pages;
+        cout << name << endl;
+        cout << pages << endl;
+    }
+};
+
+
+int main() {
+
+book <string , int , string> b1;
+b1.dis("ahmed" , 20);
+
+    return 0;
+}
