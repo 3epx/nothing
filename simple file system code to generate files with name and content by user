@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+    string name;
+    string filename;
+    ofstream f1;
+    cout << "enter your file name pls : ";
+    getline(cin, filename);
+    cout << "enter your name pls : ";
+    getline(cin, name);
+    f1.open("C:\\Users\\Ahmed\\Desktop\\" + filename+".txt");
+    f1 << name;
+    f1.close();
+    return 0;
+}
