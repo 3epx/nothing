@@ -1,0 +1,18 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+
+    string content;
+    ofstream file1;
+    file1.open(R"(C:\Users\Ali\Desktop\file handling test\text.txt)" , ios:: app);
+    if (file1.is_open()) {
+        for (int i = 0; i < 3; i++) {
+            cout << "enter the content of line " << i + 1 << " here : ";
+            getline(cin, content);
+            file1 << content << endl;
+        }
+    }
+    return 0;
+}
