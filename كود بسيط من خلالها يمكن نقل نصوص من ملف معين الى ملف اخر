@@ -1,0 +1,21 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+
+    string line;
+
+    ofstream file1;
+    file1.open(R"(enter the first file path here)" , ios::app);
+    ifstream file2;
+    file2.open(R"(enter the second file path here)");
+    while (getline(file2, line)) {
+        file1 << line << endl;
+    }
+    file1.close();
+    file2.close();
+
+
+    return 0;
+}
