@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+
+    string word; // المتغير اللي نخزن بيه الكلمة
+    int wordcounter = 0; // المتغير اللي نحسب بيه عدد الكلمات
+    int digtecounter = 0;
+    ifstream file; 
+    file.open(R"(الصق مسار المستند هنا)");
+    if (!file) {
+        cout << "the file is't open!!";
+    }
+    else {
+        while (file >> word)// السطر اللي من خلالها ننقل كل كلمة الى المتغير الخاص بتخرين الكلمات
+        {
+            wordcounter++; // هنا يتم زيادة متغير حساب عدد الكلمات بواحد كل ما يتم تخزين كلمة جديدة في متغير تخزين الكلمات
+            digtecounter = digtecounter + size(word);
+        }
+    }
+    cout << "the number of the words is : " << wordcounter << endl; // هنا طباعة عدد الكلمات التي توجد في المستند
+    cout << "the number of the digite with spaceies is : " << digtecounter + wordcounter - 1 << endl; // هنا طباعة عدد الاحرف مع المسافات في المستند
+    cout << "the number of the digite without spaceies is : " << digtecounter << endl; // هنا طباعة عدد الاحرف بدون المسافات في الموجودة في المستند
+    cout << "the number of the spaceies is : " << wordcounter -1 << endl; // هنا طباعة عدد المسافات فقط
+    file.close();
+
+    return 0;
+}
