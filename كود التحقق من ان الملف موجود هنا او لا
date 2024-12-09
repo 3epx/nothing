@@ -1,0 +1,18 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+
+
+    ofstream file;
+    file.open(R"(Enter the path here)");
+    if (!file) {
+        cout << "the file is not avabible!!!!!!!!!" << endl;
+    }
+    else {
+        cout << "the file is avabible." << endl;
+    }
+    file.close();
+    return 0;
+}
