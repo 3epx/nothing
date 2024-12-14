@@ -1,0 +1,97 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+class students {
+private:
+    int age;
+    string name;
+public:
+    students(int age, string name) {
+        this->name = name;
+        this->age = age;
+    }
+    void set(int age, string name) {
+        this->name = name;
+        this->age = age;
+    }
+    int get_age() { return age; }
+    string get_name() { return name; }
+};
+
+int main() {
+
+    vector <students> student;
+    string student_name;
+    int student_age;
+    int student_number = 0;
+    int choess;
+
+    while (true) {
+        cout << "what you want to do?" << endl;
+        cout << "1- find the information of student." << endl;
+        cout << "2- add new student to database." << endl;
+        cout << "3- change informathion for a student." << endl;
+        cin >> choess;
+
+
+        if (choess == 1) {
+            string name;
+            cout << "enter the name of the student : ";
+            cin >> name;
+            for(int i = 0; i < student.size();i++) {
+                if (student[i].get_name() == name) {
+                    cout << "student name is : " << student[i].get_name() << endl;
+                    cout << "student age is : " << student[i].get_age() << endl;
+                }
+            }
+        }
+        else if(choess == 2){
+            while (true) {
+                string answer;
+                cout << "you want add a student to database ?, answer y or n : ";
+                cin >> answer;
+                if (answer == "y") {
+                    cout << "enter the name of student " << student_number + 1 << " : ";
+                    cin >> student_name;
+                    cout << "enter the age of student " << student_number + 1 << " : ";
+                    cin >> student_age;
+                    student.emplace_back(student_age, student_name);
+                    student_number++;
+                }
+                else if (answer == "n") {
+                    break;
+                }
+                student.shrink_to_fit();
+            }
+
+        }
+        else if (choess == 3) {
+            string change_student_name;
+            int change_student_age;
+
+            cout << "enter the name and age of student " << endl;
+            cout << "enter the name of student : " << endl;
+            cin >> change_student_name;
+            cout << "enter the age of student : " << endl;
+            cin >> change_student_age;
+            for (int i = 0; i < student.size();i++) {
+                if (student[i].get_name() == change_student_name and student[i].get_age() == change_student_age) {
+                    cout << "the student " << student[i].get_name() << " that have " << student[i].get_age() << " years ";;
+                    cout << "new name of the student : ";
+                    cin >> change_student_name;
+                    cout << "new age of student : ";
+                    cin >> change_student_age;
+                    student[i].set(change_student_age , change_student_name);
+                    cout << "the student changed to " << student[i].get_name() << " and the age to " << student[i].get_age() << " years " << endl;
+
+                }
+            }
+        }
+
+
+
+    }
+
+    return 0;
+}
