@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+
+vector <string> list;
+    int counter = 1;
+while(true){
+    int choess;
+    string mission;
+cout << "choess anything from the list." << endl;
+cout << "1- add new mission." << endl;
+cout << "2- delete mission." << endl;
+cout << "3- display missions." << endl;
+cout << "4- Exit." << endl;
+cout << "write the choess here :  ";
+cin >> huchoess;
+cin.ignore();
+    if (choess == 1){
+        cout << "enter the mission here : ";
+        getline(cin , mission);
+        mission = to_string(counter) + " - " + mission;
+        list.emplace_back(mission);
+        counter++;
+    }
+    else if(choess == 2){
+        int NumberOfMission;
+        cout << "enter the number of mission here : ";
+        cin >> NumberOfMission;
+        NumberOfMission = NumberOfMission -1;
+        list.erase(list.begin() + NumberOfMission);
+    }
+    else if (choess == 3){
+        for(int i = 0; i<list.size();i++){
+            cout << list[i] << endl;
+        }
+    }
+        else if (choess == 4){
+            break;
+        }
+
+    }
+    
+    return 0;
+}
