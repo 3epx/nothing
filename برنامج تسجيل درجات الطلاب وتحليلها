@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector <float> list; float max;
+	float avg = 0;
+	int i = 0;
+	while(true) {
+		float grade;
+		cout << "enter the garde here : ";
+		cin >> grade;
+		if (grade == 0) { break; }
+		list.emplace_back(grade);
+		i++;
+	}
+	float min = list[0];
+	for (int i = 0; i < list.size();i++) {
+		if (max < list[i]) { max = list[i]; }
+		if (min > list[i]) { min = list[i]; }
+	}
+	for (int i = 0; i < list.size();i++) {
+		avg = avg + list[i];
+	}
+	avg = avg / list.size();
+	cout << "the bigest grade is : " << max << endl;
+	cout << "the mineum grade is : " << min << endl;
+	cout << "the average is : " << avg << endl;
+
+	return 0;
+}
+
