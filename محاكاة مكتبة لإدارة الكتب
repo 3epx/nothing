@@ -1,0 +1,96 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class library{
+    private:
+    string BookName;
+    string Author;
+    string PublicationYear;
+    public:
+    library(string BN, string Athr,string PY){
+        PublicationYear = PY;
+        BookName = BN;
+        Author = Athr;
+    }
+    void set_BookName(string BookName){this -> BookName = BookName;}
+    void set_Author(string Author){this -> Author = Author;}
+    void set_PublicationYear(string PublicationYear){this -> PublicationYear = PublicationYear;}
+    string get_BookName(){return BookName;}
+    string get_Author(){return Author;}
+    string get_PublicationYear(){return PublicationYear;}
+};
+
+int main() {
+vector <library> library_list;
+    string BookName;
+    string Author;
+    string PublicationYear;
+while(true){
+    int choess;
+    cout << "chosee anything form this list." << endl;
+    cout << "1- add new book." << endl;
+    cout << "2- change information for a book."<< endl;
+    cout << "3- delete a book from the library." << endl;
+    cout << "4- display library books." << endl;
+    cout << "5- Exit." << endl;
+    cout << "write the choess here : ";
+    cin >> choess;
+    cin.ignore();
+    if (choess == 1){
+        cout << "enter the name of the book : ";
+        getline(cin , BookName );
+        cout << "enter the name of Author : ";
+        getline(cin , Author );
+        cout << "enter the publication year : ";
+        getline(cin , PublicationYear );
+        library_list.emplace_back(BookName , Author , PublicationYear);
+    }
+    else if (choess == 2){
+        cout << "enter the name of the book : ";
+        getline(cin , BookName );
+        for(int i = 0 ; i <library_list.size(); i++){
+            if (library_list[i].get_BookName() == BookName){
+                cout << library_list[i].get_BookName() <<endl;
+                cout << library_list[i].get_Author() <<endl;
+                cout << library_list[i].get_PublicationYear() <<endl;
+                cout << "enter the new information changes of book. " << endl;
+                cout << "enter the title : ";
+                getline(cin , BookName );
+                cout << "enter the Author : ";
+                getline(cin , Author );
+                cout << "enter the Publication Year : ";
+                getline(cin , PublicationYear );
+                library_list[i].set_BookName(BookName);
+                library_list[i].set_Author(Author);
+                library_list[i].set_PublicationYear(PublicationYear);
+            }
+            else if (library_list[i].get_BookName() != BookName){cout << "wrong!!!!!!!!"<< endl;}
+        }
+    }
+    else if(choess == 3){
+        cout << "enter the name of the book : ";
+        getline(cin , BookName );
+        for(int i = 0 ; i <library_list.size(); i++){
+            if (library_list[i].get_BookName() == BookName){
+                library_list.erase(library_list.begin()+i);
+            }
+            else{cout <<"wrong!!!!!" << endl;}
+        }
+    }
+    else if(choess == 4){
+        for(int  i = 0; i<library_list.size();i++){
+            cout <<"Book Name : " << library_list[i].get_BookName() << endl;
+            cout <<"Author Name : " << library_list[i].get_Author() << endl;
+            cout <<"Publication Year : " << library_list[i].get_PublicationYear() << endl;
+            cout <<"_______________________"<< endl;
+        }
+    }
+    else if (choess == 5){
+        break;
+    }
+}
+
+
+    return 0;
+}
