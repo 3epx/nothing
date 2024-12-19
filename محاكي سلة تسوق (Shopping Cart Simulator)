@@ -1,0 +1,92 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+class cart{
+    private: 
+    string ProduactName;
+    float Quantity;
+    float price;
+    float total_price;
+    public: 
+    cart(string ProduactName , float Quantity , float price) : price(price) ,Quantity(Quantity) ,ProduactName(ProduactName) {
+        total_price = Quantity * price;
+    }
+    void set_ProduactName(string ProduactName){this -> ProduactName =  ProduactName;}
+    void set_Quantity(float Quantity ){this ->  Quantity =  Quantity;}
+    void set_price(float price){this ->  price =  price;}
+    string get_ProduactName(){ return ProduactName;}
+    float get_Quantity(){return Quantity;}
+    float get_price(){return price;}
+    float get_total_price(){return total_price;}
+};
+int main() {
+    
+    vector <cart> carts;
+    
+    while(true){
+        int choess , quantity , price;
+        string ProductName;
+        
+        cout << "choess anything from the list." << endl;
+        cout << "1. Add an item." << endl;
+        cout << "2. Delete an item." << endl;
+        cout << "3. View cart." << endl;
+        cout << "4. Total account." << endl;
+        cout << "5. Exit." << endl;
+        cout << "enter the choess here : ";
+        cin >> choess;
+        cin.ignore();
+        if (choess == 1){
+            cout << "Enter product name : ";
+            getline(cin , ProductName);
+            cout << "Enter quantity : ";
+            cin >> quantity;
+            cout << "Enter price per unit : ";
+            cin >> price;
+            carts.emplace_back(ProductName , quantity , price);
+            cout << "Product added successfully! " << endl;
+        }
+        else if(choess == 2){
+            cout << "Enter product name : ";
+            cin >> ProductName;
+            for (int i = 0; i <carts.size();i++){
+                if(carts[i].get_ProduactName() ==ProductName ){
+                    carts.erase(carts.begin() + i);
+                    cout << "the product deleted successfully" << endl;
+                }
+                else if (carts[i].get_ProduactName() !=ProductName ){
+                    cout << "the product isn't avalbile."<< endl;
+                }
+            }
+        }
+        else if(choess == 3){
+            for(int i = 0; i<carts.size();i++){
+                cout << "__________________"<< endl;
+                cout << "product name : " << carts[i].get_ProduactName() << endl;
+                cout << "the Quantity : " << carts[i].get_Quantity() << endl;
+                cout << "the price for unit : " << carts[i].get_price() << endl;
+                cout << "the total price : " << carts[i].get_total_price() << endl;
+            }
+            
+        }
+        else if(choess == 4){
+            float total_price = 0;
+            for(int i = 0; i<carts.size();i++){
+                total_price = total_price + carts[i].get_total_price();
+            }        
+            cout << "total price is : " << total_price << endl;
+        }
+        else if (choess == 0){
+            break;
+        }
+        
+    }
+
+
+
+
+
+
+
+    return 0;
+}
