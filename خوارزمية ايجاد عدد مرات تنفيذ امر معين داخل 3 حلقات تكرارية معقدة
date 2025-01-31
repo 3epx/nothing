@@ -1,0 +1,12 @@
+  #include <iostream>
+  #include <cmath>
+  using namespace std;
+  int main() {
+      int sum = 0;
+      int n = 69;
+      for (int i = 2; i <= n; i++) {
+          float multi = floor(log(i) / log(2) + 1) * (n - i + 1);
+          sum = sum + multi;
+     }
+     return 0;
+ }
