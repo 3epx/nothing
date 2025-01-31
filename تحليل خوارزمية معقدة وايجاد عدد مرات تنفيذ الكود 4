@@ -1,0 +1,29 @@
+        for (int i = 2; i <= n ; i++) {
+                for (int k = i; k <= i; k++) {
+                        for (int d = 4; d <= i-5; d *= 2) {
+                            
+                               cout << h << " - Ahmed" << endl;
+             }
+        }
+     }
+
+
+
+الحل 
+
+
+
+ #include <iostream>
+  #include <cmath>
+         using namespace std;
+       int main() {
+             int n = 69;
+             int sum = 0;
+             for (int i = 2; i <= n; i++) {
+                 
+                 int multi = floor(log(i - 5) / log(2) - 1);
+                 if (multi > 0)   
+                { sum = sum + multi;}
+            }
+            return 0;
+        }
