@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int max_n(int n1, int n2, int n3 , int n4,int n5 , int n6 ){
+    int x = n1;
+    if (n2 > x)
+    x = n2;
+    if (n3 > x)
+    x = n3;
+    if (n4 > x)
+    x = n4;
+    if (n5 > x)
+    x = n5;
+    if (n6 > x)
+    x = n6;
+    return x;
+}
+int main() {
+int n1 , n2 , n3 , n4 , n5 , n6;
+cout << "enter the numbers siriesly : ";
+cin >> n1 >> n2 >> n3 >> n4 >> n5 >> n6;
+int max_number = max_n(n1 , n2 , n3 , n4 , n5 , n6);
+cout << max_number;
+    return 0;
+}
