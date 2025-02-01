@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n1 , n2 , n3;
+cout << "enter the first number pls : ";
+cin >> n1;
+cout << "enter the second number pls : ";
+cin >> n2;
+if(n1 > n2){
+    while(true){
+  n3 = n1 % n2;
+  n1 = n2;
+  n2 = n3;
+  if (n2 == 0){
+      break;
+  }
+}
+cout << n1;
+}
+else if (n2 > n1){
+       while(true){
+  n3 = n2 % n1;
+  n2 = n1;
+  n1 = n3;
+  if (n1 == 0){
+      break;
+  }
+}
+}
+    return 0;
+}
