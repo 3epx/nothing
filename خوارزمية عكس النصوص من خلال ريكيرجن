@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+ string nameoo(string n) {
+	 if (n.empty())
+		 return n;
+	 return n.back() + nameoo(n.substr(0 ,n.size() - 1));
+ }
+int main() {
+	string name;
+	cout << "enter the number of sequans : ";
+	getline(cin,name);
+	string reversed = nameoo(name);
+	cout << reversed;
+}
