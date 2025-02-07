@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector <long long int> memo(10,0);
+
+long long int fibo(int n) {
+	if (n == 1) return n;
+	if (n == 0) return n;
+	if (n >= memo.size()) memo.resize(n + 1, 0);
+	if (memo[n] != 0) return memo[n];
+	return memo[n] = fibo(n - 1) + fibo(n - 2);
+}
+
+int main() {
+
+	int n = 0;
+	cout << "enter the number of sequans : ";
+	cin >> n;
+
+	for (int i = 0; i <= n; i++) {
+		cout << fibo(i) << endl;
+	}
+
+}
+
+
