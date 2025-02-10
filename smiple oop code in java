@@ -1,0 +1,19 @@
+class car{
+    private int number;
+    private String name;
+    car(String name , int number){
+        this.number = number;
+        this.name = name;}
+    void print(){
+        System.out.println("the car name is : " + name + " and it's number is : " + number);
+    }
+    
+}
+class Main {
+    public static void main(String[] args) {
+        
+        car mycar = new car("BMW" , 32);
+        mycar.print();
+    
+    }
+}
