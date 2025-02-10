@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        int[] khairy = {2,4,5,3,5,3,5,3,8,3};
+        
+        for(int i = 0; i< khairy.length;i++){
+            System.out.println(khairy[i]);
+        }
+        
+    }
+}
