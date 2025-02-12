@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+	float nums[5] = { 3,8,5,8,1 };
+
+	int max = nums[0], min = nums[0], i_p_min, i_p_max;
+
+	for (int i = 0; i < 5; i++) {
+		if (min > nums[i]) { min = nums[i]; i_p_min = i; }
+		if (max < nums[i]) { max = nums[i]; i_p_max = i; }
+	}
+
+}
