@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+	float nums[10] = {3, 4, 2.9,8,1,3.99,8,5,8,1 };
+	float x = 4;
+	float y = 1.5;
+	int i_p_2min = -1;
+	for (int i = 0; i < sizeof(nums) / sizeof(nums[0]) ; i++) {
+		if (nums[i] < x and nums[i] > y) {
+			y = nums[i];
+			i_p_2min = i;
+		}
+	}
+	if (i_p_2min < 0) {
+		cout << 0 << endl << 0;
+
+	}
+	else {
+		cout << "The index of " << nums[i_p_2min] << " in " << i_p_2min;
+	}
+}
