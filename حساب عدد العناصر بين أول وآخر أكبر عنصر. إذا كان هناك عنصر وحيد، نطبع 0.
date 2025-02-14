@@ -1,0 +1,17 @@
+nums = [2,4.2,242,9,12,9,8,3.4]
+start = 0;
+end = 0;
+maxi = nums[0];
+for i in range(0 , len(nums)):
+    if nums[i] > maxi:
+        maxi = nums[i]
+        start = i
+    if nums[start] == nums[i]:
+            end = i
+if end == start:
+    print (0)
+    print (0)
+else:
+    while start+1 < end:
+        print(start)
+        start+=1
