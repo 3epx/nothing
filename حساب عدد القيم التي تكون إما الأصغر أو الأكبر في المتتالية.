@@ -1,0 +1,18 @@
+nums = [10, 3, 3, 3, 3, 10, 5, 3, 10]
+mini = nums[0];
+maxi = nums[0];
+maxi_loops = 0;
+mini_loops = 0;
+for i in range(0, len(nums)):
+    if nums[i] < mini:
+        mini = nums[i]
+        mini_loops = 1
+    elif nums[i] == mini:
+        mini_loops +=1
+    if nums[i] > maxi:
+        maxi = nums[i]
+        maxi_loops = 1
+    elif nums[i] == maxi:
+        maxi_loops +=1
+print("min value : ",mini , "number of this value is : " , mini_loops)
+print("max value : ",maxi , "number of this value is : " , maxi_loops)
