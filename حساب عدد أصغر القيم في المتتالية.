@@ -1,0 +1,11 @@
+nums = [10, 3, 3, 3, 3, 10, 5, 3, 10]
+
+mini = nums[0];
+loops = 0;
+for i in range(0, len(nums)):
+    if nums[i] < mini:
+        mini = nums[i]
+        loops = 1
+    elif nums[i] == mini:
+        loops +=1
+print(mini , loops)
