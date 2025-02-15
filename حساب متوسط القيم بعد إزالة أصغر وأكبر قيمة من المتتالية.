@@ -1,0 +1,18 @@
+nums = [10, 3, 4, 3, 3, 10, 5, 3, 10]
+mini = nums[0];
+maxi = nums[0];
+counter = 0;
+sumo = 0;
+for i in range(0, len(nums)):
+    if nums[i] < mini:
+        mini = nums[i]
+    if nums[i] > maxi:
+        maxi = nums[i]
+for i in range(0, len(nums)):
+    if nums[i] == mini or nums[i] == maxi:
+        nums[i] = 0
+    if nums[i] > 0 or nums[i] < 0:
+        sumo += nums[i]
+        counter +=1;
+print(sumo)
+print(sumo / counter)
