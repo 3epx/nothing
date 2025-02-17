@@ -1,0 +1,14 @@
+def cal(n1 , op , n2):
+    if op == "+":
+        return n1 + n2
+    elif op == "-":
+        return n1 - n2
+    elif op == "*":
+        return n1 * n2
+    elif op == "/":
+        return n1 / n2
+n1 = int(input("enter first number here : "))
+op = input("enter the operation here : ")
+n2 = int(input("enter the second number here : "))
+result = cal(n1 , op , n2)
+print("the result is : " , result)
