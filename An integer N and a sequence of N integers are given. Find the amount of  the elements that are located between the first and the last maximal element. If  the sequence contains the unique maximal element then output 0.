@@ -1,0 +1,20 @@
+nums = [1,3,2,4,8,32,5.3,23,.9,1,0,-1,32,20]
+
+i_p_last = 0;
+i_p_fisrt = 0;
+first = nums[0]
+last = nums[0]
+for i in range(0,len(nums)):
+    if nums[i] == first:
+        last = nums[i]
+        i_p_last = i
+    if first < nums[i]:
+        i_p_fisrt = i
+        first = nums[i]
+
+if nums[i_p_last] == nums[i_p_fisrt]:
+    for i in range(i_p_fisrt + 1 , i_p_last):
+        print(nums[i])
+else:
+    print(0)
+
