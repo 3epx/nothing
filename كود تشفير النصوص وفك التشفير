@@ -1,0 +1,24 @@
+original = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+encrypted = ['?','6', 'V', 'a', '#', '3', 'B', '%', 'z', 'P', '^', 'x', 'h', '!', 'd', 'M', 'o', 'u', 'i', 'y', '*', 'C', 'r', '2', 'L', 'K']
+choice = int(input("What you want to do? \n 1- Encrypt \n 2- Decrypt \n Enter the choice: "))
+if choice == 1:
+    latter = input("Enter the text to encrypt: ").lower()
+    encrypted_ilatter = ""
+    for i in range(0 , len(latter)):
+        for u in range(0 , len(original)):
+            if original[u] == latter[i]:
+                i_p_digit = u
+                break
+        encrypted_ilatter += encrypted[i_p_digit]
+    print("Encrypted text:", encrypted_ilatter)
+elif choice == 2:
+    encrypted_ilatter = input("Enter the text to decrypt: ")
+    deencrypted_ilatter = ""
+    for i in range(0 , len(encrypted_ilatter)):
+        for u in range(0 , len(encrypted)):
+            if encrypted[u] == encrypted_ilatter[i]:
+                i_p_digit = u
+                break
+        deencrypted_ilatter += original[i_p_digit]
+        i_p_digit = 0
+    print("Decrypted text:", deencrypted_ilatter)
