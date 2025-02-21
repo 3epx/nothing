@@ -1,0 +1,25 @@
+"""
+An integer N and a sequence of N integers are given. Find the total 
+amount of all extremal (that is, minimal or maximal) elements of the sequence.
+"""
+nums = [1,1,4,2,4,-9,8,49,49,-1,49,-9,-9,-9,3,4,1]
+mini = nums[0]
+maxi = nums[0]
+w_m_n_mini = 0;
+w_m_n_maxi = 0;
+for i in range(0 , len(nums)):
+    if nums[i] < mini:
+        mini = nums[i]
+        w_m_n_mini = 0
+    if nums[i] == mini:
+        w_m_n_mini +=1
+    if nums[i] > maxi:
+        maxi = nums[i]
+        w_m_n_maxi = 0
+    if nums[i] == maxi:
+        w_m_n_maxi +=1
+print("the min number is : ",mini)
+print("The number of times the number appears is : ",w_m_n_mini)
+print("the max number is : ",maxi)
+print("The number of times the number appears is : ",w_m_n_maxi)
+print("The Total number of times the max and min appears is : ",w_m_n_maxi + w_m_n_mini)
