@@ -1,0 +1,22 @@
+#include <iostream>
+#include <random>
+using namespace std;
+
+int main()
+{
+    int length = 0;
+    cout << "Enter The Length of Password : ";
+    cin >> length;
+    int now_time = time(nullptr);
+string pass = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*+-?~";
+string password;
+mt19937 random_numbers(now_time);
+uniform_int_distribution <int> random_numbers_to_index(0 , pass.size() - 1);
+
+for(int i = 0; i<length; i++){
+    password += pass[random_numbers_to_index(random_numbers)];
+}
+cout << password;
+
+    return 0;
+}
