@@ -1,0 +1,19 @@
+"""
+An integer N (> 3) and a sequence of N real numbers are given. Find 
+three greatest elements of the sequence and output their values in descending 
+order.  
+"""
+def bubble_sort(array):
+    for i in range(0,len(array) -1):
+        swapped = False
+        for u in range(0,len(array) - i - 1):
+            if array[u] < array[u +1]:
+                ueir = array[u +1]
+                array[u +1] = array[u]
+                array[u] = ueir
+                swapped = True
+        if swapped == False:
+            break
+array = [8,3,41,9,7,93,1,0,18,39,18,92,38,18,45]
+bubble_sort(array)
+print(array[0:3])
