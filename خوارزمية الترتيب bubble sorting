@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void bubble_sort(int array[], int sizeof_array) {
+    for (int i = 0; i < sizeof_array - 1; i++) {
+        for (int u = 0; u < sizeof_array - i; u++) {
+            if (array[u] > array[u + 1]) {
+                int swap_numbers = array[u + 1];
+                array[u + 1] = array[u];
+                array[u] = swap_numbers;
+            }
+        }
+    }
+}
+int main()
+{
+    int array[] = { 1 , 3 , 4 ,7 , 9 , 12 , 19 , 12 , 31 , 14 };
+    int sizeof_array = sizeof(array) / sizeof(array[0]);
+    bubble_sort(array, sizeof_array);
+    for (int i = 0; i < sizeof_array; i++) {
+        cout << array[i] << endl;
+    }
+    return 0;
+}
