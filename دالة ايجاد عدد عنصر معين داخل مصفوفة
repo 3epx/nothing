@@ -1,0 +1,10 @@
+def count(array , c):
+    counter = 0
+    for i in range(0,len(array)):
+        if array[i] == c:
+            counter +=1
+    return counter
+
+array = ["a","a","a","a","b","b","a","a","b","a","a","a"]
+x = count(array,"a")
+print(x)
