@@ -1,0 +1,14 @@
+listt = [20, 20 , 20 , 10, 10 , 2 , 3 , 3,8 , 8, 2, 38 ,38 , 38]
+u_listt = []
+def uniq(x , y):
+    for i in range(len(x)):
+        ismojod = False
+        for u in range(len(y)):
+            if y[u] == x[i]:
+                ismojod = True
+        if ismojod == False:
+            y.append(x[i])
+uniq(listt,u_listt)
+print(u_listt)
+
+    
