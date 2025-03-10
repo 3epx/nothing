@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string revers(string x){
+    string reverser;
+    for(int i = x.length() - 1; i>=0 ;i--){
+        reverser = reverser + x[i];}
+    return reverser;
+}
+int main(){
+string name = "i love only myself";
+string x = revers(name);
+cout << x;
+    return 0;
+}
