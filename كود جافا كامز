@@ -1,0 +1,129 @@
+abstract public class Employee {
+    private String Name;
+    private String ID;
+    
+    Employee(String Name, String ID) {
+        this.Name = Name;
+        this.ID = ID;
+    }
+    
+    public String getName() { return Name; }
+    public String getID() { return ID; }
+    
+    abstract double earnings();
+    abstract void print();
+}
+
+public class SalariedEmployee extends Employee {
+    private double weeklySalary;
+    
+    SalariedEmployee(String Name, String ID, double weeklySalary) {
+        super(Name, ID);
+        this.weeklySalary = weeklySalary;
+    }
+    
+    @Override
+    double earnings() { return weeklySalary; }
+    
+    @Override
+    void print() {
+        System.out.println("Name: " + getName());
+        System.out.println("ID: " + getID());
+        System.out.println("Weekly Salary: " + weeklySalary);
+    }
+}
+
+public class CommissionEmployee extends Employee {
+    private double grossSales;
+    private double commissionRate;
+    
+    CommissionEmployee(String Name, String ID, double grossSales, double commissionRate) {
+        super(Name, ID);
+        this.grossSales = grossSales;
+        this.commissionRate = commissionRate;
+    }
+    
+    @Override
+    double earnings() { return grossSales * commissionRate; }
+    
+    @Override
+    void print() {
+        System.out.println("Name: " + getName());
+        System.out.println("ID: " + getID());
+        System.out.println("Gross Sales: " + grossSales);
+        System.out.println("Commission Rate: " + commissionRate);
+    }
+}
+
+public class HourlyEmployee extends Employee {
+    private double wage;
+    private double hours;
+    
+    HourlyEmployee(String Name, String ID, double wage, double hours) {
+        super(Name, ID);
+        this.wage = wage;
+        this.hours = hours;
+    }
+    
+    @Override
+    double earnings() { return wage * hours; }
+    
+    @Override
+    void print() {
+        System.out.println("Name: " + getName());
+        System.out.println("ID: " + getID());
+        System.out.println("Wage: " + wage);
+        System.out.println("Hours: " + hours);
+    }
+}
+
+public class BasePlusCommissionEmployee extends CommissionEmployee {
+    private double baseSalary;
+    
+    BasePlusCommissionEmployee(String Name, String ID, double grossSales, 
+                             double commissionRate, double baseSalary) {
+        super(Name, ID, grossSales, commissionRate);
+        this.baseSalary = baseSalary;
+    }
+    
+    @Override
+    double earnings() { return baseSalary + (super.earnings()); }
+    
+    @Override
+    void print() {
+        super.print();
+        System.out.println("Base Salary: " + baseSalary);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // 1. Create an object of SalariedEmployee
+        SalariedEmployee salariedEmp = new SalariedEmployee("Ahmed Mohammed", "EMP001", 1500.0);
+        System.out.println("=== Salaried Employee ===");
+        salariedEmp.print();
+        System.out.println("Earnings: " + salariedEmp.earnings());
+        System.out.println("-----------------------");
+
+        // 2. Create an object of CommissionEmployee
+        CommissionEmployee commissionEmp = new CommissionEmployee("Sarah Khaled", "EMP002", 50000.0, 0.15);
+        System.out.println("=== Commission Employee ===");
+        commissionEmp.print();
+        System.out.println("Earnings: " + commissionEmp.earnings());
+        System.out.println("-----------------------");
+
+        // 3. Create an object of HourlyEmployee
+        HourlyEmployee hourlyEmp = new HourlyEmployee("Ali Hassan", "EMP003", 50.0, 40.0);
+        System.out.println("=== Hourly Employee ===");
+        hourlyEmp.print();
+        System.out.println("Earnings: " + hourlyEmp.earnings());
+        System.out.println("-----------------------");
+
+        // 4. Create an object of BasePlusCommissionEmployee
+        BasePlusCommissionEmployee basePlusEmp = new BasePlusCommissionEmployee(
+            "Nora Abdullah", "EMP004", 30000.0, 0.1, 2000.0);
+        System.out.println("=== Base Plus Commission Employee ===");
+        basePlusEmp.print();
+        System.out.println("Earnings: " + basePlusEmp.earnings());
+    }
+}
