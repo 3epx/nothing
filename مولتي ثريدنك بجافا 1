@@ -1,0 +1,69 @@
+// استيراد مكتبة Random لتوليد أرقام عشوائية
+import java.util.Random;
+
+// تعريف الكلاس PrintTask الذي ينفذ واجهة Runnable ليصبح قابلًا للتنفيذ في مؤشر ترابط منفصل
+public class PrintTask implements Runnable {
+    // المتغيرات العضوية (الأعضاء)
+    private final int sleepTime;  // وقت الانتظار العشوائي لكل مهمة (بالمللي ثانية)
+    private final String taskName;  // اسم المهمة للتعريف بها
+    private final static Random generator = new Random();  // مولد أرقام عشوائية مشترك لجميع النسخ
+
+    // البناء (Constructor)
+    public PrintTask(String name) {
+        taskName = name;  // تعيين اسم المهمة الممرر عند إنشاء الكائن
+        sleepTime = generator.nextInt(5000);  // توليد وقت انتظار عشوائي بين 0 و5000 مللي ثانية
+    }
+
+    // تنفيذ المهمة - هذه الطريقة تُستدعى عند بدء مؤشر الترابط
+    public void run() {
+        try {
+            // طباعة رسالة توضح اسم المهمة ووقت الانتظار
+            System.out.printf("%s going to sleep for %d milliseconds.\n", 
+                taskName, sleepTime);
+            
+            // إيقاف مؤشر الترابط الحالي لمدة sleepTime مللي ثانية
+            Thread.sleep(sleepTime);
+        } catch (InterruptedException exception) {
+            // معالجة الاستثناء في حالة مقاطعة مؤشر الترابط أثناء النوم
+            System.out.printf("%s %s\n", taskName, 
+                "terminated prematurely due to interruption");
+        }
+        
+        // طباعة رسالة عند استيقاظ مؤشر الترابط وإكمال المهمة
+        System.out.printf("%s done sleeping\n", taskName);
+    }
+}
+
+
+
+
+// استيراد المكتبات اللازمة
+import java.util.concurrent.Executors;  // تحتوي على طرق مساعدة لإنشاء مجموعات مؤشرات الترابط
+import java.util.concurrent.ExecutorService;  // الواجهة لإدارة تنفيذ المهام بشكل متزامن
+
+public class Main {
+    public static void main(String[] args) {
+        // إنشاء المهام (كائنات من نوع Runnable)
+        PrintTask task1 = new PrintTask("task1");  // مهمة طباعة مع معرف "task1"
+        PrintTask task2 = new PrintTask("task2");  // مهمة طباعة مع معرف "task2"
+        PrintTask task3 = new PrintTask("task3");  // مهمة طباعة مع معرف "task3"
+        
+        System.out.println("Starting Executor");  // رسالة بدء التشغيل
+        
+        // إنشاء ExecutorService لإدارة الخيوط
+        // newCachedThreadPool() تنشئ مجموعة مؤشرات ترابط تتوسع حسب الحاجة
+        ExecutorService threadExecutor = Executors.newCachedThreadPool();
+        
+        // بدء تنفيذ المهام باستخدام المؤشرات
+        threadExecutor.execute(task1);  // تنفيذ المهمة الأولى في مؤشر ترابط منفصل
+        threadExecutor.execute(task2);  // تنفيذ المهمة الثانية في مؤشر ترابط منفصل
+        threadExecutor.execute(task3);  // تنفيذ المهمة الثالثة في مؤشر ترابط منفصل
+        
+        // إيقاف ExecutorService بعد انتهاء المهام
+        // shutdown() توقف قبول مهام جديدة ولكن تستكمل المهام الحالية
+        threadExecutor.shutdown();
+        
+        // رسالة توضح أن المهام بدأت وأن مؤشر الترابط الرئيسي انتهى
+        System.out.println("Tasks started, main ends.\n");
+    }
+}
