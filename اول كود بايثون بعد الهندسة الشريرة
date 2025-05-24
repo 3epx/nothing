@@ -1,0 +1,47 @@
+from abc import ABC , abstractmethod
+class LibraryItem(ABC):
+    def __init__(self , title  ,item_id):
+        self.__title = title
+        self.__item_id = item_id
+    @abstractmethod
+    def display_info(self):
+        pass
+    def get_title(self):
+        return self.__title
+    def get_item_id(self):
+        return self.__item_id
+    
+class Book(LibraryItem):
+    def __init__(self, title, item_id , author):
+        super().__init__(title, item_id)
+        self.__author = author
+    def display_info(self):
+        print("the name author is : {} and the title of his book is :" \
+        " {} , and the id of the book is : {}".format
+        (self.__author ,self.get_title(), self.get_item_id() ))
+
+class Magazine(LibraryItem):
+    def __init__(self, title, item_id , issue_number):
+        super().__init__(title, item_id)
+        self.__issue_number = issue_number
+    def display_info(self):
+        print("Issue is  : {} and the title of his Magazin is :" \
+        " {} , and the id of the magain is : {}".format
+        (self.__issue_number ,self.get_title(), self.get_item_id() ))
+
+class Video(LibraryItem):
+    def __init__(self, title, item_id , duration):
+        super().__init__(title, item_id)
+        self.__duration = duration
+    def display_info(self):
+        print("duration is  : {} and the title of his Magazin is :" \
+        " {} , and the id of the magain is : {}".format
+        (self.__duration ,self.get_title(), self.get_item_id() ))
+
+LibraryItem = []
+
+LibraryItem.append(Book("algorithem" , "1" , "michle"))
+LibraryItem.append(Magazine("algorithem" , "2" , "45"))
+LibraryItem.append(Book("algorithem" , "3" , "hmmmmmmmm"))
+for i in range(0 , len(LibraryItem)):
+    LibraryItem[i].display_info()
