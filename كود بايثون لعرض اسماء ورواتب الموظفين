@@ -1,0 +1,37 @@
+from abc import ABC , abstractmethod
+class Employee(ABC):
+    def __init__(self , name = "", base_salary = 0):
+        self.__name = name
+        self.__base_salary = base_salary
+    @abstractmethod
+    def calculate_salary(self):
+        pass
+    def get_base_salary(self):
+        return self.__base_salary
+    def dis(self):
+        print("emplooy name is : " ,self.__name)
+    
+class Developer(Employee):
+    def __init__(self, name = "", base_salary = 0 , bonus = 0):
+        super().__init__(name, base_salary)
+        self.__bonus = bonus
+    def calculate_salary(self):
+        return self.get_base_salary + self.__bonus
+    def dis(self):
+        super().dis()
+        print(self.calculate_salary)
+
+class Manager(Employee):
+    def __init__(self, name = "", base_salary = 0 , department = ""):
+        super().__init__(name, base_salary)
+        self.__department = department
+    def calculate_salary(self):
+        return self.get_base_salary()
+    def dis(self):
+        super().dis()
+        print("the salary is : ",self.calculate_salary())
+m1 = Manager("Ahmed" , 11293 , "Manager")
+m1.dis()
+
+
+
