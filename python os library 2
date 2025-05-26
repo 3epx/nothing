@@ -1,0 +1,41 @@
+import os
+from time import sleep
+SystemName = os.name #هنا نعرف ماهو اسم النظام
+print("System name is : " , SystemName) #هنا نطبع اسم النظام
+CurrentPath = os.getcwd() # هنا نجلب مسار العمل الحالي
+print("Current path name is : " , CurrentPath) # هنا نطبع المسار الحالي على الشاشة
+Otherdirctory = os.path.join(CurrentPath , 'flutter_windows_3.29.3-stable') 
+#هنا نقوم بعمل ربط مابين المسار الحالي ومجلد اخر حتى نكون مسار جديد نقوم بتغيير مكان العمل اليه
+os.chdir(Otherdirctory) # هنا قمنا بتغيير مجلد العمل الى المجلد الجديد
+os.chdir('..') # هنا قمنا بالرجوع الى المجلد القديم
+print(os.listdir(os.getcwd())) # هنا نطبع جميع محتويات هذا المجلد على الشاشة
+
+try: # هنا راح يسولي مجلد جديد
+    os.makedirs("test_dir/nested_dir") # هنا يقوم بانشاء مجلد جديد
+except Exception as e:
+    print("have an erorr : " , e)
+try: # هنا راح يسولي ملف تكست 
+    newfile = os.path.join(CurrentPath , 'test_dir/nested_dir/newfile.txt')
+    if not os.path.exists(os.path.join(CurrentPath , 'test_dir/nested_dir/newfile.txt')):
+        with open(newfile , 'w' , encoding='utf-8') as file:
+            file.write("ahmed alalousi is the king of engineering university")
+            print("file created succusfuly.")
+    else:
+        print("this file is alridy exists")
+except Exception as e:
+    print("have an erorr : " , e)
+os.chdir(CurrentPath)
+try: #هنا راح يغير اسم المجلد 
+    os.rename(os.path.join(CurrentPath , 'test_dir/nested_dir') , os.path.join(CurrentPath , 'test_dir/renamed_dir'))
+except Exception as e:
+    print("have an erorr.")
+try: 
+    os.rmdir(os.path.join(CurrentPath , 'test_dir/renamed_dir'))
+except Exception as e:
+    print("have an erorr.")
+
+try:
+    os.rmdir(os.path.join(CurrentPath , 'test_dir'))
+except Exception as e:
+    print("have an erorr.")
+
