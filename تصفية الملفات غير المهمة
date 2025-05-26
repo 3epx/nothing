@@ -1,0 +1,16 @@
+import os
+
+def sync_dir(dst , src):
+    for item in os.listdir(dst):
+        dst_path = os.path.join(dst , item)
+        src_path = os.path.join(src , item)
+        if not os.path.exists(src_path):
+            if os.path.isdir(dst_path):
+                os.rmdir(dst_path)
+            else:
+                os.remove(dst_path)
+
+src = os.path.join(os.getcwd() , 'src')
+dst = os.path.join(os.getcwd() , 'dst')
+
+sync_dir(dst , src)
