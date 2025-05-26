@@ -1,0 +1,22 @@
+import os
+from time import sleep
+import shutil
+
+mypath = os.getcwd()
+sleep(1)
+print("current path is : ", mypath)
+
+myfile = "path"
+filepath = os.path.join(mypath, myfile)
+
+if os.path.exists(filepath):
+    print("the file is located succusfully.")
+    newfolderr = "newfolderr"
+    if not os.path.exists(os.path.join(filepath, newfolderr)):
+        os.mkdir(os.path.join(filepath, newfolderr))
+        print("the new folder is created in successfully.")
+    else:
+        print("The file already exists")
+    
+    copyfile = "filename.mp4"
+    shutil.copy(os.path.join(filepath, copyfile), os.path.join(filepath, newfolderr))
