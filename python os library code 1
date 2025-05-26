@@ -1,0 +1,19 @@
+import os
+
+SystemName = os.name
+CurrentPath = os.getcwd()
+centerpath = os.getcwd()
+print("current path is : " , CurrentPath)
+
+if not os.path.exists(os.path.join(CurrentPath , "test_folder")):
+    os.mkdir(os.path.join(CurrentPath , "test_folder"))
+    print("folder created is done : " , os.path.join(CurrentPath , "test_folder"))
+    os.chdir(os.path.join(CurrentPath , "test_folder"))
+    print("current path is : " , os.path.join(CurrentPath , "test_folder"))
+    os.mkdir("sub_folder")
+    print("folder created is done : " , os.path.join(os.getcwd() ,"sub_folder" ))
+    CurrentPath = os.getcwd()
+    os.chdir(os.path.join(CurrentPath , "sub_folder"))
+    print(os.getcwd())
+    os.chdir(centerpath)
+    os.remove(os.path.join(centerpath , "test_folder"))
