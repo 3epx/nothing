@@ -1,0 +1,15 @@
+import os
+
+def sizeofdir(path=""):
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(path):
+        for filename in filenames:
+            try:
+                filepath = os.path.join(dirpath, filename)
+                total_size += os.path.getsize(filepath)
+            except Exception as e:
+                print(f"Error processing {filename}: {e}")
+    return total_size
+
+size = sizeofdir(os.getcwd())
+print("Size of current directory is:", size / 1073741824, "bytes")
