@@ -1,0 +1,66 @@
+import os
+from time import sleep
+
+class FileWatcher:
+    def __init__(self, path, interval):
+        self.__path = path
+        self.__interval = interval
+        self.old_snapshot = self.__take_snapshot()  
+    
+    def __take_snapshot(self):
+        """أخذ لقطة لحالة الملفات الحالية"""
+        snapshot = set()
+        for dirpath, _, filenames in os.walk(self.__path):
+            for filename in filenames:
+                fullpath = os.path.join(dirpath, filename)
+                try:
+                    # نستخدم المسار فقط دون وقت التعديل لأننا لا نتابع التعديلات
+                    snapshot.add(fullpath)
+                except Exception as e:
+                    print(f"خطأ في قراءة الملف {fullpath}: {e}")
+        return snapshot
+    
+    def check_changes(self):
+        """الكشف عن الملفات المضافة والمحذوفة"""
+        new_snapshot = self.__take_snapshot()
+        
+        # الملفات المضافة هي التي في اللقطة الجديدة وليست في القديمة
+        added = new_snapshot - self.old_snapshot
+        
+        # الملفات المحذوفة هي التي في اللقطة القديمة وليست في الجديدة
+        removed = self.old_snapshot - new_snapshot
+        
+        self.old_snapshot = new_snapshot
+        return added, removed
+    
+    def start_watching(self):
+        """بدء مراقبة المجلد"""
+        print(f"بدأت مراقبة المجلد: {self.__path} (كل {self.__interval} ثواني)")
+        print("اضغط Ctrl+C لإيقاف المراقبة...")
+        
+        while True:
+            try:
+                added, removed = self.check_changes()
+                
+                if added:
+                    print("\nالملفات المضافة:")
+                    for file in added:
+                        print(f" - {file}")
+                
+                if removed:
+                    print("\nالملفات المحذوفة:")
+                    for file in removed:
+                        print(f" - {file}")
+                
+                sleep(self.__interval)
+                
+            except KeyboardInterrupt:
+                print("\nتم إيقاف المراقبة.")
+                break
+            except Exception as e:
+                print(f"حدث خطأ: {e}")
+                sleep(self.__interval)
+
+if __name__ == "__main__":
+    watcher = FileWatcher(os.getcwd(), 3)
+    watcher.start_watching()
