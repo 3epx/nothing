@@ -1,0 +1,104 @@
+class Bank {
+    // معلومات وبيانات البنك
+  String? Bankname = "Hit Bank";
+  List<BankAccount> BankAccounts = [];
+  
+  Bank(BankAccount obj){
+      BankAccounts.add(obj);
+  }
+  void addnewaccount(BankAccount obj) {
+    BankAccounts.add(obj);
+  }
+
+  void displayaccounts() {
+    for (int i = 0; i < BankAccounts.length; i++) {
+      BankAccounts[i].display_info();
+    }
+  }
+}
+
+
+class BankAccount {
+    // معلومات صاحب الحساب 
+  String? Account_number;
+  String? Account_holder_name;
+  List<int> Transaction_history = [];
+  int Balance = 0;
+  // دالة ايداع الاموال
+  
+  BankAccount(String Account_number , String Account_holder_name , int Balance ){
+      this.Account_number = Account_number;
+      this.Account_holder_name = Account_holder_name;
+      this.Balance = Balance;
+  }
+  
+  void set_deposit(int quantity_deposit) {
+    if (quantity_deposit >= 0) {
+      Balance = (Balance ?? 0) + quantity_deposit;
+      Transaction_history.add(quantity_deposit);
+    }
+  }
+  // دالة سحب الاموال 
+  void set_withdraw(int quantity_withdraw) {
+    if (quantity_withdraw >= 0 && quantity_withdraw <= Balance) {
+      Balance = (Balance ?? 0) - quantity_withdraw;
+      Transaction_history.add(-quantity_withdraw);
+    }
+  }
+ // دالة عرض معلومات الحساب
+  void display_info() {
+    print("Account holder name: $Account_holder_name");
+    print("Account number: $Account_number ");
+    print("Balance: $Balance \$");
+  }
+ // دالة عرض التحويلات 
+  void display_transaction_history() {
+    for (int i = 0; i < Transaction_history.length; i++) {
+      print(Transaction_history[i]);
+    }
+  }
+}
+
+class Customer{
+    String? Name;
+    String? ID_number;
+    List<BankAccount> Customer_Accounts = [];
+    
+    Customer(String Name , String ID_number){
+        this.Name = Name;
+        this.ID_number= ID_number;
+    }
+    
+    
+    void display_Customer_info(){
+        print("Customer name is : $Name");
+        print("ID number is : $ID_number");
+        print("________________________");
+    }
+    
+    void new_account(String Account_number , String Account_holder_name , int Balance){
+        BankAccount newaccount = BankAccount(Account_number , Account_holder_name ,Balance );
+        Bank adder = Bank(newaccount);
+        Customer_Accounts.add(newaccount);
+    }
+    
+    void displayaccounts() {
+    for (int i = 0; i < Customer_Accounts.length; i++) {
+      Customer_Accounts[i].display_info();
+    }
+  }
+    
+}
+
+
+void main() {
+
+Customer c1  = Customer("❤️" , "200002");
+c1.new_account("1" , "first account" , 312300);
+c1.display_Customer_info();
+c1.new_account("2" , "second account" , 2349382);
+c1.displayaccounts();
+
+
+
+}
