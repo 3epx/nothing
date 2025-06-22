@@ -1,0 +1,14 @@
+import 'dart:io';
+void hof(names , Function toupper){
+  for(String name in names){
+    toupper(name);
+  }
+}
+void toupper(String name){
+  print(name.toUpperCase());
+}
+void main(){
+  List<String> names = ["ali","jakson","ali","smith","sara","zexa","jhone","mohmamed","alex"];
+
+  hof(names, toupper);
+}
