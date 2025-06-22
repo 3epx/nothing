@@ -1,0 +1,14 @@
+void hof(array , Function power2){
+
+for(int i in array){
+  power2(i);
+}
+}
+void power2(int n){
+print(n*n);
+}
+void main() {
+
+  List<int> numbers = [1,2,4,9,1,3,9,4,64,4,2,1,2,1,4,2];
+  hof(numbers, power2);
+}
