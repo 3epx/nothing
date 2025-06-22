@@ -1,0 +1,23 @@
+import 'dart:io';
+void hof(names , Function len) {
+  for (var name in names) {
+    len(name);
+  }
+}
+void len(String name){
+  int count = 0;
+  while(true) {
+    try {
+      var _ = name[count];
+      count++;
+    }
+    catch (e) {
+      break;
+    }
+  }
+  print(count);
+}
+void main(){
+  List<String> names = ["jakson","ali","smith","sara","zexa","jhone","mohmamed","alex"];
+  hof(names, len);
+}
