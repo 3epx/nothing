@@ -1,0 +1,464 @@
+import 'package:flutter/material.dart';
+import 'package:math_expressions/math_expressions.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  double? number1;
+  String? caluclat_operation;
+  double? number2;
+  String input = "";
+
+  void enter0() {
+    setState(() {
+      input += "0";
+    });
+  }
+
+  void enter1() {
+    setState(() {
+      input += "1";
+    });
+  }
+
+  void enter2() {
+    setState(() {
+      input += "2";
+    });
+  }
+
+  void enter3() {
+    setState(() {
+      input += "3";
+    });
+  }
+
+  void enter4() {
+    setState(() {
+      input += "4";
+    });
+  }
+
+  void enter5() {
+    setState(() {
+      input += "5";
+    });
+  }
+
+  void enter6() {
+    setState(() {
+      input += "6";
+    });
+  }
+
+  void enter7() {
+    setState(() {
+      input += "7";
+    });
+  }
+
+  void enter8() {
+    setState(() {
+      input += "8";
+    });
+  }
+
+  void enter9() {
+    setState(() {
+      input += "9";
+    });
+  }
+
+  void enterDot() {
+    setState(() {
+      input += ".";
+    });
+  }
+
+  void add() {
+    setState(() {
+      input += "+";
+    });
+  }
+
+  void subtract() {
+    setState(() {
+      input += "-";
+    });
+  }
+
+  void multiply() {
+    setState(() {
+      input += "*";
+    });
+  }
+
+  void divide() {
+    setState(() {
+      input += "/";
+    });
+  }
+
+  void clear() {
+    setState(() {
+      input = "";
+    });
+  }
+
+  void deleteLast() {
+    if (input.isNotEmpty) {
+      setState(() {
+        input = input.substring(0, input.length - 1);
+      });
+    }
+  }
+
+  String evaluate() {
+    try {
+      Parser parser = Parser();
+      Expression expression = parser.parse(input);
+      ContextModel contextModel = ContextModel();
+      double result = expression.evaluate(EvaluationType.REAL, contextModel);
+      setState(() {
+              input = result.toString();
+
+      });
+      return input;
+    } catch (e) {
+      return "خطأ في الحساب";
+    }
+  }
+
+  // functaions
+  void number_one() {
+    number1 = 1;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "حاسبة ",
+            style: TextStyle(color: Color(0xffffffff), fontSize: 20),
+          ),
+          backgroundColor: Color.fromRGBO(22, 67, 140, 1),
+          centerTitle: true,
+        ),
+        body: Container(
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                children: [
+                  Text(
+                    input,
+                    style: TextStyle(
+                      color: Color.fromRGBO(201, 87, 11, 1),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      style: ButtonStyle(),
+                      onPressed: enter1,
+                      child: Text(
+                        "1",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter2,
+                      child: Text(
+                        "2",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter3,
+                      child: Text(
+                        "3",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: multiply,
+                      child: Text(
+                        "x",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter4,
+                      child: Text(
+                        "4",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter5,
+                      child: Text(
+                        "5",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter6,
+                      child: Text(
+                        "6",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: add,
+                      child: Text(
+                        "+",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter7,
+                      child: Text(
+                        "7",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter8,
+                      child: Text(
+                        "8",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter9,
+                      child: Text(
+                        "9",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: divide,
+                      child: Text(
+                        "/",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: number_one,
+                      child: Text(
+                        "Sin",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: number_one,
+                      child: Text(
+                        "Cos",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: number_one,
+                      child: Text(
+                        "Tan",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: number_one,
+                      child: Text(
+                        "-",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: enter0,
+                      child: Text(
+                        "0",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: clear,
+                      child: Text(
+                        "clear",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: deleteLast,
+                      child: Text(
+                        "Remove",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: evaluate,
+                      child: Text(
+                        "=",
+                        style: TextStyle(
+                          color: Color.fromRGBO(201, 87, 11, 1),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
