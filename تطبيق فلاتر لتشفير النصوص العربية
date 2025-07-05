@@ -1,0 +1,270 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: MyPage()));
+
+class MyPage extends StatefulWidget {
+  @override
+  _MyPageState createState() => _MyPageState();
+}
+
+class _MyPageState extends State<MyPage> {
+  String originalText = '';
+  String encryptedText = '';
+
+  TextEditingController encreptor = TextEditingController();
+  TextEditingController dencreptor = TextEditingController();
+
+  // دالة فحص اللغة
+
+  void checkLanguageAndProcess() {
+    String input = encreptor.text.trim();
+
+    // تحقق إن كان يحتوي على حرف عربي
+    bool isArabic = RegExp(r'[\u0600-\u06FF]').hasMatch(input);
+
+    // تحقق إن كان يحتوي على حرف إنجليزي
+    bool isEnglish = RegExp(r'[a-zA-Z]').hasMatch(input);
+
+    if (isArabic && !isEnglish) {
+      print("النص عربي فقط");
+      arabicFunction(input);
+    } else if (isEnglish && !isArabic) {
+      print("النص إنجليزي فقط");
+      englishFunction(input);
+    } else if (isArabic && isEnglish) {
+      print("النص مختلط عربي وإنجليزي");
+      mixedFunction(input);
+    } else {
+      print("النص لا يحتوي على حروف مفهومة");
+    }
+  }
+
+  void arabicFunction(String text) {
+    // معالجة النص العربي هنا
+    print("معالجة عربية: $text");
+  }
+
+  void englishFunction(String text) {
+    // معالجة النص الإنجليزي هنا
+    print("معالجة إنجليزية: $text");
+  }
+
+  void mixedFunction(String text) {
+    // معالجة نص مختلط هنا
+    print("معالجة مختلطة: $text");
+  }
+
+  // دالة التشفير للغة العربية
+
+  void encryptArabicText() {
+    final Map<String, String> encryptionMap = {
+      'ا': 'ش',
+      'ب': 'ذ',
+      'ت': '7',
+      'ث': 'ئ',
+      'ج': 'ؤ',
+      'ح': 'ى',
+      'خ': 'ة',
+      'د': 'ل',
+      'ذ': 'ا',
+      'ر': 'ب',
+      'ز': 'ت',
+      'س': 'ث',
+      'ش': 'ج',
+      'ص': 'ح',
+      'ض': 'خ',
+      'ط': 'د',
+      'ظ': 'ر',
+      'ع': 'ز',
+      'غ': 'س',
+      'ف': 'ص',
+      'ق': 'ض',
+      'ك': 'ط',
+      'ل': 'ظ',
+      'م': 'ع',
+      'ن': 'غ',
+      'ه': 'ف',
+      'و': 'ق',
+      'ي': 'ك',
+      'ء': 'م',
+      'ؤ': 'ن',
+      'ئ': 'ه',
+      'ة': 'و',
+      'ى': 'ي',
+      ' ': ' ',
+      'َ': 'ْ',
+      'ُ': 'ّ',
+      'ِ': 'ٌ',
+      'ّ': 'ٍ',
+      'ْ': 'َ',
+      'ٌ': 'ُ',
+      'ٍ': 'ِ',
+    };
+
+    encryptedText = '';
+
+    for (int i = 0; i < NormalText.length; i++) {
+      String currentChar = NormalText[i];
+      encryptedText += encryptionMap[currentChar] ?? currentChar;
+    }
+
+    setState(() {
+      encryptedText;
+    });
+  }
+
+  // دالة فك تشفير العربية
+
+  void decryptArabicText() {
+    final Map<String, String> decryptionMap = {
+      'ش': 'ا',
+      'ذ': 'ب',
+      '7': 'ت',
+      'ئ': 'ث',
+      'ؤ': 'ج',
+      'ى': 'ح',
+      'ة': 'خ',
+      'ل': 'د',
+      'ا': 'ذ',
+      'ب': 'ر',
+      'ت': 'ز',
+      'ث': 'س',
+      'ج': 'ش',
+      'ح': 'ص',
+      'خ': 'ض',
+      'د': 'ط',
+      'ر': 'ظ',
+      'ز': 'ع',
+      'س': 'غ',
+      'ص': 'ف',
+      'ض': 'ق',
+      'ط': 'ك',
+      'ظ': 'ل',
+      'ع': 'م',
+      'غ': 'ن',
+      'ف': 'ه',
+      'ق': 'و',
+      'ك': 'ي',
+      'م': 'ء',
+      'ن': 'ؤ',
+      'ه': 'ئ',
+      'و': 'ة',
+      'ي': 'ى',
+      ' ': ' ',
+      'ْ': 'َ',
+      'ّ': 'ُ',
+      'ٌ': 'ِ',
+      'ٍ': 'ّ',
+      'َ': 'ْ',
+      'ُ': 'ٌ',
+      'ِ': 'ٍ',
+    };
+
+    originalText = '';
+
+    for (int i = 0; i < encryptedText.length; i++) {
+      String currentChar = encryptedText[i];
+      originalText += decryptionMap[currentChar] ?? currentChar;
+    }
+
+    setState(() {
+      originalText;
+    });
+  }
+
+  // 1. نعلن عن المتحكم
+
+  // 2. نعلن عن متغير لعرض النص بعد المعالجة
+  String NormalText = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("تشفير النصوص"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 143, 29, 29),
+        titleTextStyle: TextStyle(fontSize: 35),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          children: [
+            // حقل إدخال النص
+            TextField(
+              controller: encreptor,
+              decoration: InputDecoration(hintText: "اكتب النص العادي"),
+              textAlign: TextAlign.center, // إذا تريد تخلي النص في المنتصف
+            ),
+            SizedBox(height: 20),
+
+            // زر عرض النص
+            ElevatedButton(
+              onPressed: () {
+                // ✅ هنا تأخذ النص بعد الضغط
+                setState(() {
+                  NormalText = encreptor.text;
+                });
+                encryptArabicText();
+              },
+              child: Text("تشفير"),
+            ),
+            SizedBox(height: 30),
+
+            // عرض النص بعد التعديل داخل إطار
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.blue.shade50,
+                border: Border.all(color: Colors.blue, width: 2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: SelectableText(
+                encryptedText,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ),
+
+            TextField(
+              controller: dencreptor,
+              decoration: InputDecoration(hintText: "اكتب النص المشفر"),
+              textAlign: TextAlign.center, // إذا تريد تخلي النص في المنتصف
+            ),
+            SizedBox(height: 20),
+
+            // زر عرض النص
+            ElevatedButton(
+              onPressed: () {
+                // ✅ هنا تأخذ النص بعد الضغط
+                setState(() {
+                  NormalText = dencreptor.text;
+                });
+                decryptArabicText();
+              },
+              child: Text("فك تشفير"),
+            ),
+            SizedBox(height: 30),
+
+            // عرض النص بعد التعديل داخل إطار
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.blue.shade50,
+                border: Border.all(color: Colors.blue, width: 2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: SelectableText(
+                originalText,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
