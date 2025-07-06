@@ -1,0 +1,180 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  // check mode
+  bool is_dark = false;
+  bool is_visibility = false;
+
+  // white mode colors
+  Color get src_back_ground_white_mode => Color.fromARGB(255, 255, 255, 255);
+  Color get src_text_white_mode => Color.fromARGB(255, 83, 81, 81);
+  Color get src_borders_white_mode => Color.fromARGB(255, 83, 81, 81);
+  Color get src_filed_background_white_mode =>
+      Color.fromARGB(255, 196, 194, 194);
+
+  // dark mode colors
+  Color get src_back_ground_dark_mode => Color.fromARGB(255, 9, 21, 46);
+  Color get src_text_dark_mode => Color.fromARGB(255, 222, 219, 219);
+  Color get src_borders_dark_mode => Color.fromARGB(255, 222, 219, 219);
+  Color get src_filed_background_dark_mode => Color.fromARGB(255, 15, 20, 60);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(textTheme: GoogleFonts.archivoTextTheme()),
+      home: Scaffold(
+        backgroundColor:
+            is_dark ? src_back_ground_dark_mode : src_back_ground_white_mode,
+        appBar: AppBar(
+          title: Text(
+            "ابو الجيد اقوى جبوري بالحياة",
+            style: TextStyle(
+              color: is_dark ? src_text_dark_mode : src_text_white_mode,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor:
+              is_dark ? src_back_ground_dark_mode : src_back_ground_white_mode,
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: is_dark ? src_text_dark_mode : src_text_white_mode,
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              TextField(
+                style: TextStyle(
+                  color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                ),
+                decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.email,
+                    color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                  ),
+
+                  hintText: "Email",
+                  filled: true,
+                  fillColor:
+                      is_dark
+                          ? src_filed_background_dark_mode
+                          : src_filed_background_white_mode,
+                  hintStyle: TextStyle(
+                    color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2,
+                      color:
+                          is_dark
+                              ? src_borders_dark_mode
+                              : src_borders_white_mode,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2,
+
+                      color:
+                          is_dark
+                              ? src_borders_dark_mode
+                              : src_borders_white_mode,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              TextField(
+                obscureText: !is_visibility,
+                style: TextStyle(
+                  color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                ),
+                decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.lock, // ← أيقونة الباسورد
+                    color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                  ),
+
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      is_visibility
+                          ? Icons.visibility_off
+                          : Icons.visibility, // 👈 inline if
+                      color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        is_visibility =
+                            !is_visibility; // 👈 تغيير الحالة عند الضغط
+                      });
+                    },
+                  ),
+                  filled: true,
+                  fillColor:
+                      is_dark
+                          ? src_filed_background_dark_mode
+                          : src_filed_background_white_mode,
+                  hintText: "PassWord",
+                  hintStyle: TextStyle(
+                    color: is_dark ? src_text_dark_mode : src_text_white_mode,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2,
+                      color:
+                          is_dark
+                              ? src_borders_dark_mode
+                              : src_borders_white_mode,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2,
+                      color:
+                          is_dark
+                              ? src_borders_dark_mode
+                              : src_borders_white_mode,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              is_dark = !is_dark;
+            });
+          },
+          backgroundColor:
+              is_dark ? src_borders_dark_mode : src_borders_white_mode,
+          child: Icon(
+            is_dark ? Icons.light_mode : Icons.dark_mode,
+            color: is_dark ? Colors.black : Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+}
